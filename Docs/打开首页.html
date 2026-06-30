@@ -1,0 +1,2988 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <title>TIERIA | Echoes Of The Poetic Age</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+SC:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: oklch(0.045 0 0);
+        --text: oklch(0.94 0.014 82);
+        --gold: oklch(0.69 0.146 74.6);
+        --font-display: 'Marcellus', Didot, 'Bodoni 72', 'Bodoni MT', Georgia, serif;
+        --font-cjk: 'Noto Serif SC', 'Songti SC', SimSun, serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-width: 320px;
+        min-height: 100%;
+      }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-cjk);
+      }
+
+      button {
+        font: inherit;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      .hero-stage {
+        position: relative;
+        display: grid;
+        min-height: 100svh;
+        isolation: isolate;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 92%, oklch(0.18 0.018 238 / 0.52), transparent 34%),
+          linear-gradient(180deg, oklch(0.07 0 0), var(--bg) 64%);
+      }
+
+      .desktop-stage {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 50% 72%, oklch(0.18 0.02 238 / 0.42), transparent 32%),
+          linear-gradient(180deg, oklch(0.07 0 0), var(--bg) 55%);
+      }
+
+      .desktop-composition {
+        position: absolute;
+        z-index: 2;
+        width: min(100vw, calc(100svh * 2.2069));
+        aspect-ratio: 2048 / 928;
+        perspective: 1200px;
+        --tilt-y: 0deg;
+        --spot-x: 50%;
+        --spot-y: 50%;
+        --trail-x: 50%;
+        --trail-y: 50%;
+        --spot-radius: 0px;
+        --cursor-glow: 0;
+        animation: stage-arrival 1300ms cubic-bezier(0.19, 1, 0.22, 1) both;
+      }
+
+      .desktop-composition::after {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        pointer-events: none;
+        content: '';
+        background:
+          linear-gradient(90deg, var(--bg), transparent 5%, transparent 94%, var(--bg)),
+          linear-gradient(180deg, oklch(0.045 0 0 / 0.32), transparent 14%, transparent 84%, var(--bg));
+      }
+
+      .desktop-hero-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .desktop-hero-image {
+        z-index: 1;
+      }
+
+      .cursor-light-field {
+        position: absolute;
+        inset: 0;
+        z-index: 6;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .cursor-light-field::before {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background: oklch(0.045 0 0 / 0.24);
+        -webkit-mask-image: radial-gradient(
+          circle at var(--spot-x) var(--spot-y),
+          transparent 0 var(--spot-radius),
+          rgba(0, 0, 0, 0.32) calc(var(--spot-radius) + 52px),
+          #000 calc(var(--spot-radius) + 132px)
+        );
+        mask-image: radial-gradient(
+          circle at var(--spot-x) var(--spot-y),
+          transparent 0 var(--spot-radius),
+          rgba(0, 0, 0, 0.32) calc(var(--spot-radius) + 52px),
+          #000 calc(var(--spot-radius) + 132px)
+        );
+        -webkit-mask-mode: alpha;
+        mask-mode: alpha;
+      }
+
+      .cursor-halo {
+        position: absolute;
+        display: block;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        opacity: var(--cursor-glow, 0);
+        pointer-events: none;
+        mix-blend-mode: screen;
+      }
+
+      .cursor-halo-main {
+        left: var(--spot-x);
+        top: var(--spot-y);
+        width: clamp(8rem, 13vw, 16rem);
+        background:
+          radial-gradient(circle, oklch(0.96 0.018 82 / 0.28), transparent 24%),
+          radial-gradient(circle, oklch(0.69 0.146 74.6 / 0.2), transparent 68%);
+        filter: blur(7px);
+        transform: translate(-50%, -50%);
+        transition: opacity 180ms ease;
+      }
+
+      .cursor-halo-trail {
+        left: var(--trail-x);
+        top: var(--trail-y);
+        width: clamp(12rem, 24vw, 28rem);
+        background:
+          radial-gradient(ellipse at 50% 50%, oklch(0.69 0.146 74.6 / 0.12), transparent 36%),
+          radial-gradient(ellipse at 50% 50%, oklch(0.22 0.028 238 / 0.18), transparent 74%);
+        filter: blur(18px);
+        transform: translate(-50%, -50%);
+        transition:
+          left 520ms cubic-bezier(0.16, 1, 0.3, 1),
+          top 520ms cubic-bezier(0.16, 1, 0.3, 1),
+          opacity 340ms ease;
+      }
+
+      .desktop-text-plane {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        pointer-events: none;
+        transform: rotateY(var(--tilt-y, 0deg));
+        transform-origin: center center;
+        transform-style: preserve-3d;
+        transition: transform 160ms cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+      }
+
+      .text-plane-item {
+        position: absolute;
+        display: block;
+        height: auto;
+        user-select: none;
+        pointer-events: none;
+        filter: drop-shadow(0 0 15px oklch(0 0 0 / 0.72));
+      }
+
+      .text-plane-logo {
+        top: 6.5733%;
+        left: 8.6914%;
+        width: 9.375%;
+      }
+
+      .text-plane-title {
+        top: 65.3017%;
+        left: 8.3496%;
+        width: 29.834%;
+      }
+
+      .text-plane-poem {
+        top: 68.75%;
+        left: 74.4141%;
+        width: 18.3594%;
+      }
+
+
+      .hero-nav {
+        position: absolute;
+        z-index: 10;
+        top: 7.4%;
+        right: 6.7%;
+        display: grid;
+        gap: clamp(0.65rem, 1.4vw, 1rem);
+        justify-items: center;
+        width: clamp(12rem, 18vw, 16rem);
+        padding: 0.35rem 0;
+        background: transparent;
+        box-shadow: none;
+        pointer-events: auto;
+      }
+
+      .hero-nav button {
+        min-height: 2rem;
+        padding: 0.15rem 0.35rem;
+        cursor: pointer;
+        color: oklch(0.9 0.012 82 / 0.86);
+        border: 1px solid transparent;
+        background: transparent;
+        font-size: clamp(1rem, 1.35vw, 1.35rem);
+        letter-spacing: 0.18em;
+      }
+
+      .hero-nav .primary-link {
+        min-width: auto;
+        min-height: 2rem;
+        padding: 0.15rem 0.35rem;
+        border-color: transparent;
+      }
+
+      .hero-nav button:hover,
+      .hero-nav button:focus-visible,
+      .mobile-actions button:hover,
+      .mobile-actions button:focus-visible {
+        color: var(--text);
+        border-color: transparent;
+        outline: none;
+      }
+
+      .hero-nav button:focus-visible {
+        outline: 1px solid var(--gold);
+        outline-offset: 0.22rem;
+      }
+
+      .mobile-stage {
+        display: none;
+      }
+
+      .chronicles-page {
+        position: relative;
+        min-height: 100svh;
+        overflow: hidden;
+        isolation: isolate;
+        --chronicles-header-y: 0px;
+        --section-text-tilt-x: 0deg;
+        --section-text-tilt-y: 0deg;
+        --spot-x: 50%;
+        --spot-y: 50%;
+        --trail-x: 50%;
+        --trail-y: 50%;
+        --spot-radius: 0px;
+        --cursor-glow: 0;
+        background: var(--bg);
+        perspective: 1400px;
+      }
+
+      .chronicles-bg {
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        filter: contrast(1.08) saturate(0.9);
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .chronicles-page::before,
+      .chronicles-page::after {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        content: '';
+      }
+
+      .chronicles-page::before {
+        z-index: -2;
+        background:
+          radial-gradient(ellipse at 61% 64%, transparent 0 34%, oklch(0.01 0 0 / 0.38) 82%),
+          linear-gradient(90deg, oklch(0.01 0 0 / 0.78), transparent 25%, transparent 76%, oklch(0.01 0 0 / 0.62)),
+          linear-gradient(180deg, oklch(0.01 0 0 / 0.42), transparent 36%, oklch(0.01 0 0 / 0.7));
+      }
+
+      .chronicles-page::after {
+        z-index: 4;
+        background:
+          linear-gradient(180deg, oklch(0.01 0 0 / 0.06), transparent 35%, oklch(0.01 0 0 / 0.3) 100%),
+          radial-gradient(ellipse at 54% 104%, oklch(0.17 0.024 238 / 0.25), transparent 44%);
+      }
+
+      .chronicles-light-field {
+        z-index: 8;
+      }
+
+      .section-text-plane {
+        position: absolute;
+        inset: 0;
+        z-index: 12;
+        pointer-events: none;
+        transform:
+          rotateX(var(--section-text-tilt-x, 0deg))
+          rotateY(var(--section-text-tilt-y, 0deg));
+        transform-origin: 50% 50%;
+        transform-style: preserve-3d;
+        transition: transform 180ms cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+      }
+
+      .chronicles-topbar {
+        position: absolute;
+        z-index: 12;
+        top: 7.4%;
+        right: 6.7%;
+        left: 8.6914%;
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        pointer-events: none;
+        transform: translateY(var(--chronicles-header-y, 0px));
+        transition: transform 180ms cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+      }
+
+      .chronicles-brand {
+        padding: 0;
+        cursor: pointer;
+        color: oklch(0.93 0.012 82 / 0.9);
+        border: 0;
+        background: transparent;
+        font-family: var(--font-display);
+        font-size: clamp(1.35rem, 2.25vw, 2.15rem);
+        line-height: 1;
+        letter-spacing: 0.36em;
+        text-shadow:
+          0 1px 1px oklch(0 0 0 / 0.92),
+          0 0 20px oklch(0 0 0 / 0.72);
+        pointer-events: auto;
+      }
+
+      .chronicles-brand:hover,
+      .chronicles-brand:focus-visible {
+        color: var(--gold);
+        outline: none;
+      }
+
+      .section-nav {
+        display: grid;
+        justify-items: center;
+        width: clamp(12rem, 18vw, 16rem);
+        gap: clamp(0.65rem, 1.4vw, 1rem);
+        pointer-events: auto;
+      }
+
+      .section-nav button {
+        min-height: 2rem;
+        padding: 0.15rem 0.35rem;
+        cursor: pointer;
+        color: oklch(0.9 0.012 82 / 0.86);
+        border: 1px solid transparent;
+        background: transparent;
+        font-size: clamp(1rem, 1.35vw, 1.35rem);
+        line-height: 1.25;
+        letter-spacing: 0.18em;
+      }
+
+      .section-nav button:hover,
+      .section-nav button:focus-visible {
+        color: var(--text);
+        outline: none;
+      }
+
+      .section-nav button:hover {
+        border-color: transparent;
+      }
+
+      .section-nav button:focus-visible {
+        outline: 1px solid var(--gold);
+        outline-offset: 0.22rem;
+      }
+
+      .section-nav .is-active {
+        min-width: auto;
+        min-height: 2rem;
+        padding: 0.15rem 0.35rem;
+        color: var(--text);
+        border-color: transparent;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .chronicles-copy {
+        position: absolute;
+        z-index: 9;
+        top: 38.8%;
+        left: clamp(2.55rem, 5vw, 5.1rem);
+        width: min(39rem, 40vw);
+        pointer-events: none;
+        transform: translateY(-7%);
+      }
+
+      .chronicles-copy h1 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: clamp(3.05rem, 3.9vw, 4.65rem);
+        font-weight: 400;
+        line-height: 1.02;
+        letter-spacing: 0;
+        white-space: nowrap;
+        color: oklch(0.96 0.012 82);
+        text-shadow:
+          0 1px 1px oklch(0 0 0 / 0.94),
+          0 0 24px oklch(0 0 0 / 0.86);
+      }
+
+      .chronicles-copy p {
+        max-width: 31ch;
+        margin: clamp(1.25rem, 2vw, 1.8rem) 0 0;
+        color: oklch(0.91 0.012 82 / 0.9);
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 1.24vw, 1.23rem);
+        line-height: 1.7;
+        text-wrap: pretty;
+        text-shadow: 0 0 16px oklch(0 0 0 / 0.72);
+      }
+
+      .chronicles-rule {
+        position: relative;
+        display: block;
+        width: min(14.8rem, 72%);
+        height: 1px;
+        margin-top: clamp(1.35rem, 2.4vw, 2.15rem);
+        background: linear-gradient(90deg, oklch(0.69 0.146 74.6 / 0.62), oklch(0.94 0.014 82 / 0.28), transparent);
+      }
+
+      .chronicles-rule::after {
+        position: absolute;
+        top: 50%;
+        left: 48%;
+        width: 0.38rem;
+        height: 0.38rem;
+        content: '';
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.55);
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      .chronicles-back {
+        min-height: 2.25rem;
+        margin-top: clamp(0.95rem, 1.5vw, 1.35rem);
+        padding: 0;
+        cursor: pointer;
+        color: oklch(0.9 0.012 82 / 0.72);
+        border: 0;
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        font-size: clamp(0.9rem, 0.98vw, 1rem);
+        letter-spacing: 0.18em;
+        pointer-events: auto;
+      }
+
+      .chronicles-back:hover,
+      .chronicles-back:focus-visible {
+        color: var(--text);
+        border-bottom-color: var(--gold);
+        outline: none;
+      }
+
+      .chronicles-volumes {
+        position: absolute;
+        inset: 0;
+        z-index: 7;
+        perspective: 1400px;
+        pointer-events: none;
+      }
+
+      .chronicle-volume {
+        position: absolute;
+        bottom: 30.55%;
+        left: var(--book-x);
+        width: var(--book-width, clamp(12.3rem, 15.15vw, 14.1rem));
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+        transform:
+          translateX(-50%)
+          translateY(calc(var(--book-y, 0rem) + var(--book-action-y, 0rem)))
+          scale(var(--book-scale, 1));
+        transform-origin: 50% 100%;
+        transform-style: preserve-3d;
+        filter: drop-shadow(0 1.35rem 1.4rem oklch(0 0 0 / 0.72));
+        opacity: 1;
+        animation: chronicle-volume-rise 1050ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+        pointer-events: auto;
+        transition:
+          filter 220ms ease,
+          transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .chronicle-volume::before {
+        position: absolute;
+        right: 8%;
+        bottom: -0.95rem;
+        left: 8%;
+        height: 1.25rem;
+        content: '';
+        background: radial-gradient(ellipse at center, oklch(0 0 0 / 0.62), transparent 72%);
+        filter: blur(5px);
+        opacity: 0.82;
+        transition:
+          opacity 220ms ease,
+          transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .chronicle-volume:hover,
+      .chronicle-volume:focus-visible {
+        --book-action-y: -0.22rem;
+        --book-scale: 1.012;
+        filter:
+          drop-shadow(0 1.55rem 1.55rem oklch(0 0 0 / 0.78))
+          drop-shadow(0 0 0.9rem oklch(0.69 0.146 74.6 / 0.18));
+        outline: none;
+      }
+
+      .chronicle-volume:focus-visible {
+        outline: 1px solid oklch(0.69 0.146 74.6 / 0.72);
+        outline-offset: 0.46rem;
+      }
+
+      .chronicle-volume:hover::before,
+      .chronicle-volume:focus-visible::before {
+        opacity: 0.95;
+        transform: scaleX(1.06);
+      }
+
+      .chronicle-volume.is-activated {
+        animation: chronicle-book-awaken 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+      }
+
+      .chronicle-cover {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: brightness(1.08) contrast(1.08) saturate(1.06);
+        user-select: none;
+        pointer-events: none;
+        transition: filter 220ms ease;
+      }
+
+      .chronicle-volume:hover .chronicle-cover,
+      .chronicle-volume:focus-visible .chronicle-cover,
+      .chronicle-volume.is-activated .chronicle-cover {
+        filter:
+          brightness(1.17)
+          contrast(1.1)
+          saturate(1.08)
+          drop-shadow(0 0 0.68rem oklch(0.69 0.146 74.6 / 0.2));
+      }
+
+      .chronicle-cover-reflection {
+        position: absolute;
+        z-index: 1;
+        top: calc(100% + 1.15rem);
+        left: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0.18;
+        filter: blur(1px) brightness(0.68) saturate(0.78);
+        mix-blend-mode: screen;
+        transform: scaleY(-1);
+        transform-origin: center top;
+        -webkit-mask-image: linear-gradient(180deg, oklch(0 0 0 / 0.42), transparent 58%);
+        mask-image: linear-gradient(180deg, oklch(0 0 0 / 0.42), transparent 58%);
+        user-select: none;
+        pointer-events: none;
+        transition:
+          opacity 220ms ease,
+          filter 220ms ease,
+          transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .chronicle-volume:hover .chronicle-cover-reflection,
+      .chronicle-volume:focus-visible .chronicle-cover-reflection {
+        opacity: 0.24;
+        filter: blur(1.2px) brightness(0.76) saturate(0.86);
+      }
+
+      .chronicle-volume.is-activated .chronicle-cover-reflection {
+        animation: chronicle-reflection-ripple 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+      }
+
+      .volume-heroic {
+        --book-x: 35.6%;
+        --book-y: 0.2rem;
+        z-index: 2;
+      }
+
+      .volume-legends {
+        --book-x: 56.2%;
+        --book-y: 0.2rem;
+        z-index: 2;
+        animation-delay: 80ms;
+      }
+
+      .volume-known {
+        --book-x: 77.9%;
+        --book-y: 0.2rem;
+        z-index: 2;
+        animation-delay: 160ms;
+      }
+
+      @keyframes chronicle-volume-rise {
+        from {
+          opacity: 0;
+          transform:
+            translateX(-50%)
+            translateY(calc(var(--book-y, 0rem) + 1.4rem))
+            scale(0.982);
+        }
+
+        to {
+          opacity: 1;
+          transform:
+            translateX(-50%)
+            translateY(var(--book-y, 0rem))
+            scale(1);
+        }
+      }
+
+      @keyframes chronicle-book-awaken {
+        0% {
+          transform:
+            translateX(-50%)
+            translateY(var(--book-y, 0rem))
+            scale(1);
+        }
+
+        34% {
+          transform:
+            translateX(-50%)
+            translateY(calc(var(--book-y, 0rem) - 0.46rem))
+            scale(1.018);
+        }
+
+        64% {
+          transform:
+            translateX(-50%)
+            translateY(calc(var(--book-y, 0rem) - 0.12rem))
+            scale(1.006);
+        }
+
+        100% {
+          transform:
+            translateX(-50%)
+            translateY(var(--book-y, 0rem))
+            scale(1);
+        }
+      }
+
+      @keyframes chronicle-reflection-ripple {
+        0% {
+          opacity: 0.18;
+          transform: scaleY(-1) translateY(0) scaleX(1);
+        }
+
+        42% {
+          opacity: 0.29;
+          transform: scaleY(-1) translateY(0.38rem) scaleX(1.045);
+        }
+
+        100% {
+          opacity: 0.18;
+          transform: scaleY(-1) translateY(0) scaleX(1);
+        }
+      }
+
+      .geography-page {
+        position: relative;
+        min-height: 100svh;
+        overflow: hidden;
+        isolation: isolate;
+        --geography-pan-x: 0px;
+        --geography-header-y: 0px;
+        --section-text-tilt-x: 0deg;
+        --section-text-tilt-y: 0deg;
+        --spot-x: 50%;
+        --spot-y: 50%;
+        --trail-x: 50%;
+        --trail-y: 50%;
+        --spot-radius: 0px;
+        --cursor-glow: 0;
+        background: var(--bg);
+        perspective: 1400px;
+      }
+
+      .geography-page::before,
+      .geography-page::after {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        content: '';
+      }
+
+      .geography-page::before {
+        z-index: 3;
+        background:
+          linear-gradient(90deg, oklch(0.01 0 0 / 0.72), transparent 17%, transparent 78%, oklch(0.01 0 0 / 0.62)),
+          linear-gradient(180deg, oklch(0.01 0 0 / 0.46), transparent 34%, oklch(0.01 0 0 / 0.72));
+      }
+
+      .geography-page::after {
+        z-index: 4;
+        background:
+          radial-gradient(ellipse at 52% 105%, oklch(0.17 0.024 238 / 0.28), transparent 44%),
+          linear-gradient(180deg, transparent 34%, oklch(0.01 0 0 / 0.34));
+      }
+
+      .geography-panorama {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        z-index: 1;
+        width: max(180vw, calc(100svh * 3));
+        max-width: none;
+        transform: translateX(calc(-50% + var(--geography-pan-x, 0px)));
+        transition: transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+      }
+
+      .geography-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        filter: contrast(1.08) saturate(0.9);
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .geography-light-field {
+        z-index: 8;
+      }
+
+      .geography-topbar {
+        position: absolute;
+        z-index: 12;
+        top: 7.4%;
+        right: 6.7%;
+        left: 8.6914%;
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        pointer-events: none;
+        transform: translateY(var(--geography-header-y, 0px));
+        transition: transform 180ms cubic-bezier(0.19, 1, 0.22, 1);
+        will-change: transform;
+      }
+
+      .geography-copy {
+        position: absolute;
+        z-index: 12;
+        top: 38.9%;
+        left: clamp(2.55rem, 5vw, 5.1rem);
+        width: min(39rem, 40vw);
+        isolation: isolate;
+        pointer-events: none;
+        transform: translateY(-7%);
+      }
+
+      .geography-copy h1 {
+        margin: 0;
+        color: oklch(0.96 0.012 82);
+        font-family: var(--font-display);
+        font-size: clamp(3.05rem, 4vw, 4.85rem);
+        font-weight: 400;
+        line-height: 1.02;
+        letter-spacing: 0;
+        white-space: nowrap;
+        text-shadow:
+          0 1px 1px oklch(0 0 0 / 0.94),
+          0 0 24px oklch(0 0 0 / 0.86);
+      }
+
+      .geography-copy p {
+        max-width: 34ch;
+        margin: clamp(1.25rem, 2vw, 1.8rem) 0 0;
+        color: oklch(0.91 0.012 82 / 0.9);
+        font-family: var(--font-display);
+        font-size: clamp(1rem, 1.24vw, 1.23rem);
+        line-height: 1.7;
+        text-wrap: pretty;
+        text-shadow: 0 0 16px oklch(0 0 0 / 0.72);
+      }
+
+      .geography-regions {
+        position: absolute;
+        inset: 0;
+        z-index: 6;
+        pointer-events: none;
+      }
+
+      .geography-volume {
+        position: absolute;
+        bottom: 38.2%;
+        left: var(--region-x);
+        width: var(--region-width, clamp(8rem, 17svh, 10.25rem));
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        border: 0;
+        background: transparent;
+        transform:
+          translateX(-50%)
+          translateY(calc(var(--region-y, 0rem) + var(--region-action-y, 0rem)))
+          scale(var(--region-scale, 1));
+        transform-origin: 50% 100%;
+        filter: drop-shadow(0 1.15rem 1.2rem oklch(0 0 0 / 0.74));
+        opacity: 1;
+        pointer-events: auto;
+        animation: geography-volume-rise 1050ms cubic-bezier(0.19, 1, 0.22, 1) backwards;
+        transition:
+          filter 220ms ease,
+          transform 260ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .geography-volume::before {
+        position: absolute;
+        right: 8%;
+        bottom: -0.75rem;
+        left: 8%;
+        height: 1.05rem;
+        content: '';
+        background: radial-gradient(ellipse at center, oklch(0 0 0 / 0.62), transparent 72%);
+        filter: blur(5px);
+        opacity: 0.82;
+      }
+
+      .geography-volume:hover,
+      .geography-volume:focus-visible {
+        --region-action-y: -0.2rem;
+        --region-scale: 1.012;
+        filter:
+          drop-shadow(0 1.35rem 1.35rem oklch(0 0 0 / 0.8))
+          drop-shadow(0 0 0.85rem oklch(0.69 0.146 74.6 / 0.18));
+        outline: none;
+      }
+
+      .geography-volume:focus-visible {
+        outline: 1px solid oklch(0.69 0.146 74.6 / 0.72);
+        outline-offset: 0.42rem;
+      }
+
+      .geography-volume.is-activated {
+        animation: geography-book-awaken 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+      }
+
+      .geography-cover {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: brightness(1.08) contrast(1.08) saturate(1.06);
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .geography-volume:hover .geography-cover,
+      .geography-volume:focus-visible .geography-cover,
+      .geography-volume.is-activated .geography-cover {
+        filter:
+          brightness(1.17)
+          contrast(1.1)
+          saturate(1.08)
+          drop-shadow(0 0 0.62rem oklch(0.69 0.146 74.6 / 0.2));
+      }
+
+      .geography-cover-reflection {
+        position: absolute;
+        z-index: 1;
+        top: calc(100% + 0.9rem);
+        left: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+        opacity: 0.16;
+        filter: blur(1px) brightness(0.66) saturate(0.78);
+        mix-blend-mode: screen;
+        transform: scaleY(-1);
+        transform-origin: center top;
+        -webkit-mask-image: linear-gradient(180deg, oklch(0 0 0 / 0.4), transparent 56%);
+        mask-image: linear-gradient(180deg, oklch(0 0 0 / 0.4), transparent 56%);
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .geography-volume:hover .geography-cover-reflection,
+      .geography-volume:focus-visible .geography-cover-reflection {
+        opacity: 0.22;
+        filter: blur(1.2px) brightness(0.74) saturate(0.86);
+      }
+
+      .geography-volume.is-activated .geography-cover-reflection {
+        animation: geography-reflection-ripple 720ms cubic-bezier(0.19, 1, 0.22, 1) both;
+      }
+
+      .region-tierialand { --region-x: 6.6%; }
+      .region-waste-marches { --region-x: 17.3%; animation-delay: 55ms; }
+      .region-spice-lands { --region-x: 28.1%; animation-delay: 110ms; }
+      .region-nine-realms { --region-x: 38.9%; animation-delay: 165ms; }
+      .region-larsina { --region-x: 49.7%; animation-delay: 220ms; }
+      .region-vinland { --region-x: 60.5%; animation-delay: 275ms; }
+      .region-baloluth { --region-x: 71.3%; animation-delay: 330ms; }
+      .region-emerald-isles { --region-x: 82.1%; animation-delay: 385ms; }
+      .region-the-jade { --region-x: 92.8%; animation-delay: 440ms; }
+
+      @keyframes geography-volume-rise {
+        from {
+          opacity: 0;
+          transform: translateX(-50%) translateY(calc(var(--region-y, 0rem) + 1.2rem)) scale(0.982);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(-50%) translateY(var(--region-y, 0rem)) scale(1);
+        }
+      }
+
+      @keyframes geography-book-awaken {
+        0% {
+          transform: translateX(-50%) translateY(var(--region-y, 0rem)) scale(1);
+        }
+
+        42% {
+          transform: translateX(-50%) translateY(calc(var(--region-y, 0rem) - 0.4rem)) scale(1.018);
+        }
+
+        100% {
+          transform: translateX(-50%) translateY(var(--region-y, 0rem)) scale(1);
+        }
+      }
+
+      @keyframes geography-reflection-ripple {
+        0% {
+          opacity: 0.16;
+          transform: scaleY(-1) translateY(0) scaleX(1);
+        }
+
+        42% {
+          opacity: 0.27;
+          transform: scaleY(-1) translateY(0.32rem) scaleX(1.045);
+        }
+
+        100% {
+          opacity: 0.16;
+          transform: scaleY(-1) translateY(0) scaleX(1);
+        }
+      }
+
+      @media (min-width: 761px) and (max-width: 1120px) {
+        .chronicles-copy {
+          top: 40%;
+          width: min(30rem, 35vw);
+        }
+
+        .chronicles-copy h1 {
+          font-size: clamp(2.45rem, 3.8vw, 3.7rem);
+        }
+
+        .geography-copy {
+          top: 40%;
+          width: min(30rem, 35vw);
+        }
+
+        .geography-copy h1 {
+          font-size: clamp(2.45rem, 3.8vw, 3.7rem);
+        }
+
+        .geography-copy p {
+          max-width: 25ch;
+          font-size: clamp(0.92rem, 1.15vw, 1rem);
+        }
+
+        .geography-volume {
+          --region-width: clamp(7.1rem, 15.6svh, 7.9rem);
+        }
+
+        .chronicles-copy p {
+          max-width: 25ch;
+          font-size: clamp(0.92rem, 1.15vw, 1rem);
+        }
+
+        .chronicle-volume {
+          --book-width: clamp(9.4rem, 15.5vw, 10.6rem);
+        }
+
+        .volume-heroic {
+          --book-x: 33%;
+        }
+
+        .volume-legends {
+          --book-x: 57.4%;
+        }
+
+        .volume-known {
+          --book-x: 82%;
+        }
+      }
+
+      .book-detail-page {
+        position: relative;
+        min-height: 100svh;
+        overflow: hidden;
+        isolation: isolate;
+        color: var(--text);
+        background: var(--bg);
+      }
+
+      .book-detail-stage {
+        position: absolute;
+        inset: 0 0 auto;
+        height: 54svh;
+        min-height: 29rem;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 64% 82%, oklch(0.69 0.146 74.6 / 0.16), transparent 22%),
+          linear-gradient(180deg, oklch(0.035 0 0), var(--bg));
+      }
+
+      .book-detail-stage::after {
+        position: absolute;
+        inset: 0;
+        content: '';
+        background:
+          linear-gradient(90deg, oklch(0.01 0 0 / 0.72), transparent 24%, transparent 76%, oklch(0.01 0 0 / 0.68)),
+          linear-gradient(180deg, oklch(0.01 0 0 / 0.24), transparent 52%, oklch(0.01 0 0 / 0.82)),
+          radial-gradient(ellipse at 66% 88%, oklch(0.69 0.146 74.6 / 0.14), transparent 26%);
+      }
+
+      .book-detail-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 40%;
+        opacity: 0.78;
+        filter: contrast(1.1) saturate(0.9) brightness(0.78);
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .book-detail-topbar {
+        position: absolute;
+        z-index: 12;
+        top: clamp(1.45rem, 3vw, 2.25rem);
+        right: clamp(1.8rem, 3vw, 2.6rem);
+        left: clamp(1.8rem, 3vw, 2.6rem);
+        display: grid;
+        grid-template-columns: minmax(10rem, 1fr) auto minmax(7rem, 1fr);
+        gap: clamp(1rem, 2.2vw, 2rem);
+        align-items: center;
+        pointer-events: none;
+      }
+
+      .book-detail-brand,
+      .book-detail-nav button,
+      .book-detail-tools button,
+      .book-explore-button,
+      .book-return-link {
+        cursor: pointer;
+        pointer-events: auto;
+      }
+
+      .book-detail-brand {
+        justify-self: start;
+        padding: 0;
+        color: oklch(0.93 0.012 82 / 0.94);
+        border: 0;
+        background: transparent;
+        font-family: var(--font-display);
+        font-size: clamp(1.28rem, 2vw, 1.82rem);
+        line-height: 1;
+        letter-spacing: 0.38em;
+        text-shadow:
+          0 1px 1px oklch(0 0 0 / 0.9),
+          0 0 18px oklch(0 0 0 / 0.7);
+      }
+
+      .book-detail-nav {
+        display: flex;
+        gap: clamp(2rem, 4.3vw, 4.1rem);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .book-detail-nav button {
+        min-height: 2rem;
+        padding: 0.12rem 0.1rem;
+        color: oklch(0.9 0.012 82 / 0.86);
+        border: 0;
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        font-size: clamp(1rem, 1.22vw, 1.25rem);
+        letter-spacing: 0.18em;
+        white-space: nowrap;
+      }
+
+      .book-detail-nav button:hover,
+      .book-detail-nav button:focus-visible,
+      .book-detail-nav .is-active {
+        color: var(--text);
+        border-bottom-color: oklch(0.69 0.146 74.6 / 0.7);
+        outline: none;
+      }
+
+      .book-detail-tools {
+        justify-self: end;
+        display: flex;
+        gap: clamp(0.85rem, 1.4vw, 1.2rem);
+        align-items: center;
+        color: var(--gold);
+        pointer-events: auto;
+      }
+
+      .book-detail-tools button {
+        position: relative;
+        display: grid;
+        width: 2rem;
+        height: 2rem;
+        padding: 0;
+        place-items: center;
+        color: inherit;
+        border: 0;
+        background: transparent;
+      }
+
+      .book-search-icon {
+        position: relative;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid currentColor;
+        border-radius: 50%;
+      }
+
+      .book-search-icon::after {
+        position: absolute;
+        right: -0.45rem;
+        bottom: -0.34rem;
+        width: 0.58rem;
+        height: 2px;
+        content: '';
+        background: currentColor;
+        transform: rotate(45deg);
+        transform-origin: left center;
+      }
+
+      .book-tool-divider {
+        width: 1px;
+        height: 1.8rem;
+        background: oklch(0.69 0.146 74.6 / 0.56);
+      }
+
+      .book-menu-icon {
+        position: relative;
+        display: block;
+        width: 1.55rem;
+        height: 1rem;
+        border-top: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+      }
+
+      .book-menu-icon::before {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        height: 2px;
+        content: '';
+        background: currentColor;
+        transform: translateY(-50%);
+      }
+
+      .book-hero-layout {
+        position: absolute;
+        z-index: 5;
+        top: clamp(4.1rem, 8svh, 5.3rem);
+        right: clamp(2rem, 4vw, 4rem);
+        left: clamp(2rem, 4vw, 4rem);
+        display: grid;
+        grid-template-columns: minmax(18rem, 34vw) minmax(32rem, 1fr);
+        gap: clamp(2.3rem, 4.4vw, 5rem);
+        align-items: center;
+        height: min(41svh, 24rem);
+      }
+
+      .book-hero-object {
+        position: relative;
+        justify-self: center;
+        align-self: end;
+        width: clamp(13.4rem, 18.4vw, 18.8rem);
+        margin-bottom: clamp(1.55rem, 2.6svh, 2.4rem);
+        filter:
+          drop-shadow(0 1.2rem 1.35rem oklch(0 0 0 / 0.8))
+          drop-shadow(0 0 1.3rem oklch(0.69 0.146 74.6 / 0.12));
+      }
+
+      .book-hero-object::before {
+        position: absolute;
+        right: -42%;
+        bottom: -1.35rem;
+        left: -46%;
+        height: clamp(1.55rem, 2.9vw, 2.25rem);
+        content: '';
+        background:
+          linear-gradient(180deg, oklch(0.45 0.012 80), oklch(0.19 0.006 80) 58%, oklch(0.11 0 0)),
+          radial-gradient(ellipse at 50% 0, oklch(0.78 0.02 82 / 0.26), transparent 62%);
+        border-top: 1px solid oklch(0.82 0.028 82 / 0.4);
+        box-shadow:
+          0 0.5rem 1.2rem oklch(0 0 0 / 0.72),
+          inset 0 1px 0 oklch(0.94 0.014 82 / 0.16);
+      }
+
+      .book-hero-object::after {
+        position: absolute;
+        right: -72%;
+        bottom: -3.35rem;
+        left: -72%;
+        height: 2.4rem;
+        content: '';
+        background: radial-gradient(ellipse at center, oklch(0.69 0.146 74.6 / 0.13), transparent 68%);
+        filter: blur(7px);
+      }
+
+      .book-hero-cover {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: brightness(1.08) contrast(1.09) saturate(1.08);
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .book-hero-copy {
+        max-width: 47rem;
+        transform: translateY(-0.4rem);
+      }
+
+      .book-hero-copy h1 {
+        margin: 0;
+        color: oklch(0.98 0.012 82);
+        font-size: clamp(3.7rem, 5vw, 5.35rem);
+        font-weight: 500;
+        line-height: 1.04;
+        letter-spacing: 0.04em;
+        text-shadow:
+          0 1px 1px oklch(0 0 0 / 0.86),
+          0 0 28px oklch(0 0 0 / 0.82);
+        text-wrap: balance;
+      }
+
+      .book-title-rule {
+        position: relative;
+        display: block;
+        width: min(17rem, 42%);
+        height: 1px;
+        margin: clamp(1.35rem, 2.3svh, 1.75rem) 0 clamp(1.2rem, 2svh, 1.65rem);
+        background: linear-gradient(90deg, var(--gold), oklch(0.69 0.146 74.6 / 0.45), transparent);
+      }
+
+      .book-title-rule::before,
+      .book-title-rule::after {
+        position: absolute;
+        top: 50%;
+        width: 0.44rem;
+        height: 0.44rem;
+        content: '';
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.72);
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .book-title-rule::before {
+        left: 43%;
+      }
+
+      .book-title-rule::after {
+        left: 48%;
+      }
+
+      .book-hero-copy p {
+        max-width: 44ch;
+        margin: 0;
+        color: oklch(0.92 0.012 82 / 0.9);
+        font-size: clamp(1.1rem, 1.55vw, 1.45rem);
+        line-height: 1.72;
+        letter-spacing: 0.1em;
+        text-shadow: 0 0 16px oklch(0 0 0 / 0.78);
+      }
+
+      .book-explore-button {
+        display: inline-flex;
+        gap: 1.1rem;
+        align-items: center;
+        min-height: 3rem;
+        margin-top: clamp(1.25rem, 2.2svh, 1.8rem);
+        padding: 0 1.65rem;
+        color: oklch(0.91 0.12 76);
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.92);
+        background: oklch(0.045 0 0 / 0.26);
+        font-size: clamp(1rem, 1.25vw, 1.18rem);
+        letter-spacing: 0.18em;
+      }
+
+      .book-explore-button:hover,
+      .book-explore-button:focus-visible {
+        color: var(--bg);
+        background: var(--gold);
+        outline: none;
+      }
+
+      .book-explore-button span {
+        font-size: 1.55em;
+        line-height: 0;
+      }
+
+      .book-return-link {
+        display: block;
+        min-height: 2rem;
+        margin-top: 0.75rem;
+        padding: 0;
+        color: oklch(0.9 0.012 82 / 0.64);
+        border: 0;
+        border-bottom: 1px solid transparent;
+        background: transparent;
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
+      }
+
+      .book-return-link:hover,
+      .book-return-link:focus-visible {
+        color: var(--text);
+        border-bottom-color: var(--gold);
+        outline: none;
+      }
+
+      .book-contents-panel {
+        position: absolute;
+        z-index: 8;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 47svh;
+        min-height: 25rem;
+        padding: clamp(4.3rem, 6.5svh, 5.15rem) clamp(2rem, 4.7vw, 4.6rem) clamp(1.6rem, 3svh, 2.4rem);
+        color: oklch(0.2 0.025 72);
+        background:
+          radial-gradient(circle at 9% 15%, oklch(0.78 0.094 77 / 0.17), transparent 19%),
+          radial-gradient(circle at 82% 22%, oklch(0.69 0.146 74.6 / 0.13), transparent 23%),
+          linear-gradient(180deg, oklch(0.96 0.021 88), oklch(0.92 0.015 86));
+        border-top: 1px solid oklch(0.69 0.146 74.6 / 0.5);
+        box-shadow: 0 -1.2rem 2.1rem oklch(0 0 0 / 0.4);
+      }
+
+      .book-contents-panel:focus {
+        outline: none;
+      }
+
+      .book-era-strip {
+        position: absolute;
+        top: -2.15rem;
+        right: clamp(1rem, 1.8vw, 1.65rem);
+        left: clamp(1rem, 1.8vw, 1.65rem);
+        display: flex;
+        min-height: 4.25rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        color: oklch(0.22 0.03 72);
+        background:
+          radial-gradient(circle at 3% 18%, oklch(0.69 0.146 74.6 / 0.16), transparent 16%),
+          radial-gradient(circle at 97% 18%, oklch(0.69 0.146 74.6 / 0.16), transparent 16%),
+          linear-gradient(180deg, oklch(0.97 0.026 88), oklch(0.91 0.018 86));
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.66);
+        border-radius: 8px;
+        box-shadow:
+          0 0 0 1px oklch(0.94 0.014 82 / 0.5) inset,
+          0 0.45rem 1rem oklch(0.18 0.04 72 / 0.1);
+        scrollbar-width: thin;
+        scrollbar-color: oklch(0.69 0.146 74.6 / 0.55) transparent;
+      }
+
+      .book-era-tab {
+        position: relative;
+        display: grid;
+        flex: 1 0 max(11.2rem, 18%);
+        min-width: 0;
+        place-items: center;
+        padding: 0.65rem 1rem;
+        cursor: pointer;
+        color: inherit;
+        border: 0;
+        background: transparent;
+        font-family: var(--font-cjk);
+        font-size: clamp(1rem, 1.35vw, 1.28rem);
+        letter-spacing: 0.1em;
+        text-align: center;
+        text-wrap: balance;
+        transition:
+          color 180ms ease,
+          background 180ms ease;
+      }
+
+      .book-era-tab + .book-era-tab {
+        border-left: 1px solid oklch(0.69 0.146 74.6 / 0.45);
+      }
+
+      .book-era-tab + .book-era-tab::before {
+        position: absolute;
+        top: 50%;
+        left: -0.32rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        content: '';
+        background: oklch(0.92 0.015 86);
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.64);
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .book-era-tab:hover,
+      .book-era-tab:focus-visible,
+      .book-era-tab.is-active {
+        color: oklch(0.16 0.04 72);
+        background: oklch(0.69 0.146 74.6 / 0.12);
+        outline: none;
+      }
+
+      .book-chapter-grid {
+        display: block;
+        height: 100%;
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: oklch(0.69 0.146 74.6 / 0.52) transparent;
+      }
+
+      .book-chapter-group {
+        min-width: 0;
+      }
+
+      .book-chapter-group + .book-chapter-group {
+        padding-left: 0;
+        border-left: 0;
+      }
+
+      .book-chapter-group[hidden] {
+        display: none;
+      }
+
+      .book-chapter-group h2 {
+        position: relative;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        margin: 0 0 clamp(0.9rem, 1.4svh, 1.2rem);
+        color: oklch(0.22 0.036 72);
+        font-size: clamp(1.2rem, 1.52vw, 1.48rem);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+      }
+
+      .book-chapter-group h2::before {
+        display: inline-grid;
+        flex: 0 0 1.75rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        place-items: center;
+        content: '\2726';
+        color: oklch(0.69 0.146 74.6 / 0.88);
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.62);
+        border-radius: 50%;
+        font-size: 0.88rem;
+        line-height: 1;
+      }
+
+      .book-chapter-group ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        column-gap: clamp(1.4rem, 3vw, 3rem);
+        gap: clamp(0.42rem, 0.86svh, 0.68rem);
+        padding: 0;
+        margin: 0;
+        color: oklch(0.23 0.028 72 / 0.9);
+        font-size: clamp(0.92rem, 1.06vw, 1.05rem);
+        line-height: 1.42;
+        list-style: none;
+      }
+
+      .book-chapter-group li {
+        position: relative;
+        min-width: 0;
+        padding-left: 1.1rem;
+        text-wrap: pretty;
+      }
+
+      .book-chapter-group li::before {
+        position: absolute;
+        top: 0.64em;
+        left: 0.1rem;
+        width: 0.34rem;
+        height: 0.34rem;
+        content: '';
+        border: 1px solid oklch(0.69 0.146 74.6 / 0.82);
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      .book-empty-note {
+        max-width: 48ch;
+        margin: 0;
+        color: oklch(0.25 0.026 72 / 0.72);
+        font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+        line-height: 1.65;
+        letter-spacing: 0.08em;
+      }
+
+      @media (min-width: 761px) and (max-width: 1120px) {
+        .book-detail-topbar {
+          grid-template-columns: auto 1fr auto;
+        }
+
+        .book-detail-nav {
+          gap: clamp(1.15rem, 2.4vw, 2.1rem);
+        }
+
+        .book-hero-layout {
+          grid-template-columns: minmax(14rem, 30vw) minmax(0, 1fr);
+          gap: clamp(1.6rem, 3vw, 2.6rem);
+        }
+
+        .book-hero-object {
+          width: clamp(12.6rem, 18vw, 15.2rem);
+        }
+
+        .book-hero-copy h1 {
+          font-size: clamp(3rem, 5.2vw, 4.2rem);
+        }
+
+        .book-chapter-grid {
+          gap: clamp(1rem, 1.8vw, 1.6rem);
+        }
+
+        .book-chapter-group ul {
+          font-size: clamp(0.82rem, 1.2vw, 0.96rem);
+        }
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .placeholder-page {
+        position: relative;
+        display: grid;
+        min-height: 100svh;
+        place-items: center;
+        overflow: hidden;
+        padding: clamp(1.2rem, 4vw, 3rem);
+        isolation: isolate;
+        background:
+          radial-gradient(circle at 50% 50%, oklch(0.22 0.028 238 / 0.22), transparent 36%),
+          var(--bg);
+      }
+
+      .placeholder-bg {
+        position: absolute;
+        inset: -8%;
+        z-index: -2;
+        width: 116%;
+        height: 116%;
+        object-fit: cover;
+        opacity: 0.22;
+        filter: blur(14px) saturate(0.8);
+      }
+
+      .placeholder-topbar {
+        position: absolute;
+        z-index: 2;
+        top: 7.4%;
+        right: 6.7%;
+        left: 8.6914%;
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        pointer-events: none;
+      }
+
+      .placeholder-page::after {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        content: '';
+        background:
+          linear-gradient(90deg, var(--bg), oklch(0.045 0 0 / 0.64), var(--bg)),
+          linear-gradient(180deg, oklch(0.01 0 0 / 0.35), oklch(0.01 0 0 / 0.86));
+      }
+
+      .placeholder-panel {
+        width: min(42rem, 100%);
+        padding: clamp(1.5rem, 4vw, 3rem);
+        border: 1px solid oklch(0.94 0.014 82 / 0.22);
+        background: oklch(0.045 0 0 / 0.8);
+      }
+
+      .placeholder-brand {
+        margin: 0 0 0.85rem;
+        color: oklch(0.84 0.014 82 / 0.72);
+        font-family: var(--font-display);
+        font-size: 0.82rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .placeholder-panel h1 {
+        margin: 0;
+        font-size: clamp(2rem, 7vw, 4rem);
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        line-height: 1.1;
+        text-wrap: balance;
+      }
+
+      .placeholder-panel p {
+        max-width: 36rem;
+        margin: 1.1rem 0 0;
+        color: oklch(0.9 0.012 82 / 0.82);
+        font-size: clamp(1rem, 2.4vw, 1.18rem);
+        line-height: 1.8;
+      }
+
+      .placeholder-note {
+        font-family: var(--font-display);
+      }
+
+      .back-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.9rem;
+        margin-top: 1.65rem;
+        padding: 0 1.35rem;
+        cursor: pointer;
+        color: var(--bg);
+        border: 1px solid var(--gold);
+        border-radius: 999px;
+        background: var(--gold);
+        letter-spacing: 0.1em;
+      }
+
+      .back-button:hover,
+      .back-button:focus-visible {
+        filter: brightness(1.08);
+        outline: none;
+      }
+
+      @keyframes stage-arrival {
+        from {
+          opacity: 0;
+          transform: translateY(1.1rem) scale(1.012);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (max-aspect-ratio: 1/1), (max-width: 760px) {
+        .desktop-stage,
+        .hero-nav {
+          display: none;
+        }
+
+        .mobile-stage {
+          position: relative;
+          display: grid;
+          grid-template-rows: auto auto 1fr auto auto auto;
+          align-content: start;
+          min-height: 100svh;
+          padding: clamp(1.15rem, 4vw, 1.75rem);
+          overflow: hidden;
+          background:
+            linear-gradient(180deg, oklch(0.04 0 0), transparent 42%),
+            radial-gradient(circle at 52% 58%, oklch(0.24 0.018 78 / 0.28), transparent 43%),
+            var(--bg);
+        }
+
+        .mobile-stage::after {
+          position: absolute;
+          right: -25%;
+          bottom: -12%;
+          left: -25%;
+          height: 33svh;
+          pointer-events: none;
+          content: '';
+          background:
+            linear-gradient(180deg, transparent, var(--bg) 70%),
+            radial-gradient(ellipse at 50% 30%, oklch(0.22 0.028 238 / 0.56), transparent 68%);
+        }
+
+        .mobile-arches {
+          position: absolute;
+          top: clamp(1.7rem, 9svh, 4.5rem);
+          left: 50%;
+          width: min(128vw, 40rem);
+          max-width: none;
+          opacity: 0.6;
+          transform: translateX(-50%);
+        }
+
+        .mobile-brand {
+          position: relative;
+          z-index: 3;
+          justify-self: start;
+          font-family: var(--font-display);
+          font-size: clamp(1.4rem, 7vw, 2.25rem);
+          letter-spacing: 0.35em;
+        }
+
+        .mobile-statue {
+          position: relative;
+          z-index: 2;
+          justify-self: center;
+          width: min(64vw, 19rem);
+          height: min(29svh, 17rem);
+          margin-top: clamp(1.8rem, 8svh, 4.5rem);
+          object-fit: cover;
+          object-position: center;
+          filter: drop-shadow(0 24px 28px oklch(0 0 0 / 0.68));
+        }
+
+        .mobile-reflection {
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          bottom: 24svh;
+          width: min(108vw, 32rem);
+          max-width: none;
+          opacity: 0.62;
+          transform: translateX(-50%);
+        }
+
+        .mobile-actions {
+          position: relative;
+          z-index: 3;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.25rem 0.55rem;
+          align-items: center;
+          justify-self: center;
+          margin: clamp(0.5rem, 2svh, 1.2rem) 0 0;
+          color: oklch(0.88 0.012 82 / 0.82);
+          font-size: clamp(0.88rem, 3.8vw, 1.1rem);
+          letter-spacing: 0.16em;
+          text-align: center;
+        }
+
+        .mobile-actions button {
+          min-height: 1.9rem;
+          padding: 0.15rem 0.1rem;
+          cursor: pointer;
+          color: inherit;
+          border: 1px solid transparent;
+          background: transparent;
+          letter-spacing: inherit;
+        }
+
+        .mobile-stage h2 {
+          position: relative;
+          z-index: 3;
+          max-width: 9.2ch;
+          margin: clamp(0.45rem, 2svh, 1rem) 0 0;
+          font-family: var(--font-display);
+          font-size: clamp(3.05rem, 16vw, 5.45rem);
+          font-weight: 400;
+          line-height: 0.93;
+          letter-spacing: 0;
+          text-wrap: balance;
+        }
+
+        .mobile-poem {
+          position: relative;
+          z-index: 3;
+          max-width: 28ch;
+          margin: clamp(0.85rem, 2.3svh, 1.2rem) 0 0 auto;
+          color: oklch(0.89 0.012 82 / 0.76);
+          font-family: var(--font-display);
+          font-size: clamp(0.95rem, 4vw, 1.2rem);
+          line-height: 1.55;
+          text-align: right;
+        }
+
+        .mobile-enter {
+          position: relative;
+          z-index: 3;
+          display: inline-grid;
+          gap: 0.1rem;
+          place-items: center;
+          justify-self: center;
+          min-width: min(100%, 17rem);
+          min-height: 3.2rem;
+          margin-top: clamp(1rem, 3svh, 1.8rem);
+          padding: 0.65rem 1.15rem;
+          cursor: pointer;
+          color: var(--text);
+          border: 1px solid oklch(0.94 0.014 82 / 0.82);
+          border-radius: 999px;
+          background: oklch(0.045 0 0 / 0.66);
+          letter-spacing: 0.14em;
+          backdrop-filter: blur(8px);
+        }
+
+        .mobile-enter span {
+          font-family: var(--font-display);
+          font-size: 0.75rem;
+          letter-spacing: 0.08em;
+        }
+
+        .chronicles-bg {
+          opacity: 0.9;
+          object-position: 50% center;
+        }
+
+        .geography-panorama {
+          width: max(225vw, calc(100svh * 3));
+        }
+
+        .geography-page::before {
+          background:
+            linear-gradient(90deg, oklch(0.01 0 0 / 0.82), transparent 38%, transparent 70%, oklch(0.01 0 0 / 0.58)),
+            linear-gradient(180deg, oklch(0.01 0 0 / 0.6), transparent 36%, oklch(0.01 0 0 / 0.78));
+        }
+
+        .geography-topbar {
+          top: clamp(1.1rem, 4svh, 1.65rem);
+          right: clamp(1rem, 4vw, 1.4rem);
+          left: clamp(1rem, 4vw, 1.4rem);
+          gap: 0.8rem;
+        }
+
+        .geography-copy {
+          top: 20svh;
+          right: 1.25rem;
+          left: 1.25rem;
+          width: auto;
+          transform: none;
+        }
+
+        .geography-copy h1 {
+          font-size: clamp(2.7rem, 12.4vw, 3.95rem);
+          line-height: 0.98;
+        }
+
+        .geography-copy p {
+          max-width: 28ch;
+          margin-top: 1rem;
+          font-size: clamp(0.95rem, 3.9vw, 1.08rem);
+          line-height: 1.55;
+        }
+
+        .geography-volume {
+          bottom: 37.9%;
+          --region-width: clamp(5.4rem, 13.6svh, 7.2rem);
+        }
+
+        .chronicles-page::before {
+          background:
+            linear-gradient(90deg, oklch(0.01 0 0 / 0.82), transparent 52%, oklch(0.01 0 0 / 0.56)),
+            linear-gradient(180deg, oklch(0.01 0 0 / 0.58), transparent 38%, oklch(0.01 0 0 / 0.76));
+        }
+
+        .chronicles-topbar,
+        .placeholder-topbar {
+          top: clamp(1.1rem, 4svh, 1.65rem);
+          right: clamp(1rem, 4vw, 1.4rem);
+          left: clamp(1rem, 4vw, 1.4rem);
+          gap: 0.8rem;
+        }
+
+        .chronicles-brand {
+          font-size: clamp(1.18rem, 6vw, 1.7rem);
+          letter-spacing: 0.31em;
+        }
+
+        .section-nav {
+          width: min(12rem, 52vw);
+          gap: 0.32rem;
+          justify-items: end;
+        }
+
+        .section-nav button {
+          min-height: 1.75rem;
+          padding: 0.12rem 0.2rem;
+          font-size: clamp(0.75rem, 3.3vw, 0.96rem);
+          letter-spacing: 0.12em;
+        }
+
+        .section-nav .is-active {
+          min-width: auto;
+          min-height: 2rem;
+          padding: 0.28rem 0.72rem;
+        }
+
+        .chronicles-copy {
+          top: 20svh;
+          right: 1.25rem;
+          left: 1.25rem;
+          width: auto;
+          transform: none;
+        }
+
+        .chronicles-copy h1 {
+          font-size: clamp(2.7rem, 12.4vw, 3.95rem);
+          line-height: 0.98;
+        }
+
+        .chronicles-copy p {
+          max-width: 24ch;
+          margin-top: 1rem;
+          font-size: clamp(0.95rem, 3.9vw, 1.08rem);
+          line-height: 1.55;
+        }
+
+        .chronicles-rule {
+          width: min(13rem, 68%);
+          margin-top: 1.05rem;
+        }
+
+        .chronicles-back {
+          min-height: 2rem;
+          margin-top: 0.68rem;
+          font-size: 0.82rem;
+          letter-spacing: 0.16em;
+        }
+
+        .chronicles-volumes {
+          inset: 0;
+        }
+
+        .chronicle-volume {
+          bottom: 30.1%;
+          --book-width: clamp(6.15rem, 29vw, 7.25rem);
+        }
+
+        .volume-heroic {
+          --book-x: 18.2%;
+          --book-y: 0.2rem;
+        }
+
+        .volume-legends {
+          --book-x: 50%;
+          --book-y: 0.2rem;
+        }
+
+        .volume-known {
+          --book-x: 81.8%;
+          --book-y: 0.2rem;
+        }
+
+        .book-detail-page {
+          max-height: 100svh;
+          overflow-y: auto;
+        }
+
+        .book-detail-stage {
+          height: 35rem;
+          min-height: 35rem;
+        }
+
+        .book-detail-topbar {
+          top: 1rem;
+          right: 1rem;
+          left: 1rem;
+          grid-template-columns: 1fr auto;
+          gap: 0.8rem;
+        }
+
+        .book-detail-brand {
+          font-size: clamp(1.18rem, 6vw, 1.7rem);
+          letter-spacing: 0.31em;
+        }
+
+        .book-detail-tools {
+          grid-column: 2;
+          grid-row: 1;
+          gap: 0.75rem;
+        }
+
+        .book-detail-nav {
+          grid-column: 1 / -1;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          gap: 0.45rem 1rem;
+          padding-top: 0.35rem;
+        }
+
+        .book-detail-nav button {
+          min-height: 1.7rem;
+          font-size: clamp(0.78rem, 3.2vw, 0.94rem);
+          letter-spacing: 0.12em;
+        }
+
+        .book-hero-layout {
+          position: relative;
+          top: auto;
+          right: auto;
+          left: auto;
+          display: grid;
+          grid-template-columns: 1fr;
+          height: auto;
+          min-height: 35rem;
+          padding: 7.2rem 1.25rem 3rem;
+          gap: 1.1rem;
+        }
+
+        .book-hero-object {
+          justify-self: center;
+          width: clamp(9.8rem, 42vw, 12.2rem);
+          margin: 0;
+        }
+
+        .book-hero-copy {
+          max-width: none;
+          transform: none;
+        }
+
+        .book-hero-copy h1 {
+          font-size: clamp(2.45rem, 11vw, 3.45rem);
+          line-height: 1.08;
+        }
+
+        .book-title-rule {
+          width: min(13.5rem, 68%);
+          margin: 1rem 0;
+        }
+
+        .book-hero-copy p {
+          max-width: 27ch;
+          font-size: clamp(1rem, 4vw, 1.14rem);
+          line-height: 1.58;
+          letter-spacing: 0.08em;
+        }
+
+        .book-explore-button {
+          min-height: 2.75rem;
+          margin-top: 1rem;
+          font-size: 0.98rem;
+        }
+
+        .book-contents-panel {
+          position: relative;
+          height: auto;
+          min-height: 0;
+          padding: 1.1rem 1.2rem 2.2rem;
+        }
+
+        .book-era-strip {
+          position: relative;
+          top: auto;
+          right: auto;
+          left: auto;
+          display: flex;
+          flex-direction: column;
+          overflow: visible;
+          min-height: 0;
+          margin-bottom: 1.35rem;
+        }
+
+        .book-era-tab {
+          flex-basis: auto;
+          min-height: 2.7rem;
+          font-size: 1rem;
+        }
+
+        .book-era-tab + .book-era-tab {
+          border-top: 1px solid oklch(0.69 0.146 74.6 / 0.45);
+          border-left: 0;
+        }
+
+        .book-era-tab + .book-era-tab::before {
+          top: -0.31rem;
+          left: 50%;
+          transform: translateX(-50%) rotate(45deg);
+        }
+
+        .book-chapter-grid {
+          height: auto;
+          overflow: visible;
+        }
+
+        .book-chapter-group + .book-chapter-group {
+          padding-left: 0;
+          border-top: 0;
+          border-left: 0;
+        }
+
+        .book-chapter-group h2 {
+          font-size: 1.18rem;
+        }
+
+        .book-chapter-group ul {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cursor-light-field::before {
+          background: oklch(0.045 0 0 / 0.18);
+          -webkit-mask-image: none;
+          mask-image: none;
+        }
+
+        .cursor-halo {
+          display: none;
+        }
+
+        .desktop-text-plane {
+          transform: none !important;
+        }
+
+        .section-text-plane {
+          transform: none !important;
+        }
+
+        .chronicles-topbar {
+          transform: none !important;
+        }
+
+        .geography-panorama {
+          transform: translateX(-50%) !important;
+        }
+
+        .geography-topbar {
+          transform: none !important;
+        }
+
+        .chronicle-volume.is-activated,
+        .chronicle-volume.is-activated .chronicle-cover-reflection,
+        .geography-volume.is-activated,
+        .geography-volume.is-activated .geography-cover-reflection {
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero-stage" id="home" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="sr-only">TIERIA, Echoes Of The Poetic Age</h1>
+
+        <div class="desktop-stage">
+          <div class="desktop-composition">
+            <img class="desktop-hero-image" src="../APP/src/assets/Hb381Ycho45qeCoc-stage-clean.png" alt="" aria-hidden="true" />
+            <div class="cursor-light-field" aria-hidden="true">
+              <span class="cursor-halo cursor-halo-trail"></span>
+              <span class="cursor-halo cursor-halo-main"></span>
+            </div>
+            <div class="desktop-text-plane">
+              <img class="text-plane-item text-plane-logo" src="../APP/src/assets/text-plane/tieria-logo.png" alt="" aria-hidden="true" />
+              <img class="text-plane-item text-plane-title" src="../APP/src/assets/text-plane/poetic-title.png" alt="" aria-hidden="true" />
+              <img class="text-plane-item text-plane-poem" src="../APP/src/assets/text-plane/poem.png" alt="" aria-hidden="true" />
+              <nav class="hero-nav" aria-label="TIERIA sections">
+                <button type="button" data-page="chronicles">&#32534;&#24180;&#21490;&#19982;&#29579;&#32479;</button>
+                <button type="button" data-page="geography">&#22320;&#29702;&#19982;&#26041;&#31867;</button>
+                <button class="primary-link" type="button" data-page="poetic">&#26368;&#21518;&#30340;&#35799;&#20154;&#26102;&#20195;</button>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mobile-stage">
+          <img class="mobile-arches" src="../APP/src/assets/6eDQtCLsCd8BYhrs-transparent.png" alt="" aria-hidden="true" />
+          <div class="mobile-brand" aria-label="TIERIA">TIERIA</div>
+          <img class="mobile-statue" src="../APP/src/assets/ZxYVF4luJcHYh622-transparent.png" alt="Marble muse holding a lyre." />
+          <img class="mobile-reflection" src="../APP/src/assets/rpw5S7Y7iCAxfIa7-transparent.png" alt="" aria-hidden="true" />
+          <div class="mobile-actions" aria-label="TIERIA sections">
+            <button type="button" data-page="chronicles">&#32534;&#24180;&#21490;&#19982;&#29579;&#32479;</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-page="geography">&#22320;&#29702;&#19982;&#26041;&#31867;</button>
+          </div>
+          <h2>Echoes Of The Poetic Age</h2>
+          <p class="mobile-poem">Amid a falling blaze of burning light, a meteor cleft the heavens.</p>
+          <button class="mobile-enter" type="button" data-page="poetic">
+            &#26368;&#21518;&#30340;&#35799;&#20154;&#26102;&#20195;
+            <span>Enter the Poetic Age</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="chronicles-page" id="chronicles" aria-labelledby="chronicles-title" hidden>
+        <img class="chronicles-bg" src="../APP/src/assets/chronicles-v2/chronicles-stage.png" alt="" aria-hidden="true" />
+        <div class="chronicles-light-field cursor-light-field" aria-hidden="true">
+          <span class="cursor-halo cursor-halo-trail"></span>
+          <span class="cursor-halo cursor-halo-main"></span>
+        </div>
+        <div class="section-text-plane chronicles-text-plane">
+          <header class="chronicles-topbar">
+            <button class="chronicles-brand" type="button" data-back>TIERIA</button>
+            <nav class="section-nav" aria-label="TIERIA sections">
+              <button class="is-active" type="button" data-page="chronicles" aria-current="page">&#32534;&#24180;&#21490;&#19982;&#29579;&#32479;</button>
+              <button type="button" data-page="geography">&#22320;&#29702;&#19982;&#26041;&#31867;</button>
+              <button type="button" data-page="poetic">&#26368;&#21518;&#30340;&#35799;&#20154;&#26102;&#20195;</button>
+            </nav>
+          </header>
+          <div class="chronicles-copy">
+            <h1 id="chronicles-title">Chronicles &amp;<br />Royal Lineage</h1>
+            <p>The memory of kings, unfinished deeds, and the order of the known world.</p>
+            <span class="chronicles-rule" aria-hidden="true"></span>
+            <button class="chronicles-back" type="button" data-back>&#36820;&#22238;&#26609;&#24266;</button>
+          </div>
+        </div>
+        <div class="chronicles-volumes" aria-label="Chronicle volumes">
+          <button
+            class="chronicle-volume volume-heroic"
+            type="button"
+            data-volume
+            data-book="heroic"
+            aria-label="归来、逝去与英雄史诗。关于英雄、战争与命运轮回的古老吟游。"
+          >
+            <img class="chronicle-cover" src="../APP/src/assets/chronicles-v2/heroic-cover.png" alt="" aria-hidden="true" />
+            <img class="chronicle-cover-reflection" src="../APP/src/assets/chronicles-v2/heroic-cover.png" alt="" aria-hidden="true" />
+          </button>
+          <button
+            class="chronicle-volume volume-legends"
+            type="button"
+            data-volume
+            data-book="legends"
+            aria-label="传说、历史与未竟之业。记载王国兴衰与先行者未竟之志。"
+          >
+            <img class="chronicle-cover" src="../APP/src/assets/chronicles-v2/legends-cover.png" alt="" aria-hidden="true" />
+            <img class="chronicle-cover-reflection" src="../APP/src/assets/chronicles-v2/legends-cover.png" alt="" aria-hidden="true" />
+          </button>
+          <button
+            class="chronicle-volume volume-known"
+            type="button"
+            data-volume
+            data-book="known-world"
+            aria-label="已知世界志。绘制大陆、谱写与帝国的知识典藏。"
+          >
+            <img class="chronicle-cover" src="../APP/src/assets/chronicles-v2/known-world-cover.png" alt="" aria-hidden="true" />
+            <img class="chronicle-cover-reflection" src="../APP/src/assets/chronicles-v2/known-world-cover.png" alt="" aria-hidden="true" />
+          </button>
+        </div>
+      </section>
+
+      <section class="book-detail-page heroic-book-detail" id="heroic-book" aria-labelledby="heroic-book-title" hidden>
+        <div class="book-detail-stage" aria-hidden="true">
+          <img class="book-detail-bg" src="../APP/src/assets/chronicles-v2/chronicles-stage.png" alt="" />
+        </div>
+        <header class="book-detail-topbar">
+          <button class="book-detail-brand" type="button" data-back>TIERIA</button>
+          <nav class="book-detail-nav" aria-label="TIERIA sections">
+            <button class="is-active" type="button" data-page="chronicles">&#32534;&#24180;&#21490;&#19982;&#29579;&#32479;</button>
+            <button type="button" data-page="geography">&#22320;&#29702;&#19982;&#26041;&#31867;</button>
+            <button type="button" data-page="poetic">&#26368;&#21518;&#30340;&#35799;&#20154;&#26102;&#20195;</button>
+          </nav>
+          <div class="book-detail-tools" aria-label="Book tools">
+            <button type="button" aria-label="搜索本卷"><span class="book-search-icon" aria-hidden="true"></span></button>
+            <span class="book-tool-divider" aria-hidden="true"></span>
+            <button type="button" aria-label="打开目录"><span class="book-menu-icon" aria-hidden="true"></span></button>
+          </div>
+        </header>
+
+        <div class="book-hero-layout">
+          <div class="book-hero-object" aria-hidden="true">
+            <img class="book-hero-cover" src="../APP/src/assets/chronicles-v2/heroic-cover.png" alt="" />
+          </div>
+          <div class="book-hero-copy">
+            <h1 id="heroic-book-title">归来、逝去与英雄史诗</h1>
+            <span class="book-title-rule" aria-hidden="true"></span>
+            <p>诸王归来，古史逝去，英雄与时代仍在回响。</p>
+            <button class="book-explore-button" type="button" data-focus-contents>
+              探索本卷
+              <span aria-hidden="true">›</span>
+            </button>
+            <button class="book-return-link" type="button" data-page="chronicles">返回编年史</button>
+          </div>
+        </div>
+
+        <section
+          class="book-contents-panel"
+          id="heroic-book-contents"
+          aria-label="归来、逝去与英雄史诗目录"
+          tabindex="-1"
+        >
+          <div class="book-era-strip" role="tablist" aria-label="选择时代">
+            <button class="book-era-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="heroic-era-ancient" data-era="ancient">太古时代</button>
+            <button class="book-era-tab" type="button" role="tab" aria-selected="false" aria-controls="heroic-era-first" data-era="first">第一纪元</button>
+            <button class="book-era-tab" type="button" role="tab" aria-selected="false" aria-controls="heroic-era-north" data-era="north">第二纪元-北方王国</button>
+            <button class="book-era-tab" type="button" role="tab" aria-selected="false" aria-controls="heroic-era-empire" data-era="empire">第二纪元-帝国</button>
+          </div>
+          <div class="book-chapter-grid">
+            <article class="book-chapter-group" id="heroic-era-ancient" role="tabpanel" data-era-panel="ancient">
+              <h2>太古时代</h2>
+              <ul>
+                <li>翠月的眼睛</li>
+                <li>忒诺亚-黄金时代与白银时代</li>
+                <li>荒州-诸神之子的崛起</li>
+                <li>巴洛卢瑟-尚葛之乱</li>
+                <li>拉尔斯尼亚-英雄时代的回声</li>
+                <li>翠月往事</li>
+                <li>翡翠的陨落</li>
+                <li>太古时代的终章</li>
+              </ul>
+            </article>
+            <article class="book-chapter-group" id="heroic-era-first" role="tabpanel" data-era-panel="first" hidden>
+              <h2>第一纪元</h2>
+              <ul>
+                <li>翠月陨落后的世界</li>
+                <li>阿尔诺王国——北方巨人的倒下</li>
+                <li>伊里昂斯王朝——东方巨鹿的陨落</li>
+                <li>五王之战</li>
+                <li>神之采石场之战</li>
+                <li>高崖要塞之战</li>
+                <li>血林之战</li>
+                <li>七戒远征</li>
+              </ul>
+            </article>
+            <article class="book-chapter-group" id="heroic-era-north" role="tabpanel" data-era-panel="north" hidden>
+              <h2>第二纪元-北方王国</h2>
+              <ul>
+                <li>"雄主"赫伦·赫雷斯特与北方王国的黑铁时代</li>
+                <li>"血斧"贡纳尔</li>
+                <li>布伦希尔德女王</li>
+                <li>贵族议会摄政时代</li>
+                <li>"佣兵王"埃里克</li>
+                <li>"铁砧"格恩泰尔</li>
+                <li>芙蕾雅女王</li>
+                <li>"守财奴"克雷格</li>
+                <li>"傀儡王"英格瓦</li>
+                <li>"僭主"洛克</li>
+                <li>"悲哀王"奥古斯都</li>
+              </ul>
+            </article>
+            <article class="book-chapter-group" id="heroic-era-empire" role="tabpanel" data-era-panel="empire" hidden>
+              <h2>第二纪元-帝国</h2>
+              <ul>
+                <li>老洛克里安的黎明与黄昏</li>
+                <li>"百日女王"拉瑞恩</li>
+                <li>"疯王"洛克里安二世</li>
+                <li>"忠诚的"提耶利亚</li>
+                <li>"强腕"阿塔里安</li>
+                <li>"短促的贤王"乔拉</li>
+                <li>"南境征服者"班克罗夫特</li>
+                <li>"昏王"洛克里安三世</li>
+                <li>"守成的"弗洛伦斯二世</li>
+                <li>"落马者"阿塔里安二世</li>
+                <li>"落马者二世"索尔</li>
+                <li>"瘫痪的"乔拉三世</li>
+                <li>"僭王"洛克里安四世</li>
+                <li>"蜡烛般"塞西二世</li>
+                <li>"坠落的"大卫</li>
+                <li>"迫王"科尔一世</li>
+                <li>"复兴者"索尔二世</li>
+                <li>"远征王"埃德加一世</li>
+                <li>"多谋的"雷纳德三世</li>
+                <li>"务实的"科尔二世</li>
+                <li>"勇武的"科尔三世</li>
+                <li>"征服者"提耶利亚</li>
+                <li>"贤王"索尔三世</li>
+                <li>"疲王"伊伦奥恩一世</li>
+                <li>"烬后者"伊伦奥恩二世</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="geography-page" id="geography" aria-labelledby="geography-title" hidden>
+        <div class="geography-panorama">
+          <img class="geography-bg" src="../APP/src/assets/geography/geography-stage.png" alt="" aria-hidden="true" />
+          <div class="geography-regions" aria-label="Geography region volumes">
+            <button class="geography-volume region-tierialand" type="button" data-region data-book="tierialand" aria-label="Tierialand region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/tierialand.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/tierialand.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-waste-marches" type="button" data-region data-book="waste-marches" aria-label="Waste Marches region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/waste-marches.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/waste-marches.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-spice-lands" type="button" data-region data-book="spice-lands" aria-label="Spice Lands region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/spice-lands.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/spice-lands.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-nine-realms" type="button" data-region data-book="nine-realms" aria-label="Nine Realms region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/nine-realms.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/nine-realms.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-larsina" type="button" data-region data-book="larsina" aria-label="Larsina region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/larsina.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/larsina.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-vinland" type="button" data-region data-book="vinland" aria-label="Vinland region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/vinland.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/vinland.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-baloluth" type="button" data-region data-book="baloluth" aria-label="Baloluth region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/baloluth.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/baloluth.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-emerald-isles" type="button" data-region data-book="emerald-isles" aria-label="Emerald Isles region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/emerald-isles.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/emerald-isles.png" alt="" aria-hidden="true" />
+            </button>
+            <button class="geography-volume region-the-jade" type="button" data-region data-book="the-jade" aria-label="The Jade region volume">
+              <img class="geography-cover" src="../APP/src/assets/geography/the-jade.png" alt="" aria-hidden="true" />
+              <img class="geography-cover-reflection" src="../APP/src/assets/geography/the-jade.png" alt="" aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+        <div class="geography-light-field cursor-light-field" aria-hidden="true">
+          <span class="cursor-halo cursor-halo-trail"></span>
+          <span class="cursor-halo cursor-halo-main"></span>
+        </div>
+        <div class="section-text-plane geography-text-plane">
+          <header class="geography-topbar">
+            <button class="chronicles-brand" type="button" data-back>TIERIA</button>
+            <nav class="section-nav" aria-label="TIERIA sections">
+              <button type="button" data-page="chronicles">&#32534;&#24180;&#21490;&#19982;&#29579;&#32479;</button>
+              <button class="is-active" type="button" data-page="geography" aria-current="page">&#22320;&#29702;&#19982;&#26041;&#31867;</button>
+              <button type="button" data-page="poetic">&#26368;&#21518;&#30340;&#35799;&#20154;&#26102;&#20195;</button>
+            </nav>
+          </header>
+          <div class="geography-copy">
+            <h1 id="geography-title">Geography &amp;<br />Regions</h1>
+            <p>The shape of lands, forgotten frontiers, and the order of rivers, realms, and roads.</p>
+            <span class="chronicles-rule" aria-hidden="true"></span>
+            <button class="chronicles-back" type="button" data-back>&#36820;&#22238;&#26609;&#24266;</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="placeholder-page" id="placeholder" aria-labelledby="placeholder-title" hidden>
+        <img class="placeholder-bg" src="../APP/src/assets/Hb381Ycho45qeCoc.webp" alt="" aria-hidden="true" />
+        <header class="placeholder-topbar">
+          <button class="chronicles-brand" type="button" data-back>TIERIA</button>
+          <nav class="section-nav" aria-label="TIERIA sections">
+            <button type="button" data-page="chronicles">&#32534;&#24180;&#21490;&#19982;&#29579;&#32479;</button>
+            <button type="button" data-page="geography">&#22320;&#29702;&#19982;&#26041;&#31867;</button>
+            <button class="is-active" type="button" data-page="poetic" aria-current="page">&#26368;&#21518;&#30340;&#35799;&#20154;&#26102;&#20195;</button>
+          </nav>
+        </header>
+        <div class="placeholder-panel">
+          <p class="placeholder-brand" id="placeholder-brand"></p>
+          <h1 id="placeholder-title"></h1>
+          <p id="placeholder-copy"></p>
+          <p class="placeholder-note">
+            This page is reserved for the next chapter. The gateway works now, and the return path is ready.
+          </p>
+          <button class="back-button" type="button" id="back-button" data-back>&#36820;&#22238;&#26609;&#24266;</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const pages = {
+        chronicles: {
+          title: '\u7f16\u5e74\u53f2\u4e0e\u738b\u7edf',
+          english: 'Chronicles & Royal Lineage',
+          copy: '\u8fd9\u91cc\u5c06\u6536\u5bb9 TIERIA \u7684\u738b\u7edf\u3001\u5e74\u8868\u4e0e\u5927\u4e8b\u8bb0\u3002',
+        },
+        geography: {
+          title: '\u5730\u7406\u4e0e\u65b9\u7c7b',
+          english: 'Geographies And Orders',
+          copy: '\u8fd9\u91cc\u5c06\u6536\u5bb9\u5927\u5730\u3001\u65cf\u7c7b\u3001\u57ce\u90a6\u4e0e\u65b9\u4f4d\u7684\u7d22\u5f15\u3002',
+        },
+        poetic: {
+          title: '\u6700\u540e\u7684\u8bd7\u4eba\u65f6\u4ee3',
+          english: 'The Last Poetic Age',
+          copy: '\u8fd9\u91cc\u5c06\u901a\u5411\u5e8f\u7ae0\u3001\u8bd7\u7bc7\u4e0e\u90a3\u4e2a\u88ab\u79f0\u4f5c\u6700\u7f8e\u65f6\u4ee3\u7684\u4f20\u8bf4\u3002',
+        },
+      };
+
+      const catalogSource = "\n# 《诗人时代的回声》目录\n\n# 传说、历史与未竟之事\n\n## 混沌、圣树与首生者\n\n## 蒙神、世界与次生者\n\n### 天穹、山峦与海洋\n\n### 白昼、黑夜与光明\n\n### 西风、北风与季候\n\n## 世界、锻铸与诸神\n\n### 先觉天\n\n### 以太海\n\n### 止界\n\n### 极乐地\n\n### 绯红荒野\n\n### 百战世界\n\n### 灵魂海\n\n### 八层地狱\n\n## 尘土、泪水与凡人\n\n# 归来、逝去与英雄史诗\n\n## 太古时代\n\n### 翠月的眼睛\n\n### 忒诺亚-黄金时代与白银时代\n\n### 荒州-诸神之子的崛起\n\n### 巴洛卢瑟-尚葛之乱\n\n### 拉尔斯尼亚-英雄时代的回声\n\n### 翠月往事\n\n### 翡翠的陨落\n\n### 太古时代的终章\n\n## 第一纪元\n\n### 翠月陨落后的世界\n\n### 阿尔诺王国——北方巨人的倒下\n\n### 伊里昂斯王朝——东方巨鹿的陨落\n\n### 五王之战\n\n### 神之采石场之战\n\n### 高崖要塞之战\n\n### 血林之战\n\n### 七戒远征\n\n## 第二纪元-北方王国\n\n### \"雄主\"赫伦·赫雷斯特与北方王国的黑铁时代\n\n### \"血斧\"贡纳尔\n\n### 布伦希尔德女王\n\n### 贵族议会摄政时代\n\n### \"佣兵王\"埃里克\n\n### \"铁砧\"格恩泰尔\n\n### 芙蕾雅女王\n\n### \"守财奴\"克雷格\n\n### \"傀儡王\"英格瓦\n\n### \"僭主\"洛克\n\n### \"悲哀王\"奥古斯都\n\n## 第二纪元-帝国\n\n### 老洛克里安的黎明与黄昏\n\n### \"百日女王\"拉瑞恩\n\n### \"疯王\"洛克里安二世\n\n### \"忠诚的\"提耶利亚\n\n### \"强腕\"阿塔里安\n\n### \"短促的贤王\"乔拉\n\n### \"南境征服者\"班克罗夫特\n\n### \"昏王\"洛克里安三世\n\n### \"守成的\"弗洛伦斯二世\n\n### \"落马者\"阿塔里安二世\n\n### \"落马者二世\"索尔\n\n### \"瘫痪的\"乔拉三世\n\n### \"僭王\"洛克里安四世\n\n### \"蜡烛般\"塞西二世\n\n### \"坠落的\"大卫\n\n### \"迫王\"科尔一世\n\n### \"复兴者\"索尔二世\n\n### \"远征王\"埃德加一世\n\n### \"多谋的\"雷纳德三世\n\n### \"务实的\"科尔二世\n\n### \"勇武的\"科尔三世\n\n### \"征服者\"提耶利亚\n\n### \"贤王\"索尔三世\n\n### \"疲王\"伊伦奥恩一世\n\n### \"烬后者\"伊伦奥恩二世\n\n# 已知世界的记载\n\n## 已知世界的地理\n\n## 已知世界的文字体系\n\n### 河西文字\n\n### 北方文字\n\n### 空文\n\n### 幽谷文字\n\n### 诺恩符文\n\n### 高等百湖地语\n\n### 阿妲尔文字\n\n### 太阳文\n\n### 高等阿契尼德文字\n\n### 怀恩里尼文字\n\n### 希阿文字\n\n### 祖扎达尔文字\n\n### 通用语\n\n### 塞尔克南文字\n\n### 汉隶\n\n### 番文\n\n### 回鹘文\n\n### 梵文\n\n### 粟特文\n\n### 诃陵陀文\n\n### 百越图符\n\n## 已知世界的节日\n\n### 耦纹日\n\n### 一如日\n\n### 祭灵日\n\n### 丰收节\n\n### 启航节\n\n### 雪月新年\n\n### 柴薪日\n\n### 炉乡祭\n\n### 苦修月\n\n### 狩日\n\n### 自由日\n\n### 英雄日\n\n### 鹰母祭\n\n### 奥汶日\n\n### 伊斯塔卡祭\n\n### 密特隆日\n\n### 翡翠节\n\n### 圣剑日\n\n### 双子日\n\n### 鹿首节\n\n### 泰沃日\n\n### 满月节\n\n### 阴月\n\n### 春节\n\n### 沐浴日\n\n### 圣火日\n\n### 火花祭\n\n### 中秋节\n\n### 祭天\n\n### 降临日\n\n### 忏悔日\n\n### 圣席尔日\n\n### 香料月与铎尔祭典\n\n### 坎卓尔祭典\n\n## 已知世界的神祇与怪异\n\n### 忒诺亚诸神\n\n### 怀恩里尼诸神\n\n### 香料地诸神\n\n### 拉尔斯尼亚诸神\n\n### 巴罗卢瑟诸神\n\n### 九州诸神\n\n### 荒野诸神\n\n### 翠月精灵诸神\n\n### 侏儒诸神\n\n### 半身人诸神\n\n### 矮人诸神\n\n### 兽人诸神\n\n### 地精诸神\n\n### 巨人诸神\n\n### 龙类诸神\n\n### 巨灵贵族\n\n### 地狱领主\n\n### 海洋怪异\n\n## 已知世界的重要书籍\n\n### 地理与方志类典籍\n\n### 史诗与王统纪\n\n### 宗教与神学典籍\n\n### 民间故事与传说集\n\n### 史诗与英雄纪事\n\n## 已知世界的种族\n\n### 人类\n\n### 精类\n\n### 矮人\n\n### 其余种族\n\n## 已知世界的货币\n\n### 帝国\n\n### 北境\n\n### 香料地\n\n### 怀恩里尼\n\n### 百湖地\n\n### 河洛\n\n## 商品\n\n# 忒诺亚Tierialand\n\n## 帝国\n\n### 开拓、权力与基石\n\n### 传承、王座与灼目皇冠\n\n### 地理、大河与国度\n\n## 北方王国\n\n### 王冠、历史与伤痕\n\n### 传承、王座与巨人之血\n\n### 地理、北风与国度\n\n## 东北诸侯\n\n### 荒原、坚韧与背叛\n\n### 传承、王座与三国的纷争\n\n### 地理、冻土与国度\n\n## 冬群岛\n\n### 海浪、盗匪与困境\n\n### 传承、王庭与北海传说\n\n### 地理、北海与国度\n\n## 北方诸部\n\n### 冻土、严寒与风暴\n\n### 传承、部族与北风史诗\n\n### 地理、大雪与国度\n\n## 百湖地\n\n### 文明、兴衰与纷争\n\n### 传承、王庭与月下往事\n\n### 地理、月光与国度\n\n# 荒州WasteMarches\n\n## 都林之山\n\n### 群山、悲歌与传承\n\n### 地理、山峰与国度\n\n## 伊瑟瑞尔\n\n### 谷地、秘语与存续\n\n### 地理、幽溪与国度\n\n## 卢姆巴尔\n\n### 矿峰、诸侯与铁血\n\n### 地理、岩石与国度\n\n## 大林地\n\n### 古老、隐秘与德鲁伊\n\n### 地理、荒野与国度\n\n## 卡西俄斯\n\n### 长城、辽阔与黄金之路\n\n### 传承、王座与阿契尼德之子\n\n### 地理、平原与国度\n\n## 伯琉雷斯\n\n### 河滩、岁月与商路\n\n### 传承、王座与鞍上史诗\n\n### 地理、旧城与国度\n\n## 奥佩恩\n\n### 海岸、王朝与凯勒\n\n### 地理、港湾与国度\n\n## 红色荒原\n\n### 沙海、祸乱与恐惧\n\n### 地理、驼峰与国度\n\n## 格罗加兹\n\n## 凄凉之地\n\n### 苦寒、妖治与威胁\n\n### 地理、凄凉与国度\n\n## 姐妹会\n\n### 雾岛、继承与存续\n\n### 地理、隔绝与国度\n\n# 香料地SpiceLands\n\n## 降临、冲突与征服\n\n## 大漠、圣香与日冕\n\n## 文字、民俗与种族\n\n## 冠冕、财富与信仰\n\n### 纷争的源头\n\n### 阿妲尔王朝\n\n### 教廷的崛起\n\n### 脆弱的平衡\n\n## 地理、绿洲与国度\n\n### 王畿奥斯蒂亚\n\n### 王冠群岛\n\n### 圣地公国索拉梅尔\n\n### 琥珀山公国古拉尼尔\n\n### 咸水湾公国布拉弥尔\n\n### 旱地公国坦安提尔\n\n### 风间谷公国铎洛弥尔\n\n### 林地公国卢巴纳\n\n### 象地公国韦鲁姆\n\n### 望海崖\n\n# 九州Nine Realms\n\n## 地理、辽阔与国度\n\n### 瀚州\n\n### 苍州\n\n### 菟州\n\n### 羌州\n\n### 中州\n\n### 瀛州\n\n### 沙门州\n\n### 旃州\n\n### 宝瓶州\n\n# 拉尔斯尼亚Larsina\n\n## 泰坦、山脉与海洋\n\n## 传承、王座与远西海风\n\n## 地理、古老与国度\n\n### 拉弗利兹王国\n\n### 罗利内特王国\n\n### 希阿王国\n\n### 斯弥尔王国\n\n# 文兰Vinland\n\n## 传承、财富与古老神秘\n\n## 地理、未知与国度\n\n### 开拓者半岛(The Pioneer Peninsula)\n\n### 蟹群岛(Crab Isles)\n\n### 远西之地(Far West)\n\n### 纳斯帝国(Nasr Empire)\n\n### 奥苏王国(Osu Kingdom)\n\n### 米托-胡恩利兹 (Mitô-Hûnleth)\n\n### 胡古恩长城 (Hugûn Wall)\n\n### 塞外之地\n\n# 巴洛卢瑟Baloluth\n\n## 晦朔、流离与守望\n\n## 传承、王座与旧日回忆\n\n## 地理、黑豹与国度\n\n# 翡翠群岛Emerald Isles\n\n### 地理、家园与国度\n\n# 翠月The Jade\n\n### 荒原、宁静与永恒\n";
+
+      function parseCatalog(source) {
+        const books = [];
+        let currentBook = null;
+        let currentSection = null;
+
+        source.split(/\r?\n/).forEach((rawLine) => {
+          const line = rawLine.trim();
+          const match = /^(#{1,3})\s+(.+)$/.exec(line);
+
+          if (!match) return;
+
+          const marker = match[1];
+          const title = match[2];
+
+          if (marker.length === 1) {
+            if (title.includes('\u76ee\u5f55')) {
+              currentBook = null;
+              currentSection = null;
+              return;
+            }
+
+            currentBook = { title, sections: [] };
+            currentSection = null;
+            books.push(currentBook);
+            return;
+          }
+
+          if (!currentBook) return;
+
+          if (marker.length === 2) {
+            currentSection = { heading: title, items: [] };
+            currentBook.sections.push(currentSection);
+            return;
+          }
+
+          if (!currentSection) {
+            currentSection = { heading: '\u672c\u5377\u76ee\u5f55', items: [] };
+            currentBook.sections.push(currentSection);
+          }
+
+          currentSection.items.push(title);
+        });
+
+        return books;
+      }
+
+      const parsedCatalogByTitle = new Map(parseCatalog(catalogSource).map((book) => [book.title, book.sections]));
+
+      function sectionsFor(title) {
+        return parsedCatalogByTitle.get(title) || [{ heading: '\u672c\u5377\u76ee\u5f55', items: [] }];
+      }
+
+      const catalogBooks = parseCatalog(catalogSource);
+      const bookOrder = {
+        legends: 0,
+        heroic: 1,
+        'known-world': 2,
+        tierialand: 3,
+        'waste-marches': 4,
+        'spice-lands': 5,
+        'nine-realms': 6,
+        larsina: 7,
+        vinland: 8,
+        baloluth: 9,
+        'emerald-isles': 10,
+        'the-jade': 11,
+      };
+
+      function catalogBookFor(key) {
+        return catalogBooks[bookOrder[key]] || { title: '\u672c\u5377\u76ee\u5f55', sections: [{ heading: '\u672c\u5377\u76ee\u5f55', items: [] }] };
+      }
+
+      const bookMeta = {
+        heroic: { image: '../APP/src/assets/chronicles-v2/heroic-cover.png', stage: '../APP/src/assets/chronicles-v2/chronicles-stage.png', activePage: 'chronicles', returnLabel: '\u8fd4\u56de\u7f16\u5e74\u53f2' },
+        legends: { image: '../APP/src/assets/chronicles-v2/legends-cover.png', stage: '../APP/src/assets/chronicles-v2/chronicles-stage.png', activePage: 'chronicles', returnLabel: '\u8fd4\u56de\u7f16\u5e74\u53f2' },
+        'known-world': { image: '../APP/src/assets/chronicles-v2/known-world-cover.png', stage: '../APP/src/assets/chronicles-v2/chronicles-stage.png', activePage: 'chronicles', returnLabel: '\u8fd4\u56de\u7f16\u5e74\u53f2' },
+        tierialand: { image: '../APP/src/assets/geography/tierialand.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        'waste-marches': { image: '../APP/src/assets/geography/waste-marches.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        'spice-lands': { image: '../APP/src/assets/geography/spice-lands.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        'nine-realms': { image: '../APP/src/assets/geography/nine-realms.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        larsina: { image: '../APP/src/assets/geography/larsina.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        vinland: { image: '../APP/src/assets/geography/vinland.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        baloluth: { image: '../APP/src/assets/geography/baloluth.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        'emerald-isles': { image: '../APP/src/assets/geography/emerald-isles.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+        'the-jade': { image: '../APP/src/assets/geography/the-jade.png', stage: '../APP/src/assets/geography/geography-stage.png', activePage: 'geography', returnLabel: '\u8fd4\u56de\u5730\u7406\u4e0e\u65b9\u7c7b' },
+      };
+
+      const bookDetails = Object.fromEntries(
+        Object.entries(bookMeta).map(([key, meta]) => {
+          const source = catalogBookFor(key);
+          return [
+            key,
+            {
+              ...meta,
+              title: source.title,
+              intro: source.title + '\u7684\u76ee\u5f55\u5df2\u7ecf\u5c55\u5f00\uff0c\u4e8c\u7ea7\u5206\u7ec4\u4e0e\u4e09\u7ea7\u6761\u76ee\u53ef\u9010\u9879\u5207\u6362\u3002',
+              sections: source.sections,
+            },
+          ];
+        }),
+      );
+
+      const home = document.querySelector('#home');
+      const chronicles = document.querySelector('#chronicles');
+      const heroicBook = document.querySelector('#heroic-book');
+      const geography = document.querySelector('#geography');
+      const placeholder = document.querySelector('#placeholder');
+      const backButton = document.querySelector('#back-button');
+      const heroicBookContents = document.querySelector('#heroic-book-contents');
+      const placeholderBrand = document.querySelector('#placeholder-brand');
+      const placeholderTitle = document.querySelector('#placeholder-title');
+      const placeholderCopy = document.querySelector('#placeholder-copy');
+      const desktopComposition = document.querySelector('.desktop-composition');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let activeVolumeButton = null;
+      let activeVolumeTimer = null;
+      let activeRegionButton = null;
+      let activeRegionTimer = null;
+      let geographyKeyboardPan = 0;
+
+      function openPage(key) {
+        const page = pages[key];
+        if (!page) return;
+        if (key === 'chronicles') {
+          home.hidden = true;
+          heroicBook.hidden = true;
+          placeholder.hidden = true;
+          geography.hidden = true;
+          chronicles.hidden = false;
+          chronicles.querySelector('.chronicles-back').focus();
+          return;
+        }
+        if (key === 'geography') {
+          home.hidden = true;
+          heroicBook.hidden = true;
+          chronicles.hidden = true;
+          placeholder.hidden = true;
+          geography.hidden = false;
+          geography.querySelector('.chronicles-back').focus();
+          return;
+        }
+        placeholderBrand.textContent = 'TIERIA / ' + page.english;
+        placeholderTitle.textContent = page.title;
+        placeholderCopy.textContent = page.copy;
+        home.hidden = true;
+        chronicles.hidden = true;
+        heroicBook.hidden = true;
+        geography.hidden = true;
+        placeholder.hidden = false;
+        backButton.focus();
+      }
+
+      function openBook(key) {
+        const book = bookDetails[key];
+        if (!book) return;
+
+        const title = heroicBook.querySelector('.book-hero-copy h1');
+        const intro = heroicBook.querySelector('.book-hero-copy p');
+        const cover = heroicBook.querySelector('.book-hero-cover');
+        const stage = heroicBook.querySelector('.book-detail-bg');
+        const returnLink = heroicBook.querySelector('.book-return-link');
+        const contents = heroicBook.querySelector('.book-contents-panel');
+
+        title.textContent = book.title;
+        intro.textContent = book.intro;
+        cover.src = book.image;
+        stage.src = book.stage;
+        returnLink.textContent = book.returnLabel;
+        returnLink.dataset.page = book.activePage;
+        contents.setAttribute('aria-label', book.title + '\u76ee\u5f55');
+
+        heroicBook.querySelectorAll('.book-detail-nav [data-page]').forEach((button) => {
+          const isActive = button.dataset.page === book.activePage;
+          button.classList.toggle('is-active', isActive);
+          if (isActive) button.setAttribute('aria-current', 'page');
+          else button.removeAttribute('aria-current');
+        });
+
+        renderBookContents(book);
+        home.hidden = true;
+        chronicles.hidden = true;
+        geography.hidden = true;
+        placeholder.hidden = true;
+        heroicBook.hidden = false;
+        heroicBook.querySelector('.book-explore-button').focus();
+      }
+
+      function renderBookContents(book) {
+        const eraStrip = heroicBook.querySelector('.book-era-strip');
+        const chapterGrid = heroicBook.querySelector('.book-chapter-grid');
+        eraStrip.textContent = '';
+        chapterGrid.textContent = '';
+
+        book.sections.forEach((section, index) => {
+          const button = document.createElement('button');
+          button.className = 'book-era-tab' + (index === 0 ? ' is-active' : '');
+          button.type = 'button';
+          button.role = 'tab';
+          button.dataset.era = section.heading;
+          button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
+          button.textContent = section.heading;
+          button.addEventListener('click', () => selectBookEra(section.heading));
+          eraStrip.append(button);
+
+          const article = document.createElement('article');
+          article.className = 'book-chapter-group';
+          article.dataset.eraPanel = section.heading;
+          article.role = 'tabpanel';
+          article.hidden = index !== 0;
+          const heading = document.createElement('h2');
+          heading.textContent = section.heading;
+          article.append(heading);
+
+          if (section.items.length > 0) {
+            const list = document.createElement('ul');
+            section.items.forEach((item) => {
+              const listItem = document.createElement('li');
+              listItem.textContent = item;
+              list.append(listItem);
+            });
+            article.append(list);
+          } else {
+            const note = document.createElement('p');
+            note.className = 'book-empty-note';
+            note.textContent = '\u672c\u8282\u6682\u65e0\u4e09\u7ea7\u76ee\u5f55\u3002';
+            article.append(note);
+          }
+          chapterGrid.append(article);
+        });
+        selectBookEra(book.sections[0]?.heading || '');
+      }
+
+      function selectBookEra(era) {
+        heroicBook.querySelectorAll('[data-era]').forEach((button) => {
+          const isActive = button.dataset.era === era;
+          button.classList.toggle('is-active', isActive);
+          button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+
+        heroicBook.querySelectorAll('[data-era-panel]').forEach((panel) => {
+          panel.hidden = panel.dataset.eraPanel !== era;
+        });
+      }
+
+      function goBack() {
+        chronicles.hidden = true;
+        heroicBook.hidden = true;
+        geography.hidden = true;
+        placeholder.hidden = true;
+        home.hidden = false;
+      }
+
+      function updateChroniclesPointer(event) {
+        if (reduceMotion.matches) return;
+
+        const rect = chronicles.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const offsetX = (event.clientX - centerX) / (rect.width / 2);
+        const offsetY = (event.clientY - centerY) / (rect.height / 2);
+        const relativeX = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+        const relativeY = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+        const glowRadius = Math.max(92, Math.min(168, rect.width * 0.075));
+        const headerShift = Math.max(-1, Math.min(1, offsetY)) * 12;
+        const textTiltY = Math.max(-1, Math.min(1, offsetX)) * 6;
+        const textTiltX = Math.max(-1, Math.min(1, offsetY)) * -2.2;
+
+        chronicles.style.setProperty('--chronicles-header-y', `${headerShift.toFixed(1)}px`);
+        chronicles.style.setProperty('--section-text-tilt-y', `${textTiltY.toFixed(2)}deg`);
+        chronicles.style.setProperty('--section-text-tilt-x', `${textTiltX.toFixed(2)}deg`);
+        chronicles.style.setProperty('--spot-x', `${(relativeX * 100).toFixed(2)}%`);
+        chronicles.style.setProperty('--spot-y', `${(relativeY * 100).toFixed(2)}%`);
+        chronicles.style.setProperty('--trail-x', `${(relativeX * 100).toFixed(2)}%`);
+        chronicles.style.setProperty('--trail-y', `${(relativeY * 100).toFixed(2)}%`);
+        chronicles.style.setProperty('--spot-radius', `${glowRadius.toFixed(0)}px`);
+        chronicles.style.setProperty('--cursor-glow', '1');
+      }
+
+      function resetChroniclesPointer() {
+        chronicles.style.setProperty('--chronicles-header-y', '0px');
+        chronicles.style.setProperty('--section-text-tilt-y', '0deg');
+        chronicles.style.setProperty('--section-text-tilt-x', '0deg');
+        chronicles.style.setProperty('--spot-radius', '0px');
+        chronicles.style.setProperty('--cursor-glow', '0');
+      }
+
+      function updateGeographyPointer(event) {
+        if (reduceMotion.matches) return;
+
+        const rect = geography.getBoundingClientRect();
+        const panorama = geography.querySelector('.geography-panorama');
+        const centerY = rect.top + rect.height / 2;
+        const offsetX = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+        const offsetY = (event.clientY - centerY) / (rect.height / 2);
+        const relativeX = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+        const relativeY = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+        const extraWidth = panorama ? Math.max(0, panorama.getBoundingClientRect().width - rect.width) : 0;
+        const panRatio = Math.max(-1, Math.min(1, offsetX));
+        const panX = panRatio * extraWidth * -0.5;
+        const headerShift = Math.max(-1, Math.min(1, offsetY)) * 12;
+        const glowRadius = Math.max(92, Math.min(168, rect.width * 0.075));
+        const textTiltY = panRatio * 6;
+        const textTiltX = Math.max(-1, Math.min(1, offsetY)) * -2.2;
+
+        geographyKeyboardPan = panRatio;
+        geography.style.setProperty('--geography-pan-x', `${panX.toFixed(1)}px`);
+        geography.style.setProperty('--geography-header-y', `${headerShift.toFixed(1)}px`);
+        geography.style.setProperty('--section-text-tilt-y', `${textTiltY.toFixed(2)}deg`);
+        geography.style.setProperty('--section-text-tilt-x', `${textTiltX.toFixed(2)}deg`);
+        geography.style.setProperty('--spot-x', `${(relativeX * 100).toFixed(2)}%`);
+        geography.style.setProperty('--spot-y', `${(relativeY * 100).toFixed(2)}%`);
+        geography.style.setProperty('--trail-x', `${(relativeX * 100).toFixed(2)}%`);
+        geography.style.setProperty('--trail-y', `${(relativeY * 100).toFixed(2)}%`);
+        geography.style.setProperty('--spot-radius', `${glowRadius.toFixed(0)}px`);
+        geography.style.setProperty('--cursor-glow', '1');
+      }
+
+      function resetGeographyPointer() {
+        geographyKeyboardPan = 0;
+        geography.style.setProperty('--geography-pan-x', '0px');
+        geography.style.setProperty('--geography-header-y', '0px');
+        geography.style.setProperty('--section-text-tilt-y', '0deg');
+        geography.style.setProperty('--section-text-tilt-x', '0deg');
+        geography.style.setProperty('--spot-radius', '0px');
+        geography.style.setProperty('--cursor-glow', '0');
+      }
+
+      function moveGeographyWithKeyboard(direction) {
+        if (geography.hidden) return;
+
+        const rect = geography.getBoundingClientRect();
+        const panorama = geography.querySelector('.geography-panorama');
+        const extraWidth = panorama ? Math.max(0, panorama.getBoundingClientRect().width - rect.width) : 0;
+
+        geographyKeyboardPan = Math.max(-1, Math.min(1, geographyKeyboardPan + direction * 0.22));
+        geography.style.setProperty('--geography-pan-x', `${(geographyKeyboardPan * extraWidth * -0.5).toFixed(1)}px`);
+        geography.style.setProperty('--spot-radius', '0px');
+        geography.style.setProperty('--cursor-glow', '0');
+      }
+
+      document.querySelectorAll('[data-page]').forEach((button) => {
+        button.addEventListener('click', () => openPage(button.dataset.page));
+      });
+
+      document.querySelectorAll('[data-book]').forEach((button) => {
+        button.addEventListener('click', () => window.setTimeout(() => openBook(button.dataset.book), 120));
+      });
+
+      document.querySelectorAll('[data-focus-contents]').forEach((button) => {
+        button.addEventListener('click', () => heroicBookContents.focus());
+      });
+
+      heroicBook.querySelectorAll('[data-era]').forEach((button) => {
+        button.addEventListener('click', () => selectBookEra(button.dataset.era));
+      });
+
+      chronicles.addEventListener('pointermove', updateChroniclesPointer);
+      chronicles.addEventListener('pointerleave', resetChroniclesPointer);
+      geography.addEventListener('pointermove', updateGeographyPointer);
+      geography.addEventListener('pointerleave', resetGeographyPointer);
+
+      document.querySelectorAll('[data-volume]').forEach((button) => {
+        button.addEventListener('click', () => {
+          if (activeVolumeButton && activeVolumeButton !== button) {
+            activeVolumeButton.classList.remove('is-activated');
+          }
+
+          button.classList.remove('is-activated');
+          void button.offsetWidth;
+          button.classList.add('is-activated');
+          activeVolumeButton = button;
+
+          if (activeVolumeTimer) {
+            window.clearTimeout(activeVolumeTimer);
+          }
+
+          activeVolumeTimer = window.setTimeout(() => {
+            button.classList.remove('is-activated');
+            if (activeVolumeButton === button) {
+              activeVolumeButton = null;
+            }
+          }, 720);
+        });
+      });
+
+      document.querySelectorAll('[data-region]').forEach((button) => {
+        button.addEventListener('click', () => {
+          if (activeRegionButton && activeRegionButton !== button) {
+            activeRegionButton.classList.remove('is-activated');
+          }
+
+          button.classList.remove('is-activated');
+          void button.offsetWidth;
+          button.classList.add('is-activated');
+          activeRegionButton = button;
+
+          if (activeRegionTimer) {
+            window.clearTimeout(activeRegionTimer);
+          }
+
+          activeRegionTimer = window.setTimeout(() => {
+            button.classList.remove('is-activated');
+            if (activeRegionButton === button) {
+              activeRegionButton = null;
+            }
+          }, 720);
+        });
+      });
+
+      if (desktopComposition) {
+        desktopComposition.addEventListener('pointermove', (event) => {
+          if (reduceMotion.matches) return;
+          const rect = desktopComposition.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const offset = (event.clientX - centerX) / (rect.width / 2);
+          const relativeX = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width));
+          const relativeY = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height));
+          const glowRadius = Math.max(92, Math.min(168, rect.width * 0.075));
+          const tilt = Math.max(-1, Math.min(1, offset)) * 7;
+          desktopComposition.style.setProperty('--tilt-y', `${tilt.toFixed(2)}deg`);
+          desktopComposition.style.setProperty('--spot-x', `${(relativeX * 100).toFixed(2)}%`);
+          desktopComposition.style.setProperty('--spot-y', `${(relativeY * 100).toFixed(2)}%`);
+          desktopComposition.style.setProperty('--trail-x', `${(relativeX * 100).toFixed(2)}%`);
+          desktopComposition.style.setProperty('--trail-y', `${(relativeY * 100).toFixed(2)}%`);
+          desktopComposition.style.setProperty('--spot-radius', `${glowRadius.toFixed(0)}px`);
+          desktopComposition.style.setProperty('--cursor-glow', '1');
+        });
+
+        desktopComposition.addEventListener('pointerleave', () => {
+          desktopComposition.style.setProperty('--tilt-y', '0deg');
+          desktopComposition.style.setProperty('--spot-radius', '0px');
+          desktopComposition.style.setProperty('--cursor-glow', '0');
+        });
+      }
+
+      document.querySelectorAll('[data-back]').forEach((button) => {
+        button.addEventListener('click', goBack);
+      });
+      window.addEventListener('keydown', (event) => {
+        if (!geography.hidden && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+          event.preventDefault();
+          moveGeographyWithKeyboard(event.key === 'ArrowLeft' ? -1 : 1);
+          return;
+        }
+
+        if (event.key === 'Escape' && (!placeholder.hidden || !chronicles.hidden || !geography.hidden || !heroicBook.hidden)) {
+          event.preventDefault();
+          goBack();
+        }
+      });
+    </script>
+  </body>
+</html>
+

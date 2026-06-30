@@ -1536,6 +1536,14 @@ function sectionToArticle(section: ContentSection): ContentArticle {
   };
 }
 
+function publicAssetPath(src: string) {
+  if (!src.startsWith('/')) {
+    return src;
+  }
+
+  return `${import.meta.env.BASE_URL}${src.slice(1)}`;
+}
+
 function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
   return (
     <>
@@ -1559,7 +1567,7 @@ function ContentBlocks({ blocks }: { blocks: ContentBlock[] }) {
                 alt={block.alt}
                 height={block.height}
                 loading="lazy"
-                src={block.src}
+                src={publicAssetPath(block.src)}
                 width={block.width}
               />
             </figure>

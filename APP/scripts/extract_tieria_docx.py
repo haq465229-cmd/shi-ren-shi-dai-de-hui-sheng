@@ -277,7 +277,7 @@ def export_docx(docx_path: Path, media_dir: Path) -> tuple[list[dict], dict]:
                     leaf,
                     {
                         "type": "image",
-                        "src": f"/docx-media/{media['fileName']}",
+                        "src": f"docx-media/{media['fileName']}",
                         "width": media["width"],
                         "height": media["height"],
                         "alt": f"{current_book['title']} / {leaf.title} 插图",

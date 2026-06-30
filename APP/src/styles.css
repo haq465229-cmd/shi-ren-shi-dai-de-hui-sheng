@@ -27,10 +27,26 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-cjk);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 button {
   font: inherit;
+}
+
+input,
+textarea,
+select,
+[contenteditable='true'],
+[contenteditable='plaintext-only'] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img {
+  -webkit-user-drag: none;
 }
 
 .app-shell {
@@ -38,6 +54,26 @@ button {
   background:
     radial-gradient(circle at 50% 92%, oklch(0.18 0.018 238 / 0.52), transparent 34%),
     linear-gradient(180deg, oklch(0.07 0 0), var(--bg) 64%);
+}
+
+.content-protection-toast {
+  position: fixed;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: clamp(1rem, 3vw, 2rem);
+  z-index: 10000;
+  max-width: min(24rem, calc(100vw - 2rem));
+  padding: 0.72rem 0.95rem;
+  color: oklch(0.98 0.014 82);
+  border: 1px solid oklch(0.69 0.146 74.6 / 0.5);
+  border-radius: 8px;
+  background: oklch(0.045 0 0 / 0.88);
+  box-shadow: 0 0.7rem 1.5rem oklch(0 0 0 / 0.42);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  pointer-events: none;
+  animation: content-protection-toast-in 180ms ease both;
+  backdrop-filter: blur(10px);
 }
 
 .hero-stage {
@@ -1422,6 +1458,134 @@ button {
   pointer-events: none;
 }
 
+.book-map-preview {
+  --map-tilt-x: 56deg;
+  --map-light-y: 44%;
+  position: absolute;
+  right: clamp(-5.6rem, -5.8vw, -3.2rem);
+  bottom: clamp(0.15rem, 1.5svh, 0.9rem);
+  z-index: 5;
+  display: block;
+  padding: 0;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  perspective: 950px;
+  pointer-events: auto;
+}
+
+.book-map-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0.18rem;
+  background: oklch(0.1 0.008 82);
+  box-shadow:
+    0 1.15rem 1.35rem oklch(0 0 0 / 0.72),
+    0 0 1.1rem oklch(0.69 0.146 74.6 / 0.1);
+  line-height: 0;
+  transform:
+    rotateX(var(--map-tilt-x))
+    rotateY(-13deg)
+    rotateZ(-7deg);
+  transform-origin: 50% 78%;
+  transition:
+    box-shadow 220ms ease,
+    filter 220ms ease,
+    transform 180ms cubic-bezier(0.19, 1, 0.22, 1);
+  will-change: transform;
+}
+
+.book-map-card::after {
+  position: absolute;
+  inset: 0;
+  content: '';
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 52% var(--map-light-y), oklch(0.96 0.04 88 / 0.18), transparent 28%),
+    linear-gradient(135deg, oklch(0.99 0.02 88 / 0.14), transparent 34%, oklch(0 0 0 / 0.28));
+  mix-blend-mode: screen;
+}
+
+.book-map-card img {
+  display: block;
+  width: auto;
+  max-width: clamp(7.2rem, 9.8vw, 10.8rem);
+  height: auto;
+  max-height: clamp(7.6rem, 15svh, 11.2rem);
+  user-select: none;
+}
+
+.book-map-preview:hover .book-map-card,
+.book-map-preview:focus-visible .book-map-card {
+  filter: brightness(1.06) saturate(1.04);
+  box-shadow:
+    0 1.35rem 1.65rem oklch(0 0 0 / 0.78),
+    0 0 1.35rem oklch(0.69 0.146 74.6 / 0.18);
+}
+
+.book-map-preview:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 0.4rem;
+}
+
+.book-map-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2.2rem);
+  background:
+    radial-gradient(circle at 50% 50%, oklch(0.16 0.018 82 / 0.62), transparent 48%),
+    oklch(0.02 0 0 / 0.94);
+  backdrop-filter: blur(8px);
+}
+
+.book-map-viewer-frame {
+  display: grid;
+  max-width: 96vw;
+  max-height: 90svh;
+  overflow: auto;
+  place-items: center;
+  box-shadow:
+    0 2rem 4rem oklch(0 0 0 / 0.86),
+    0 0 0 1px oklch(0.69 0.146 74.6 / 0.18);
+}
+
+.book-map-viewer-frame img {
+  display: block;
+  width: auto;
+  max-width: 96vw;
+  height: auto;
+  max-height: 90svh;
+  object-fit: contain;
+}
+
+.book-map-viewer-close {
+  position: fixed;
+  top: clamp(0.9rem, 2vw, 1.4rem);
+  right: clamp(0.9rem, 2vw, 1.4rem);
+  z-index: 1;
+  display: grid;
+  width: 2.65rem;
+  height: 2.65rem;
+  place-items: center;
+  cursor: pointer;
+  color: oklch(0.96 0.014 82);
+  border: 1px solid oklch(0.69 0.146 74.6 / 0.55);
+  border-radius: 50%;
+  background: oklch(0.05 0 0 / 0.86);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.book-map-viewer-close:hover,
+.book-map-viewer-close:focus-visible {
+  color: var(--gold);
+  outline: none;
+}
+
 .book-hero-copy {
   max-width: 47rem;
   transform: translateY(-0.4rem);
@@ -1943,6 +2107,18 @@ button.book-subheading-link {
   border: 0;
 }
 
+@keyframes content-protection-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes stage-arrival {
   from {
     opacity: 0;
@@ -2416,6 +2592,30 @@ button.book-subheading-link {
     margin: 0;
   }
 
+  .book-map-preview {
+    right: clamp(-3.4rem, -13vw, -2rem);
+    bottom: 0.1rem;
+  }
+
+  .book-map-card img {
+    max-width: clamp(5.6rem, 23vw, 7rem);
+    max-height: clamp(6.2rem, 24vw, 7.8rem);
+  }
+
+  .book-map-viewer {
+    padding: 0.75rem;
+  }
+
+  .book-map-viewer-frame {
+    max-width: calc(100vw - 1.5rem);
+    max-height: 86svh;
+  }
+
+  .book-map-viewer-frame img {
+    max-width: calc(100vw - 1.5rem);
+    max-height: 86svh;
+  }
+
   .book-hero-copy {
     max-width: none;
     transform: none;
@@ -2611,6 +2811,10 @@ button.book-subheading-link {
 
   .section-text-plane {
     transform: none !important;
+  }
+
+  .book-map-card {
+    transform: rotateX(56deg) rotateY(-13deg) rotateZ(-7deg) !important;
   }
 
   .chronicles-topbar {

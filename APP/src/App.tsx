@@ -13,6 +13,10 @@ import theJadeBook from './assets/geography/the-jade.png';
 import tierialandBook from './assets/geography/tierialand.png';
 import vinlandBook from './assets/geography/vinland.png';
 import wasteMarchesBook from './assets/geography/waste-marches.png';
+import larsinaMap from './assets/maps/larsina-map.png';
+import tierialandMap from './assets/maps/tierialand-map.jpg';
+import vinlandMap from './assets/maps/vinland-map.jpg';
+import wasteMarchesMap from './assets/maps/waste-marches-map.jpg';
 import heroicBook from './assets/chronicles-v2/heroic-cover.png';
 import knownWorldBook from './assets/chronicles-v2/known-world-cover.png';
 import legendsBook from './assets/chronicles-v2/legends-cover.png';
@@ -179,9 +183,16 @@ type GeographyVolumeKey = (typeof geographyVolumes)[number]['key'];
 
 type CatalogBookKey = ChronicleVolumeKey | GeographyVolumeKey;
 
+type BookMap = {
+  src: string;
+  alt: string;
+  label: string;
+};
+
 type SiteBookDetail = Omit<BookContent, 'key'> & {
   key: CatalogBookKey;
   image: string;
+  map?: BookMap;
   stage: string;
   activePage: PageKey;
   returnLabel: string;
@@ -968,7 +979,7 @@ const bookDetails: Record<CatalogBookKey, CatalogBookDetail> = {
 
 const bookVisuals: Record<
   CatalogBookKey,
-  Pick<SiteBookDetail, 'image' | 'stage' | 'activePage' | 'returnLabel'>
+  Pick<SiteBookDetail, 'image' | 'map' | 'stage' | 'activePage' | 'returnLabel'>
 > = {
   heroic: {
     image: heroicBook,
@@ -990,12 +1001,22 @@ const bookVisuals: Record<
   },
   tierialand: {
     image: tierialandBook,
+    map: {
+      src: tierialandMap,
+      alt: '忒诺亚大陆地图',
+      label: '忒诺亚大陆地图',
+    },
     stage: geographyStage,
     activePage: 'geography',
     returnLabel: '返回地理与方类',
   },
   'waste-marches': {
     image: wasteMarchesBook,
+    map: {
+      src: wasteMarchesMap,
+      alt: '荒洲地图',
+      label: '荒洲地图',
+    },
     stage: geographyStage,
     activePage: 'geography',
     returnLabel: '返回地理与方类',
@@ -1014,12 +1035,22 @@ const bookVisuals: Record<
   },
   larsina: {
     image: larsinaBook,
+    map: {
+      src: larsinaMap,
+      alt: '拉尔斯尼亚地图',
+      label: '拉尔斯尼亚地图',
+    },
     stage: geographyStage,
     activePage: 'geography',
     returnLabel: '返回地理与方类',
   },
   vinland: {
     image: vinlandBook,
+    map: {
+      src: vinlandMap,
+      alt: '文兰大地政区图',
+      label: '文兰大地政区图',
+    },
     stage: geographyStage,
     activePage: 'geography',
     returnLabel: '返回地理与方类',
@@ -1657,11 +1688,14 @@ function BookDetailPage({ book, onBackHome, onOpenPage, onReturnToShelf }: BookD
   const effectiveActiveArticleId = activeArticle?.id ?? activeRootArticle?.id ?? null;
   const readerContextLabel = activeSection?.title ?? (activeRootArticle ? '卷册条目' : book.title);
   const hasReaderArticle = Boolean(readerArticle);
+  const bookMap = book.map;
+  const [isMapViewerOpen, setIsMapViewerOpen] = useState(false);
 
   useEffect(() => {
     setActiveSectionId(initialSectionId);
     setActiveArticleId(initialArticleId);
     setPendingScrollTarget(null);
+    setIsMapViewerOpen(false);
   }, [book.key, initialArticleId, initialSectionId]);
 
   useEffect(() => {
@@ -1672,6 +1706,24 @@ function BookDetailPage({ book, onBackHome, onOpenPage, onReturnToShelf }: BookD
     scrollToElement(pendingScrollTarget === 'contents' ? contentsRef.current : readerRef.current);
     setPendingScrollTarget(null);
   }, [pendingScrollTarget, activeSectionId, activeArticleId]);
+
+  useEffect(() => {
+    if (!isMapViewerOpen) {
+      return;
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') {
+        setIsMapViewerOpen(false);
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isMapViewerOpen]);
 
   function focusContents() {
     scrollToElement(contentsRef.current);
@@ -1686,6 +1738,24 @@ function BookDetailPage({ book, onBackHome, onOpenPage, onReturnToShelf }: BookD
   function openArticle(article: ContentArticle) {
     setActiveArticleId(article.id);
     setPendingScrollTarget('reader');
+  }
+
+  function handleMapPreviewMove(event: PointerEvent<HTMLButtonElement>) {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const normalized = Math.max(
+      -1,
+      Math.min(1, ((event.clientY - rect.top) / rect.height - 0.5) * 2),
+    );
+    const tiltX = 56 + normalized * 10;
+    const lightY = 44 + normalized * 22;
+
+    event.currentTarget.style.setProperty('--map-tilt-x', `${tiltX.toFixed(2)}deg`);
+    event.currentTarget.style.setProperty('--map-light-y', `${lightY.toFixed(2)}%`);
+  }
+
+  function resetMapPreview(event: PointerEvent<HTMLButtonElement>) {
+    event.currentTarget.style.setProperty('--map-tilt-x', '56deg');
+    event.currentTarget.style.setProperty('--map-light-y', '44%');
   }
 
   return (
@@ -1718,8 +1788,22 @@ function BookDetailPage({ book, onBackHome, onOpenPage, onReturnToShelf }: BookD
       </header>
 
       <div className="book-hero-layout">
-        <div className="book-hero-object" aria-hidden="true">
-          <img className="book-hero-cover" src={book.image} alt="" />
+        <div className="book-hero-object">
+          <img className="book-hero-cover" src={book.image} alt="" aria-hidden="true" />
+          {bookMap ? (
+            <button
+              className="book-map-preview"
+              type="button"
+              aria-label={`打开${bookMap.label}全图`}
+              onClick={() => setIsMapViewerOpen(true)}
+              onPointerLeave={resetMapPreview}
+              onPointerMove={handleMapPreviewMove}
+            >
+              <span className="book-map-card" aria-hidden="true">
+                <img src={bookMap.src} alt="" />
+              </span>
+            </button>
+          ) : null}
         </div>
         <div className="book-hero-copy">
           <h1 id={`${book.key}-book-title`}>{book.title}</h1>
@@ -1780,6 +1864,28 @@ function BookDetailPage({ book, onBackHome, onOpenPage, onReturnToShelf }: BookD
             </div>
           </article>
         </section>
+      ) : null}
+
+      {bookMap && isMapViewerOpen ? (
+        <div
+          className="book-map-viewer"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${bookMap.label}全图`}
+          onClick={() => setIsMapViewerOpen(false)}
+        >
+          <button
+            className="book-map-viewer-close"
+            type="button"
+            aria-label="关闭地图"
+            onClick={() => setIsMapViewerOpen(false)}
+          >
+            ×
+          </button>
+          <div className="book-map-viewer-frame" onClick={(event) => event.stopPropagation()}>
+            <img src={bookMap.src} alt={bookMap.alt} />
+          </div>
+        </div>
       ) : null}
     </section>
   );
@@ -1847,10 +1953,129 @@ function PlaceholderPage({ page, onBack, onOpenBook, onOpenPage }: PlaceholderPa
   );
 }
 
+const COPY_PROTECTION_MESSAGE = '内容受版权保护，暂不支持复制。';
+const protectedShortcutKeys = new Set(['a', 'c', 'v', 'x']);
+
+function isEditableTarget(target: EventTarget | null) {
+  if (!(target instanceof Node)) {
+    return false;
+  }
+
+  const element = target instanceof Element ? target : target.parentElement;
+  const editableTarget = element?.closest('input, textarea, select, [contenteditable]');
+
+  if (!editableTarget) {
+    return false;
+  }
+
+  return (
+    editableTarget instanceof HTMLInputElement ||
+    editableTarget instanceof HTMLTextAreaElement ||
+    editableTarget instanceof HTMLSelectElement ||
+    (editableTarget instanceof HTMLElement && editableTarget.isContentEditable)
+  );
+}
+
+function shouldBlockShortcut(event: KeyboardEvent) {
+  if (isEditableTarget(event.target)) {
+    return false;
+  }
+
+  const key = event.key.toLowerCase();
+
+  if ((event.ctrlKey || event.metaKey) && protectedShortcutKeys.has(key)) {
+    return true;
+  }
+
+  if (event.key === 'Insert' && (event.ctrlKey || event.shiftKey)) {
+    return true;
+  }
+
+  return event.key === 'Delete' && event.shiftKey;
+}
+
+function useCopyProtectionNotice() {
+  const [isNoticeVisible, setIsNoticeVisible] = useState(false);
+
+  useEffect(() => {
+    let noticeTimeout: number | undefined;
+
+    function showNotice() {
+      setIsNoticeVisible(true);
+
+      if (noticeTimeout !== undefined) {
+        window.clearTimeout(noticeTimeout);
+      }
+
+      noticeTimeout = window.setTimeout(() => {
+        setIsNoticeVisible(false);
+      }, 1600);
+    }
+
+    function blockWithNotice(event: Event) {
+      if (isEditableTarget(event.target)) {
+        return;
+      }
+
+      event.preventDefault();
+      showNotice();
+    }
+
+    function blockQuietly(event: Event) {
+      if (isEditableTarget(event.target)) {
+        return;
+      }
+
+      event.preventDefault();
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (!shouldBlockShortcut(event)) {
+        return;
+      }
+
+      event.preventDefault();
+      showNotice();
+    }
+
+    const guardedEvents = ['copy', 'cut', 'paste', 'contextmenu'] as const;
+    const quietEvents = ['dragstart', 'selectstart'] as const;
+
+    guardedEvents.forEach((eventName) => {
+      document.addEventListener(eventName, blockWithNotice, true);
+    });
+
+    quietEvents.forEach((eventName) => {
+      document.addEventListener(eventName, blockQuietly, true);
+    });
+
+    window.addEventListener('keydown', handleKeyDown, true);
+
+    return () => {
+      if (noticeTimeout !== undefined) {
+        window.clearTimeout(noticeTimeout);
+      }
+
+      guardedEvents.forEach((eventName) => {
+        document.removeEventListener(eventName, blockWithNotice, true);
+      });
+
+      quietEvents.forEach((eventName) => {
+        document.removeEventListener(eventName, blockQuietly, true);
+      });
+
+      window.removeEventListener('keydown', handleKeyDown, true);
+    };
+  }, []);
+
+  return isNoticeVisible;
+}
+
 export default function App() {
   const [activePage, setActivePage] = useState<PageKey | null>(null);
   const [activeBook, setActiveBook] = useState<CatalogBookKey | null>(null);
   const currentBook = activeBook ? contentBookDetails[activeBook] : null;
+  const isCopyProtectionNoticeVisible = useCopyProtectionNotice();
 
   function openHome() {
     setActiveBook(null);
@@ -1888,6 +2113,11 @@ export default function App() {
       ) : (
         <HeroStage onOpenPage={openPage} />
       )}
+      {isCopyProtectionNoticeVisible ? (
+        <div className="content-protection-toast" role="status" aria-live="polite">
+          {COPY_PROTECTION_MESSAGE}
+        </div>
+      ) : null}
     </main>
   );
 }

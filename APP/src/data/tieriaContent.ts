@@ -53,7 +53,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image1.png",
+            "src": "docx-media/image1.png",
             "width": 1268,
             "height": 714,
             "alt": "传说、历史与未竟之事 / 混沌、圣树与首生者 插图"
@@ -76,7 +76,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image2.png",
+            "src": "docx-media/image2.png",
             "width": 1268,
             "height": 714,
             "alt": "传说、历史与未竟之事 / 混沌、圣树与首生者 插图"
@@ -112,7 +112,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image3.png",
+                "src": "docx-media/image3.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "传说、历史与未竟之事 / 天穹、山峦与海洋 插图"
@@ -175,14 +175,14 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image4.png",
+                "src": "docx-media/image4.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "传说、历史与未竟之事 / 时间与混沌 插图"
               },
               {
                 "type": "image",
-                "src": "/docx-media/image5.png",
+                "src": "docx-media/image5.png",
                 "width": 1055,
                 "height": 1491,
                 "alt": "传说、历史与未竟之事 / 时间与混沌 插图"
@@ -365,14 +365,14 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image6.png",
+                "src": "docx-media/image6.png",
                 "width": 606,
                 "height": 606,
                 "alt": "归来、逝去与英雄史诗 / 翠月的眼睛 插图"
               },
               {
                 "type": "image",
-                "src": "/docx-media/image7.png",
+                "src": "docx-media/image7.png",
                 "width": 606,
                 "height": 606,
                 "alt": "归来、逝去与英雄史诗 / 翠月的眼睛 插图"
@@ -428,7 +428,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image8.png",
+                "src": "docx-media/image8.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / 忒诺亚-黄金时代与白银时代 插图"
@@ -633,7 +633,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image9.png",
+                "src": "docx-media/image9.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / 荒州-诸神之子的崛起 插图"
@@ -815,7 +815,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "paragraph",
-                "text": "在统一巴洛卢瑟之后，十子的目光投向了更远的地方。在巴洛卢瑟以南的无尽冰洋对岸，存在一个古老而强大的帝国——古塞尔克南帝国。那里是蛇父魁查玛的子民世代生息的故土，有着与巴洛卢瑟截然不同的文明与信仰。那里有宏伟的金字塔、精密的星图、以及一座从未被外人征服的伟大都城。"
+                "text": "在统一巴洛卢瑟之后，十子的目光投向了更远的地方。在巴洛卢瑟以南的沸腾之海对岸，存在一个古老而强大的帝国——古塞尔克南帝国。那里是蛇父魁查玛的子民世代生息的故土，有着与巴洛卢瑟截然不同的文明与信仰。那里有宏伟的金字塔、精密的星图、以及一座从未被外人征服的伟大都城。"
               },
               {
                 "type": "paragraph",
@@ -983,7 +983,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "paragraph",
-                "text": "奥雅带着从芭蕉列岛撤退下来的残军，退入了这座要塞。她身后是匆匆集结起来的援军——“金矛”恩戈率领的金色疤痕军团主力，“青铜守护”贝恩尼的黑豹之拳重装步兵，以及来自亚克斯奥姆与杜伦林两大城市的地方军队。恩戈与贝恩尼调动了灰垣城周围所有的防御力量：恩戈从东都调来了亚克斯奥姆城的驻军，那支以观星术与精密弩炮闻名的城市卫队；贝恩尼则从北方急调了杜伦林的守军，那些从冰原地区征召来的战士耐寒善战，在高原山地的战场上尤为致命。"
+                "text": "奥雅带着从芭蕉列岛撤退下来的残军，退入了这座要塞。她身后是匆匆集结起来的援军——“金矛”恩戈率领的金色疤痕军团主力，“青铜守护”贝恩尼的黑豹之拳重装步兵，以及来自亚克斯奥姆与杜伦林两大城市的地方军队。恩戈与贝恩尼调动了灰垣城周围所有的防御力量：恩戈从东都调来了亚克斯奥姆城的驻军，那支以观星术与精密弩炮闻名的城市卫队；贝恩尼则从急调了杜伦林的守军，那些从冰原地区征召来的战士耐寒善战，在高原山地的战场上尤为致命。"
               },
               {
                 "type": "paragraph",
@@ -1552,7 +1552,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image10.png",
+                "src": "docx-media/image10.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / 翠月往事 插图"
@@ -1667,7 +1667,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image11.png",
+                "src": "docx-media/image11.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / 翠月往事 插图"
@@ -2253,7 +2253,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image12.png",
+                "src": "docx-media/image12.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / 翡翠的陨落 插图"
@@ -2590,7 +2590,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image13.png",
+                "src": "docx-media/image13.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / 高崖要塞之战 插图"
@@ -2619,7 +2619,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image14.png",
+                "src": "docx-media/image14.png",
                 "width": 941,
                 "height": 1672,
                 "alt": "归来、逝去与英雄史诗 / 七戒远征 插图"
@@ -2669,7 +2669,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image15.png",
+                "src": "docx-media/image15.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “雄主”赫伦·赫雷斯特 插图"
@@ -2816,7 +2816,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image16.png",
+                "src": "docx-media/image16.png",
                 "width": 941,
                 "height": 1672,
                 "alt": "归来、逝去与英雄史诗 / 老洛克里安的黎明与黄昏 插图"
@@ -2857,7 +2857,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image17.png",
+                "src": "docx-media/image17.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “疯王”洛克里安二世 插图"
@@ -2886,7 +2886,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image18.png",
+                "src": "docx-media/image18.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “强腕”阿塔里安 插图"
@@ -2897,7 +2897,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image19.png",
+                "src": "docx-media/image19.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “强腕”阿塔里安 插图"
@@ -2922,7 +2922,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image20.png",
+                "src": "docx-media/image20.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “强腕”阿塔里安 插图"
@@ -3035,7 +3035,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image21.png",
+                "src": "docx-media/image21.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “强腕”阿塔里安 插图"
@@ -3112,7 +3112,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image22.png",
+                "src": "docx-media/image22.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “强腕”阿塔里安 插图"
@@ -3211,7 +3211,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image23.png",
+                "src": "docx-media/image23.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “短促的贤王”乔拉 插图"
@@ -3222,7 +3222,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image24.png",
+                "src": "docx-media/image24.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “短促的贤王”乔拉 插图"
@@ -3258,7 +3258,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image25.jpeg",
+                "src": "docx-media/image25.jpeg",
                 "width": 910,
                 "height": 1260,
                 "alt": "归来、逝去与英雄史诗 / “南境征服者”班克罗夫特 插图"
@@ -3275,7 +3275,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image26.png",
+                "src": "docx-media/image26.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “南境征服者”班克罗夫特 插图"
@@ -3316,7 +3316,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image27.png",
+                "src": "docx-media/image27.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “昏王”洛克里安三世 插图"
@@ -3442,7 +3442,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image28.png",
+                "src": "docx-media/image28.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “守成的”弗洛伦斯二世 插图"
@@ -3464,7 +3464,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image29.png",
+                "src": "docx-media/image29.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “落马者”阿塔里安二世 插图"
@@ -3482,7 +3482,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image30.png",
+                "src": "docx-media/image30.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “落马者二世”索尔 插图"
@@ -3520,7 +3520,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image31.png",
+                "src": "docx-media/image31.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “瘫痪的”乔拉三世 插图"
@@ -3565,7 +3565,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image32.png",
+                "src": "docx-media/image32.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “蜡烛般”塞西二世 插图"
@@ -3583,7 +3583,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image33.png",
+                "src": "docx-media/image33.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “坠落的”大卫 插图"
@@ -3605,7 +3605,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image34.png",
+                "src": "docx-media/image34.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “迫王”科尔一世 插图"
@@ -3623,7 +3623,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image35.png",
+                "src": "docx-media/image35.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “复兴者”索尔二世 插图"
@@ -3881,7 +3881,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image36.png",
+                "src": "docx-media/image36.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “远征王”埃德加一世 插图"
@@ -4016,7 +4016,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image37.png",
+                "src": "docx-media/image37.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “远征王”埃德加一世 插图"
@@ -4094,7 +4094,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image38.png",
+                "src": "docx-media/image38.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “多谋的”雷纳德三世 插图"
@@ -4148,7 +4148,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image39.png",
+                "src": "docx-media/image39.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “务实的”科尔二世 插图"
@@ -4169,7 +4169,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image40.png",
+                "src": "docx-media/image40.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “务实的”科尔二世 插图"
@@ -4344,7 +4344,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image41.png",
+                "src": "docx-media/image41.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “勇武的”科尔三世 插图"
@@ -4422,7 +4422,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image42.png",
+                "src": "docx-media/image42.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “征服者”提耶利亚 插图"
@@ -4767,7 +4767,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image43.png",
+                "src": "docx-media/image43.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “征服者”提耶利亚 插图"
@@ -4958,7 +4958,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image44.png",
+                "src": "docx-media/image44.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “贤王”索尔三世 插图"
@@ -5096,7 +5096,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image45.png",
+                "src": "docx-media/image45.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “疲王”伊伦奥恩一世 插图"
@@ -5322,7 +5322,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image46.png",
+                "src": "docx-media/image46.png",
                 "width": 347,
                 "height": 433,
                 "alt": "归来、逝去与英雄史诗 / “烬后者”伊伦奥恩二世 插图"
@@ -5415,7 +5415,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image47.png",
+                "src": "docx-media/image47.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “烬后者”伊伦奥恩二世 插图"
@@ -5472,7 +5472,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image48.png",
+                "src": "docx-media/image48.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "归来、逝去与英雄史诗 / “烬后者”伊伦奥恩二世 插图"
@@ -7533,7 +7533,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image49.png",
+                "src": "docx-media/image49.png",
                 "width": 1267,
                 "height": 713,
                 "alt": "已知世界的记载 / 忒诺亚诸神 插图"
@@ -7807,7 +7807,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image50.png",
+                "src": "docx-media/image50.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 怀恩里尼诸神 插图"
@@ -7841,7 +7841,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image51.png",
+                "src": "docx-media/image51.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 香料地诸神 插图"
@@ -7875,7 +7875,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image52.png",
+                "src": "docx-media/image52.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 拉尔斯尼亚诸神 插图"
@@ -7933,7 +7933,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image53.png",
+                "src": "docx-media/image53.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 巴洛卢瑟诸神 插图"
@@ -7955,7 +7955,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image54.png",
+                "src": "docx-media/image54.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 九州诸神 插图"
@@ -8001,7 +8001,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image55.png",
+                "src": "docx-media/image55.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 荒野诸神 插图"
@@ -8035,14 +8035,14 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image56.png",
+                "src": "docx-media/image56.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 翠月精灵诸神 插图"
               },
               {
                 "type": "image",
-                "src": "/docx-media/image57.png",
+                "src": "docx-media/image57.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 翠月精灵诸神 插图"
@@ -8164,7 +8164,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image58.png",
+                "src": "docx-media/image58.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 侏儒诸神 插图"
@@ -8202,7 +8202,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image59.png",
+                "src": "docx-media/image59.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 半身人诸神 插图"
@@ -8236,7 +8236,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image60.png",
+                "src": "docx-media/image60.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 矮人诸神 插图"
@@ -8286,7 +8286,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image61.png",
+                "src": "docx-media/image61.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 兽人诸神 插图"
@@ -8308,7 +8308,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image62.png",
+                "src": "docx-media/image62.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 地精诸神 插图"
@@ -8346,7 +8346,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image63.png",
+                "src": "docx-media/image63.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 巨人诸神 插图"
@@ -8360,7 +8360,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image64.png",
+                "src": "docx-media/image64.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 龙类诸神 插图"
@@ -8394,7 +8394,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image65.png",
+                "src": "docx-media/image65.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 巨灵贵族 插图"
@@ -8424,7 +8424,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image66.png",
+                "src": "docx-media/image66.png",
                 "width": 1052,
                 "height": 1494,
                 "alt": "已知世界的记载 / 地狱领主 插图"
@@ -8494,7 +8494,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image67.png",
+                "src": "docx-media/image67.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 海洋怪异 插图"
@@ -8521,7 +8521,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image68.png",
+                "src": "docx-media/image68.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 海洋怪异 插图"
@@ -8548,7 +8548,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image69.png",
+                "src": "docx-media/image69.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 海洋怪异 插图"
@@ -8575,7 +8575,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image70.png",
+                "src": "docx-media/image70.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 海洋怪异 插图"
@@ -8602,7 +8602,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image71.png",
+                "src": "docx-media/image71.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "已知世界的记载 / 海洋怪异 插图"
@@ -12237,28 +12237,28 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image72.png",
+                "src": "docx-media/image72.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
               },
               {
                 "type": "image",
-                "src": "/docx-media/image73.png",
+                "src": "docx-media/image73.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
               },
               {
                 "type": "image",
-                "src": "/docx-media/image74.png",
+                "src": "docx-media/image74.png",
                 "width": 260,
                 "height": 263,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
               },
               {
                 "type": "image",
-                "src": "/docx-media/image75.png",
+                "src": "docx-media/image75.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12329,7 +12329,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image76.png",
+                "src": "docx-media/image76.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12340,7 +12340,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image77.png",
+                "src": "docx-media/image77.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12369,7 +12369,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image78.png",
+                "src": "docx-media/image78.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12388,7 +12388,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image79.png",
+                "src": "docx-media/image79.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12419,7 +12419,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image80.png",
+                "src": "docx-media/image80.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12440,7 +12440,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image81.png",
+                "src": "docx-media/image81.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12459,7 +12459,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image82.png",
+                "src": "docx-media/image82.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12488,7 +12488,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image83.png",
+                "src": "docx-media/image83.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12537,7 +12537,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image84.png",
+                "src": "docx-media/image84.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12582,7 +12582,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image85.png",
+                "src": "docx-media/image85.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12609,7 +12609,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image86.png",
+                "src": "docx-media/image86.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12630,7 +12630,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image87.png",
+                "src": "docx-media/image87.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12649,7 +12649,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image88.png",
+                "src": "docx-media/image88.png",
                 "width": 228,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12664,7 +12664,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image89.png",
+                "src": "docx-media/image89.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12681,7 +12681,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image90.png",
+                "src": "docx-media/image90.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12722,7 +12722,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image91.png",
+                "src": "docx-media/image91.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12763,7 +12763,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image92.png",
+                "src": "docx-media/image92.png",
                 "width": 260,
                 "height": 312,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12800,7 +12800,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image93.png",
+                "src": "docx-media/image93.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12825,7 +12825,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image94.png",
+                "src": "docx-media/image94.png",
                 "width": 260,
                 "height": 263,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12866,7 +12866,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image95.png",
+                "src": "docx-media/image95.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12899,7 +12899,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image96.png",
+                "src": "docx-media/image96.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12936,7 +12936,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image97.png",
+                "src": "docx-media/image97.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12955,7 +12955,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image98.png",
+                "src": "docx-media/image98.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12974,7 +12974,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image99.png",
+                "src": "docx-media/image99.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12985,7 +12985,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image100.png",
+                "src": "docx-media/image100.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -12996,7 +12996,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image101.png",
+                "src": "docx-media/image101.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13007,7 +13007,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image102.png",
+                "src": "docx-media/image102.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13026,7 +13026,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image103.png",
+                "src": "docx-media/image103.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13037,7 +13037,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image104.png",
+                "src": "docx-media/image104.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13048,7 +13048,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image105.png",
+                "src": "docx-media/image105.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13059,7 +13059,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image89.png",
+                "src": "docx-media/image89.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13070,7 +13070,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image106.png",
+                "src": "docx-media/image106.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13087,7 +13087,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image107.png",
+                "src": "docx-media/image107.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13112,7 +13112,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image108.png",
+                "src": "docx-media/image108.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13145,7 +13145,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image109.png",
+                "src": "docx-media/image109.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13178,7 +13178,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image110.png",
+                "src": "docx-media/image110.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13227,7 +13227,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image111.png",
+                "src": "docx-media/image111.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13280,7 +13280,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image112.png",
+                "src": "docx-media/image112.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与灼目皇冠 插图"
@@ -13589,7 +13589,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image113.png",
+                "src": "docx-media/image113.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -13748,7 +13748,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image114.png",
+                "src": "docx-media/image114.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -13807,7 +13807,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image115.png",
+                "src": "docx-media/image115.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -13854,7 +13854,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image116.png",
+                "src": "docx-media/image116.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -13897,7 +13897,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image117.png",
+                "src": "docx-media/image117.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -13980,7 +13980,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image118.png",
+                "src": "docx-media/image118.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14075,7 +14075,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image119.png",
+                "src": "docx-media/image119.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14146,7 +14146,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image120.png",
+                "src": "docx-media/image120.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14165,7 +14165,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image121.png",
+                "src": "docx-media/image121.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14248,7 +14248,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image122.png",
+                "src": "docx-media/image122.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14319,7 +14319,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image123.png",
+                "src": "docx-media/image123.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14362,7 +14362,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image124.png",
+                "src": "docx-media/image124.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14395,7 +14395,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image125.png",
+                "src": "docx-media/image125.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14466,7 +14466,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image126.png",
+                "src": "docx-media/image126.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14537,7 +14537,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image127.png",
+                "src": "docx-media/image127.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14560,7 +14560,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image128.png",
+                "src": "docx-media/image128.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14631,7 +14631,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image129.png",
+                "src": "docx-media/image129.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14650,7 +14650,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image130.png",
+                "src": "docx-media/image130.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14697,7 +14697,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image131.png",
+                "src": "docx-media/image131.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14780,7 +14780,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image132.png",
+                "src": "docx-media/image132.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14823,7 +14823,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image133.png",
+                "src": "docx-media/image133.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14876,7 +14876,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image134.png",
+                "src": "docx-media/image134.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14901,7 +14901,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image135.png",
+                "src": "docx-media/image135.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -14964,7 +14964,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image136.png",
+                "src": "docx-media/image136.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -15121,7 +15121,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image137.png",
+                "src": "docx-media/image137.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -15168,7 +15168,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image138.png",
+                "src": "docx-media/image138.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -15233,7 +15233,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image139.png",
+                "src": "docx-media/image139.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大河与国度 插图"
@@ -15409,7 +15409,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image140.png",
+                "src": "docx-media/image140.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15428,7 +15428,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image141.png",
+                "src": "docx-media/image141.png",
                 "width": 260,
                 "height": 263,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15473,7 +15473,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image142.png",
+                "src": "docx-media/image142.png",
                 "width": 219,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15498,7 +15498,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image143.png",
+                "src": "docx-media/image143.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15521,7 +15521,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image144.png",
+                "src": "docx-media/image144.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15554,7 +15554,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image145.png",
+                "src": "docx-media/image145.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15591,7 +15591,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image146.png",
+                "src": "docx-media/image146.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与巨人之血 插图"
@@ -15651,7 +15651,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image147.png",
+                "src": "docx-media/image147.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、北风与国度 插图"
@@ -15738,7 +15738,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image148.png",
+                "src": "docx-media/image148.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、北风与国度 插图"
@@ -15845,7 +15845,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image149.png",
+                "src": "docx-media/image149.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、北风与国度 插图"
@@ -15928,7 +15928,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image150.png",
+                "src": "docx-media/image150.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、北风与国度 插图"
@@ -15999,7 +15999,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image151.png",
+                "src": "docx-media/image151.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、北风与国度 插图"
@@ -16129,7 +16129,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image152.png",
+                "src": "docx-media/image152.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与三国的纷争 插图"
@@ -16170,7 +16170,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image153.png",
+                "src": "docx-media/image153.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王座与三国的纷争 插图"
@@ -16203,7 +16203,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image154.png",
+                "src": "docx-media/image154.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王座与三国的纷争 插图"
@@ -16245,7 +16245,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image155.png",
+                "src": "docx-media/image155.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、冻土与国度 插图"
@@ -16340,7 +16340,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image156.png",
+                "src": "docx-media/image156.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、冻土与国度 插图"
@@ -16371,7 +16371,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image157.png",
+                "src": "docx-media/image157.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、冻土与国度 插图"
@@ -16394,7 +16394,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image158.png",
+                "src": "docx-media/image158.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、冻土与国度 插图"
@@ -16454,7 +16454,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image159.png",
+                "src": "docx-media/image159.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王庭与北海传说 插图"
@@ -16473,7 +16473,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image160.png",
+                "src": "docx-media/image160.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王庭与北海传说 插图"
@@ -16492,7 +16492,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image161.png",
+                "src": "docx-media/image161.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王庭与北海传说 插图"
@@ -16511,7 +16511,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image162.png",
+                "src": "docx-media/image162.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王庭与北海传说 插图"
@@ -16530,7 +16530,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image163.png",
+                "src": "docx-media/image163.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王庭与北海传说 插图"
@@ -16552,7 +16552,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image164.png",
+                "src": "docx-media/image164.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、北海与国度 插图"
@@ -16688,7 +16688,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image165.png",
+                "src": "docx-media/image165.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16699,7 +16699,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image166.png",
+                "src": "docx-media/image166.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16710,7 +16710,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image167.png",
+                "src": "docx-media/image167.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16721,7 +16721,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image168.png",
+                "src": "docx-media/image168.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16732,7 +16732,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image169.png",
+                "src": "docx-media/image169.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16743,7 +16743,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image170.png",
+                "src": "docx-media/image170.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16754,7 +16754,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image171.png",
+                "src": "docx-media/image171.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16765,7 +16765,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image172.png",
+                "src": "docx-media/image172.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16776,7 +16776,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image173.png",
+                "src": "docx-media/image173.png",
                 "width": 228,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、部族与北风史诗 插图"
@@ -16790,7 +16790,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image174.png",
+                "src": "docx-media/image174.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大雪与国度 插图"
@@ -16845,7 +16845,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image175.png",
+                "src": "docx-media/image175.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、大雪与国度 插图"
@@ -16962,7 +16962,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image176.png",
+                "src": "docx-media/image176.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 文明、兴衰与纷争 插图"
@@ -17018,7 +17018,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image177.png",
+                "src": "docx-media/image177.png",
                 "width": 260,
                 "height": 260,
                 "alt": "忒诺亚Tierialand / 传承、王庭与月下往事 插图"
@@ -17345,7 +17345,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image178.png",
+                "src": "docx-media/image178.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王庭与月下往事 插图"
@@ -17390,7 +17390,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image179.png",
+                "src": "docx-media/image179.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王庭与月下往事 插图"
@@ -17435,7 +17435,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image180.png",
+                "src": "docx-media/image180.png",
                 "width": 260,
                 "height": 280,
                 "alt": "忒诺亚Tierialand / 传承、王庭与月下往事 插图"
@@ -17517,7 +17517,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image181.png",
+                "src": "docx-media/image181.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、月光与国度 插图"
@@ -17560,7 +17560,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image182.png",
+                "src": "docx-media/image182.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、月光与国度 插图"
@@ -17735,7 +17735,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image183.png",
+                "src": "docx-media/image183.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "忒诺亚Tierialand / 地理、月光与国度 插图"
@@ -17913,7 +17913,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image184.png",
+                "src": "docx-media/image184.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、山峰与国度 插图"
@@ -18029,7 +18029,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image185.png",
+                "src": "docx-media/image185.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、幽溪与国度 插图"
@@ -18097,7 +18097,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image186.png",
+                "src": "docx-media/image186.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、岩石与国度 插图"
@@ -18225,7 +18225,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image187.png",
+                "src": "docx-media/image187.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、荒野与国度 插图"
@@ -18333,7 +18333,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image188.png",
+                "src": "docx-media/image188.png",
                 "width": 219,
                 "height": 260,
                 "alt": "荒州WasteMarches / 传承、王座与阿契尼德之子 插图"
@@ -18399,7 +18399,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image189.png",
+                "src": "docx-media/image189.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、平原与国度 插图"
@@ -18418,7 +18418,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image190.png",
+                "src": "docx-media/image190.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、平原与国度 插图"
@@ -18509,7 +18509,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image191.png",
+                "src": "docx-media/image191.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、平原与国度 插图"
@@ -18564,7 +18564,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image192.png",
+                "src": "docx-media/image192.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、平原与国度 插图"
@@ -18704,7 +18704,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image193.png",
+                "src": "docx-media/image193.png",
                 "width": 219,
                 "height": 260,
                 "alt": "荒州WasteMarches / 传承、王座与鞍上史诗 插图"
@@ -18786,7 +18786,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image194.png",
+                "src": "docx-media/image194.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、旧城与国度 插图"
@@ -18805,7 +18805,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image195.png",
+                "src": "docx-media/image195.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、旧城与国度 插图"
@@ -18992,7 +18992,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image196.png",
+                "src": "docx-media/image196.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、旧城与国度 插图"
@@ -19023,7 +19023,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image197.png",
+                "src": "docx-media/image197.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、旧城与国度 插图"
@@ -19047,7 +19047,7 @@ export const tieriaBooks = [
       },
       {
         "id": "waste-marches-s029-entry",
-        "title": "奥佩恩",
+        "title": "奥佩恩（破碎之地）",
         "blocks": [],
         "articles": [
           {
@@ -19101,7 +19101,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image198.png",
+                "src": "docx-media/image198.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19117,10 +19117,6 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "《奴隶王遗产考》：“昂格拉的舵，早已握在西境家族的手中。”"
-              },
-              {
-                "type": "paragraph",
-                "text": "《奥佩恩王统纪》：“米万之蜜，凝海风与山花之魂。”"
               },
               {
                 "type": "paragraph",
@@ -19178,7 +19174,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image199.png",
+                "src": "docx-media/image199.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19197,7 +19193,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image200.png",
+                "src": "docx-media/image200.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19216,7 +19212,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image201.png",
+                "src": "docx-media/image201.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19290,6 +19286,10 @@ export const tieriaBooks = [
                 "text": "坐落在法尔哈达山脉西部与侏儒湾东岸之间的狭长海滨地带。这座城市以其独特而醇厚的蜂蜜酿造技艺闻名遐迩，当地养蜂人利用海岸山脉丰富的花卉资源，酿造出口感层次分明、带有独特海风气息的琥珀色蜜浆。纳赫勒家族世代掌管此地的蜂业与贸易，他们的标志广泛烙印于每一桶外销的蜜罐之上。"
               },
               {
+                "type": "paragraph",
+                "text": "《奥佩恩王统纪》：“米万之蜜，凝海风与山花之魂。”"
+              },
+              {
                 "type": "heading",
                 "id": "waste-marches-a186-entry-h193-entry",
                 "title": "东破碎之地",
@@ -19297,7 +19297,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image202.png",
+                "src": "docx-media/image202.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19406,7 +19406,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image203.png",
+                "src": "docx-media/image203.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19425,7 +19425,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image204.png",
+                "src": "docx-media/image204.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、港湾与国度 插图"
@@ -19506,7 +19506,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image205.png",
+                "src": "docx-media/image205.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、驼峰与国度 插图"
@@ -19598,7 +19598,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image206.png",
+            "src": "docx-media/image206.png",
             "width": 1268,
             "height": 714,
             "alt": "荒州WasteMarches / 格罗加兹 插图"
@@ -19641,7 +19641,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image207.png",
+                "src": "docx-media/image207.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、凄凉与国度 插图"
@@ -19749,7 +19749,7 @@ export const tieriaBooks = [
             "blocks": [
               {
                 "type": "image",
-                "src": "/docx-media/image208.png",
+                "src": "docx-media/image208.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "荒州WasteMarches / 地理、隔绝与国度 插图"
@@ -20031,23 +20031,30 @@ export const tieriaBooks = [
               },
               {
                 "type": "paragraph",
-                "text": "阿米纳一世之子，“筑城者”伊本一世继位后，开始系统性地扩张。他在沿海修建了第二座城市——绿心城，将其定为阿妲尔王朝的都城。他利用沃肯帝国的建筑技艺，修建了香料地最早的石砌城墙与港口设施，使绿心城迅速超越椰港，成为香料地最大的城市与享乐之都。"
+                "text": "阿米纳一世之子，“绿心王”伊本一世继位后，开始系统性地扩张。他在沿海修建了第二座城市——绿心城，将其定为阿妲尔王朝的都城。他利用沃肯帝国的建筑技艺，修建了香料地最早的石砌城墙与港口设施，使绿心城迅速超越椰港，成为香料地最大的城市与享乐之都。"
               },
               {
                 "type": "paragraph",
-                "text": "真正的征服始于伊本一世之孙，“铁腕”勒拉丁一世。他敏锐地意识到，谷地七王朝虽然表面上臣服于狮王朝，但各城邦之间的离心力始终存在。他采取的策略是：逐个击破，联姻收买。"
+                "text": "真正的征服始于伊本一世之孙，“屠狼者”垂雷一世。他敏锐地意识到，谷地七王朝虽然表面上臣服于狮王朝，但各城邦之间的离心力始终存在。他采取的策略是：逐个击破，联姻收买。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image209.png",
+                "width": 1267,
+                "height": 713,
+                "alt": "香料地SpiceLands / 阿妲尔王朝 插图"
               },
               {
                 "type": "paragraph",
-                "text": "首先倒下的是“鹰王朝”。来自鹰王朝的帕夏拒绝向阿妲尔家族纳贡，勒拉丁一世率军围困其都城三个月。当城内开始出现人吃人的惨状时，鹰王朝的贵族们发动政变，杀死帕夏，开城投降。勒拉丁一世没有屠城，而是将鹰王朝的王室成员全部押往绿心城，与阿妲尔家族通婚，将其封地改为由阿妲尔家族直接管辖的行省。"
+                "text": "首先倒下的是“鹰王朝”。来自鹰王朝的帕夏拒绝向阿妲尔家族纳贡，垂雷一世率军围困其都城三个月。当城内开始出现人吃人的惨状时，鹰王朝的贵族们发动政变，杀死帕夏，开城投降。勒拉丁一世没有屠城，而是将鹰王朝的王室成员全部押往绿心城，与阿妲尔家族通婚，将其封地改为由阿妲尔家族直接管辖的行省。"
               },
               {
                 "type": "paragraph",
-                "text": "这一策略效果显著。接下来的二十年中，“蛇王朝”、“鹿王朝”、“狼王朝”相继以类似的方式被吞并——或是军事压力下的投降，或是联姻后的自愿归附。至勒拉丁一世去世时，香料地北部绿洲群已有五个王朝覆灭，其土地尽归阿妲尔家族统治。"
+                "text": "这一策略效果显著。接下来的二十年中，“蛇王朝”、“鹿王朝”、“狼王朝”相继以类似的方式被吞并——或是军事压力下的投降，或是联姻后的自愿归附。至垂雷一世去世时，香料地北部绿洲群已有五个王朝覆灭，其土地尽归阿妲尔家族统治。"
               },
               {
                 "type": "paragraph",
-                "text": "最后一个倒下的是“隼王朝”。隼王朝的末代苏丹是一位被称为“老狐”的狡猾统治者。他表面上向勒拉丁一世之子“高人王”徘洛一世称臣，暗中却联合高地人，试图发动一场东西夹击的叛乱。徘洛一世发现了这一阴谋，率军奔袭三百里，在隼王朝的军队与高地人会合之前，将其主力击溃于庞恩特江东岸的平原上。隼王朝的领土被并入阿妲尔王朝，其王室成员被分散安置在各处，与本地贵族通婚，逐渐融入香料地的血脉之中。"
+                "text": "最后一个倒下的是“隼王朝”。隼王朝的末代苏丹是一位被称为“老狐”的狡猾统治者。他表面上向垂雷一世之子“高人王”徘洛一世称臣，暗中却联合高地人，试图发动一场东西夹击的叛乱。徘洛一世发现了这一阴谋，率军奔袭三百里，在隼王朝的军队与高地人会合之前，将其主力击溃于庞恩特江东岸的平原上。隼王朝的领土被并入阿妲尔王朝，其王室成员被分散安置在各处，与本地贵族通婚，逐渐融入香料地的血脉之中。"
               },
               {
                 "type": "paragraph",
@@ -20283,7 +20290,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image209.png",
+                "src": "docx-media/image210.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 王畿奥斯蒂亚​​ 插图"
@@ -20299,6 +20306,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "当庞恩特江汇入碧波万顷的瀚海，阿妲尔家族的荣光便在伟大之城奥斯蒂亚扎根。翡翠般的绿洲如同神明铺就的地毯，庞恩特江奔涌的河水满载着上游村落敬献的陶罐与谷物，日夜不停地注入这座生机勃勃的城市。码头上皇家造船厂新落的龙骨散发着树脂的芬芳，铁锤敲击声与海鸥鸣叫交织，水手们正将香料地特有的红椒和肉桂装入橡木货舱。城市心脏的梵娜广场上，财富女神石像的火焰长发仿佛在风中跃动，玛瑙镶嵌的双眼凝视着载满黄金的商队涌入大理石门拱。圣俄毗修斯学院的穹顶图书馆里，积满灰尘的羊皮纸卷摊开在雕花橡木桌上，年迈的学者用羽毛笔描摹星图，咸涩的海风掠过高窗，带来港口船帆起落的号角长鸣。在这里，海的气息与沙粒的灼热在每一寸空气中交融。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image211.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 王畿奥斯蒂亚​​ 插图"
               },
               {
                 "type": "paragraph",
@@ -20396,6 +20410,13 @@ export const tieriaBooks = [
                 "text": "在王畿奥斯蒂亚的北部海域，一片由七座主岛与数十座礁石组成的群岛如散落的王冠宝石，浮现在碧波之上。这里的气候较大陆更为温和湿润，海风常年吹拂，驱散了内陆的燥热，使得群岛四季如春，草木葱茏。阿妲尔家族将这片离岛视为皇室私产，既因其扼守着通往香料地腹地的海上咽喉，也因其得天独厚的自然条件，成为王族与显贵们逃离政务喧嚣的避世桃源。群岛之间最窄处的水道，便是连接王畿与北方的圣香海峡，每日商船如织，帆影不绝。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image212.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 王冠群岛 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "王冠港 (Crownport)"
               },
@@ -20432,7 +20453,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image210.png",
+                "src": "docx-media/image213.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 圣地公国索拉梅尔​ 插图"
@@ -20451,7 +20472,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image211.png",
+                "src": "docx-media/image214.png",
                 "width": 1268,
                 "height": 714,
                 "alt": "香料地SpiceLands / 圣地公国索拉梅尔​ 插图"
@@ -20517,7 +20538,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image212.png",
+                "src": "docx-media/image215.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 琥珀山公国古拉尼尔 插图"
@@ -20533,6 +20554,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "在王畿西部，琥珀山嶙峋的脊背像巨兽的獠牙撕裂沙漠。维普特平原上，乌尔法斯家族的石堡威严地踞于山隘，其下蜿蜒的矿洞如深入山腹的蠕虫。矿工们手中的鹤嘴锄在山体深处凿出火花，借着摇曳的牛油灯焰，新开出的秘银矿脉闪烁着蜂蜜般诱人的光泽。山脚下的作坊街巷响彻昼夜不息的叮当锤声，巴洛卢瑟匠人将熔化的赤铜注入谷斗模具，拉尔斯尼亚银匠则在小巧的胸甲上雕琢盘旋的鹰翼纹饰。这些贴着红蜡封印、烙印着双山徽记的精工制品，由乌尔法斯的货船运往香料地的每一个角落。山顶城堡的垛口上，瞭望兵紧盯着沙漠边缘扬起的沙尘——那里也许潜藏着劫掠矿石车队的匪帮。乌尔法斯公爵的骑士穿着反射日光、灿若山间新雪的秘银鳞甲，他们的长矛守卫着通往矿坑的每一条石径。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image216.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 琥珀山公国古拉尼尔 插图"
               },
               {
                 "type": "paragraph",
@@ -20595,7 +20623,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image213.png",
+                "src": "docx-media/image217.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 咸水湾公国布拉弥尔​​ 插图"
@@ -20611,6 +20639,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "香料地西部的海岸线浸透海盐的苦涩与生命的躁动，这里是坎赛罗家族治下的咸水湾。当深海的季风开始咆哮，双桅渔船便将巨帆鼓满如怀胎的肚腹，犁开灰绿色的滔天巨浪。渔获丰收时，海滩铺满闪烁银光的鲣鱼尸骸，妇孺用骨刀熟练地刮开鱼腹，裹满粗盐的鱼肉在熏窑的果木炭烟中染成棕褐色。来自东方异域的商船挤满避风港，水手们在潮湿的甲板上清点着丝绸卷与胡椒囊，空气里混杂着异国语言的吆喝、鱼腥和船上满载的肉桂芬芳。布拉弥尔城堡的珊瑚石墙体被海浪蚀刻出蜂窝状的伤痕，在防波堤尽头矗立着执剑的风暴之神石像，渔民们将沾染鱼血的祭品放置在神像冰冷石足下，祈求他腰间悬着的秘银长剑永收锋芒，莫让风暴吞噬归航之路。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image218.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 咸水湾公国布拉弥尔​​ 插图"
               },
               {
                 "type": "paragraph",
@@ -20697,7 +20732,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image214.png",
+                "src": "docx-media/image219.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 旱地公国坦安提尔​​ 插图"
@@ -20751,7 +20786,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image215.png",
+                "src": "docx-media/image220.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 风间谷公国铎洛弥尔​​ 插图"
@@ -20767,6 +20802,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "咸水湾以南的风间谷，是香料地跳动的心脏与饱满的胃囊。海浪的气息滋养山坡上的沃土，绵延的梯田在阳光曝晒下翻涌着金黄色的麦浪波涛。磨坊的巨大水轮日复一日碾磨春小麦，白霜般的精白面粉落满谷仓，被农夫们小心地装入红陶罐，等待运往帕特维家族的谷仓舰队。满载的谷船扬着绣有金色麦穗的旗帜，顶着季风驶向王畿城的港口、琥珀山矿工的营地或圣城索拉梅尔的修道院饭堂。丰收季来临时，农人们在村头祭坛用麦草扎成燃烧的日轮，火光映照着一张张汗水浸透的脸庞。而在梵娜女神的简陋小神龛内，总有农妇悄悄奉上一块点缀着坚果的蜜糖蜂糕——她们相信红发女神能驱散潜伏在谷仓阴影中、带来饥馑的鼠辈群妖。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image221.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 风间谷公国铎洛弥尔​​ 插图"
               },
               {
                 "type": "paragraph",
@@ -20805,7 +20847,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image216.png",
+                "src": "docx-media/image222.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 林地公国卢巴纳 插图"
@@ -20821,6 +20863,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "香料地的中部，越过风间谷的麦浪，大地陡然隆起，被一片无边无际的、蒸腾着湿热雾气的原始热带雨林所覆盖，这便是穆索卡家族世代统治的林地公国卢巴纳。此地常年饱含雨水，空气黏稠如蜜，参天巨木的树冠遮蔽天日，林下昏暗潮湿，藤蔓交织如网。生命的节奏在此遵循着雨林的法则：雨季来临，天地如挂水帘，河流暴涨，淹没低地；短暂的干季，阳光方能艰难穿透密林，在林间空地上催生出绚烂的植被。穆索卡家族正是在这片绿色迷宫中建立起他们的统治，其财富不源于矿藏或良田，而源于森林本身无尽的馈赠。他们性情如林中藤蔓般坚韧而懂得攀附，既与王畿保持恭顺，也默许乃至庇护着那些在合法与非法边缘行走的商贾，将公国经营成香料地最神秘、也最令外人却步的疆域。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image223.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 林地公国卢巴纳 插图"
               },
               {
                 "type": "paragraph",
@@ -20859,7 +20908,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image217.png",
+                "src": "docx-media/image224.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 象地公国韦鲁姆 插图"
@@ -20875,6 +20924,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "在香料地的西陲，一道碧蓝的海峡将咸水湾的波涛与一片翡翠般散落的群岛隔开，这便是卡隆伽家族统治的象地公国韦鲁姆。此地由一座主岛与数十座小岛组成，气候较大陆更为湿润，阳光充足，海风习习，吹散了内陆的燥热。群岛的地貌丰富多样，既有高耸的火山峰，也有平缓的白色沙滩和肥沃的冲积谷地。这片土地的灵魂，是那些体型庞大、性情却出乎意料温和的灰褐色巨兽——战象。卡隆伽家族的名字与象群密不可分，传说他们的先祖曾以魔法与诚意，赢得了岛上象王的友谊，从此建立起人与象之间独特的友谊。公国的财富与力量，皆系于这些巨兽之背：它们是农田里最得力的帮手，是战场上移动的堡垒，更是卡隆伽家族统治权威的活生生的象征。此地的生活节奏缓慢而富足，空气中永远飘荡着成熟水果的甜香与海风混合的独特气息。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image225.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 象地公国韦鲁姆 插图"
               },
               {
                 "type": "paragraph",
@@ -20937,7 +20993,7 @@ export const tieriaBooks = [
               },
               {
                 "type": "image",
-                "src": "/docx-media/image218.png",
+                "src": "docx-media/image226.png",
                 "width": 219,
                 "height": 260,
                 "alt": "香料地SpiceLands / 望海崖 插图"
@@ -20953,6 +21009,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "被卡穆尔山脉从香料地隔绝的一片狭长半岛，地势北高南低，形成一道天然屏障。此地气候温和湿润，夏季清凉宜人，冬季则湿暖多雨，得益于海洋调节，降水均匀，少有极端天气。半作为已知世界的贸易十字路口，望海崖的独特地理隔绝使其成为独立商贸枢纽，由狄奥多拉商盟共同管理——该联盟由忒诺亚、荒州香料地、拉尔斯尼亚、巴洛卢瑟、河洛、等地的顶尖商会组成，包括曼尔墩图斯本地的列蒂希雅-狄奥多拉商会、忒诺亚西陆的坦恩商会、奥卡恩商会、盐浪花商会、西风商会、黑石商会、金珊瑚商会、马里诺斯商会、塔拉萨迪斯商会、利兰德拉皇家商会；荒州的铁心商会、海法尔商会、巴尔卡商会、奥佩恩皇家商会、扎尔卡商会、里法特商会、维林河商会；香料地的庇洛克商会、阿妲尔皇家商会、琥珀山商会、鲣尾商会、铃泉堡商队、索兰妮娅商会、三姐妹商会、巨象商会、林地商会；拉尔斯尼亚的希阿皇家商会、欧托商会、科林亚城商会；以及巴洛卢瑟的米斯特隆商会、烈焰商会，河洛的天工、南海舶会、察罕白银会、金庭会，毗陀商会，古普塔商会、吕宋商帮以及已知世界其他地域的一些商会。商盟通过议会制运作，确保贸易公平与航道安全，将半岛打造为财富与文化的熔炉，同时避免大国政治干预，维系中立地位。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image227.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "香料地SpiceLands / 望海崖 插图"
               },
               {
                 "type": "paragraph",
@@ -21176,6 +21239,13 @@ export const tieriaBooks = [
                 "text": "九州西北的瀚州，是沙漠与绿洲编织的棋盘。白银之路像一条丝线，把这些散落流失在沙海与大漠内的怪异间的城邦串在一起。没有这条商路，瀚州就只是一片无人愿意驻足的不毛之地；有了它，瀚州便成了九州最狡黠、最懂得如何在夹缝中生存的地方。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image228.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 瀚州 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "楼兰是白银之路的起点，也是瀚州最古老的城市。传说在诸城尚未立墙、驼铃尚未响彻大漠之前，楼兰人便已经在黄沙之下寻找水脉。他们擅长凿井与储水，在沙漠中挖出百尺深井，又以陶管、暗渠与石槽将水引向每一块田垄，使荒沙之中生出葡萄架、瓜田、麦圃与枣林。楼兰的葡萄与瓜果是瀚州最好的，酿出的酒清甜而后劲悠长，连河洛的龙帝都曾点名索饮。商人们说，白银之路上有三样东西最贵：河洛的丝、于阗的玉，以及楼兰女王窖藏十年的葡萄酒。然而楼兰并非只靠甘泉与美酒闻名。它也是瀚州少有的军事强国。楼兰人深知，水井便是城池，绿洲便是王座；谁掌握水源，谁便掌握沙漠中的生死。因此他们在通往各处绿洲、盐泽、山口与商路驿站之间修筑井堡，堡中常备弓手、驼骑与水官，既护送商队，也监视敌军动向。外敌若想攻打楼兰，往往尚未见到城墙，便会先在无水的沙海中被拖垮。楼兰军不喜正面决战，而擅长引敌深入、截断水道、焚毁草料、夜袭营地；他们的轻骑能在沙丘间无声移动，驼军能携水远行数十日，弓手则惯用短弓与倒刺箭，在热风与黄尘中射杀迷失方向的敌人。楼兰的城主世代由尉犁氏、车师氏与于阗氏三大家的女性担任，被称为“沙中女王”。三大家并非虚名：尉犁氏掌井田、水籍与城防，车师氏掌驼骑、斥候与边塞，于阗氏掌玉税、外交与军械。每一位沙中女王即位时，都要在最古老的王井前饮下一杯苦水，立誓不使楼兰一井落入敌手。她们既是城主，也是商路的仲裁者、绿洲的守护者与军队的最高统帅。楼兰人相信，女王的王冠不是金银铸成的，而是由深井、陶管、驼铃、弓弦与沙漠中无数死去敌人的骨灰共同筑成的。因此，在瀚州诸城邦之中，楼兰常被视作最难征服的城市。若说金庭城掌握白银之路的繁华，玉城掌握白玉的荣耀，那么楼兰掌握的便是白银之路的咽喉。没有楼兰的水，商队无法启程；没有楼兰的默许，军队也无法穿越瀚州东部的沙海。"
               },
@@ -21213,6 +21283,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "九州的北方，是苍州。这里的天空比别处更低，风比别处更硬。苍州没有城墙，没有道路，只有无边无际的草原和一条永远追不上的地平线。斡兀鲁思的牧人在这条线之间活了一千年，他们的规矩是长生天定的，他们的律法是马蹄踏出来的。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image229.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 苍州 插图"
               },
               {
                 "type": "paragraph",
@@ -21258,6 +21335,13 @@ export const tieriaBooks = [
                 "text": "菟州是苍州草原与中州平原之间的一片缓冲之地，也是斡兀鲁思与河洛两大势力在东北方向长期对峙的角力场。这片土地上，两种文明的边界由铁蹄与城墙、血与火、数百年的仇恨与恐惧一寸一寸地磨出来。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image230.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 菟州 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "奉天是菟州西部的首府，黑龙的贝勒舒尔赫沁·穆尔泰的治所。这座城市是斡兀鲁思插入南方的一枚楔子，城墙是河洛工匠修的，街道却是草原式的大帐布局。舒尔赫沁家族在“黑龙之变”后世代臣服于天可汗，他们的首领在天可汗帐下领菟西万夫长之职。奉天城每年要向天都进贡战马三百匹、貂皮五百张，贝勒的儿子们从小就被送到天都充当侍卫奉天城里的贵族讲斡兀语，穿河洛的丝绸，用陆奥的银器，他们夹在两个文明之间，像一棵长在悬崖缝里的树，根扎在草原的岩石里，枝叶却伸向南方的天空。"
               },
@@ -21281,6 +21365,13 @@ export const tieriaBooks = [
                 "text": "羌州是高原上的国。这里的空气比别处稀薄，天空比别处更低，寺庙的金顶在阳光下刺得人睁不开眼。大番，琛家、噶尔家与昆家的法王统治的政教合一之国。法王被认为是南陀教大南陀支派的最高领袖，在羌州既是国王，也是活佛，他是悠远太古时代天空泰坦的后裔，流淌着天空泰坦的血，兼具着慈悲与残忍、仁爱与暴戾。他的宫殿建在喀尔赞的河谷红山上——那座被称作云中宫或黄金宫的伟大之城，据说是无数奴隶用一代人的血汗修筑起来的。宫墙刷成白色与红色，白色象征慈悲，红色象征智慧。喀尔赞的城墙从河谷底部一直爬到山腰，远远望去，像一座从山体里长出来的巨城。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image231.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 羌州 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "大番的律法就是南陀教的戒律，官员就是寺庙的僧官，军队就是武装起来的僧兵。法王极少离开羌州，但他的影响力远远超出了这片高原——河洛帝国的小南陀僧团视他为精神导师。大番与斡兀鲁思的关系微妙而复杂。游牧人偶尔会南下劫掠羌州的寺庙与村庄，白卓法王则派出僧使北上斡旋，用茶叶与香料换取和平。天可汗对大番的态度与对待河洛不同——他不打算征服羌州，因为这片高原太冷、太高、太穷，征服它需要的银子比能从它身上榨取的银子多得多。他只需要大番保持中立，不南下去援助河洛，不东进搅乱菟州的平衡。"
               }
@@ -21294,6 +21385,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "中州，被称作中原，是九州里最大的州，也是九州的文明轴心。若说瀚州是商路的喉舌，苍州是北境的屏障，瀛州是海上的镜影，那么中州便是九州的脊梁与心脏。自古以来，这片土地便被认为是河川、礼法、文字与王权汇聚之处。龙帝统御的河洛帝国已绵延千载，其疆域北抵苍州边界，南接旃州藩属，东北临菟州对峙线，东滨瓷海，西达羌州，与瀛州隔海相望。千年的王朝更替未能真正撼动它的根基，因为帝国并不只是一位皇帝、一座都城或一支军队，而是一整套早已深入田亩、宗族、书院、驿站、庙宇与衙门的庞大秩序。帝国的骨骼是遍布州境的驿道与运河。自燕京向四方辐射的官道如棋盘般穿过平原、丘陵与江湖，驿站每三十里一设，驿卒、马匹、文书与军令昼夜不息。南北运河则像一条被人工驯服的巨龙，将江南的稻米、盐场的税银、广君的兵器、江城的丝帛、定远的漕船与燕京的宫廷需求连成一体。漕运总督衙门的账簿上，记录着帝国每一年真正的脉搏。若运河畅通，燕京便安然无恙；若漕船停摆，连太和殿上的龙帝也不得不侧耳倾听水上的风声。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image232.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 中州 插图"
               },
               {
                 "type": "paragraph",
@@ -21347,6 +21445,13 @@ export const tieriaBooks = [
                 "text": "瀛州是散落在瓷海上的碎玉。大大小小的岛屿星罗棋布，从陆奥到夷丸，从津户到罗府，每一座岛都有自己的方言、自己的规矩、自己的刀。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image233.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 瀛州 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "陆奥是瀛州最大的岛屿，山多地少，民风剽悍。石流家统治着陆奥，麾下的武士数量居三岛之首，他们的刀法据说传自初代倭王的天照王，以刚猛凌厉著称。陆奥的武士们视荣誉重于生命，切腹在他们看来不是惩罚，而是对过失最体面的了结。"
               },
@@ -21378,6 +21483,13 @@ export const tieriaBooks = [
                 "text": "南陀国，南陀教的发源地，九州的宗教心脏。南陀国的国王虽是世俗君主，但他登基时必须由沙门南陀的最高僧侣加冕，否则便不被承认。国都梵城或被称作白象城、孔雀城，是九州最大的宗教城市，城中寺庙林立，佛塔如林，檀香与诵经声是这里永恒的背景音。梵城的大佛寺里供奉着一颗据说是南陀教初祖的舍利子，每年浴佛节，从大番、河洛、伩罗、倭国乃至宝瓶州赶来的信徒挤满了寺前的广场。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image234.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 沙门州 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "毗罗陀圣山横亘在沙门州与中州、羌州之间，山势险峻，终年积雪。圣山既是地理上的屏障，也是宗教上的分界线——山北是儒道百家的天下，山南是南陀教的国土。翻越毗罗陀的商路只有寥寥几条，每一条都设有寺院关卡，过往商旅缴纳的税银中，有一部分专门用于修缮山间的佛寺与栈道。"
               },
@@ -21395,6 +21507,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "旃州是南方半岛上的碎镜子，被河洛与诃陵陀掰成了两半，散落在雨林与海岸之间。暹罗、金鄂、天化、曼陀、楚荼——这些名字代表着一群大小不一的王国与城邦，分布在旃州的平原、河谷与海岸线上。它们的统治者们穿着河洛风格的冕服，用着高贡铸造的钱币，念着南陀教的经文，却各自说着彼此听不懂的方言。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image235.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 旃州 插图"
               },
               {
                 "type": "paragraph",
@@ -21418,6 +21537,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "宝瓶州是海上的棋盘，诃陵陀是执棋的人。诃陵陀国，九州海洋上的海洋霸主，统治着东胜宫的王族室利佛逝氏控制着从宝瓶州到旃州再到沙门州的每一条主要航道。它的核心领土在宝瓶州最大的岛屿上，都城三佛齐建在入海口的三角洲上，城墙临水，码头就是城门。诃陵陀没有强大的陆军，也不需要陆军——它的海军是九州最强的，拥有大小战船数百艘，水手数万人。诃陵陀的战船速度快、船体低、转向灵活，在海战中如同一群猎鲨。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image236.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "九州Nine Realms / 宝瓶州 插图"
               },
               {
                 "type": "paragraph",
@@ -21957,7 +22083,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image219.png",
+            "src": "docx-media/image237.png",
             "width": 219,
             "height": 260,
             "alt": "拉尔斯尼亚Larsina / 传承、王座与远西海风 插图"
@@ -21976,7 +22102,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image220.png",
+            "src": "docx-media/image238.png",
             "width": 219,
             "height": 260,
             "alt": "拉尔斯尼亚Larsina / 传承、王座与远西海风 插图"
@@ -21995,7 +22121,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image221.png",
+            "src": "docx-media/image239.png",
             "width": 219,
             "height": 260,
             "alt": "拉尔斯尼亚Larsina / 传承、王座与远西海风 插图"
@@ -22014,7 +22140,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image222.png",
+            "src": "docx-media/image240.png",
             "width": 219,
             "height": 260,
             "alt": "拉尔斯尼亚Larsina / 传承、王座与远西海风 插图"
@@ -22043,6 +22169,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "韦芙洛娜海西边岛屿与东边乌约山脉以北的王国，雪巨人欧托的子民自黄金时代就生活于此"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image241.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "拉尔斯尼亚Larsina / 拉弗利兹王国 插图"
               },
               {
                 "type": "paragraph",
@@ -22088,6 +22221,13 @@ export const tieriaBooks = [
                 "text": "倚靠着底斯里山脉的林地王国，历史悠久，人民信迈亚，过着和平富足的生活"
               },
               {
+                "type": "image",
+                "src": "docx-media/image242.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "拉尔斯尼亚Larsina / 罗利内特王国 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "银水镇(Silverspring)：加沃尔江中流的商贸小镇"
               },
@@ -22129,6 +22269,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "黄金王之子凯文尼亚建立的伟大王国，整个王国山势险峻，与东边斯弥尔王国的艾格伦西娅岛隔海相望，国家富庶太平，人民安居乐业"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image243.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "拉尔斯尼亚Larsina / 希阿王国 插图"
               },
               {
                 "type": "paragraph",
@@ -22190,6 +22337,13 @@ export const tieriaBooks = [
                 "text": "海洋与战争之神哈拉子裔的王国，地势平坦，土地贫瘠，人口稀少"
               },
               {
+                "type": "image",
+                "src": "docx-media/image244.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "拉尔斯尼亚Larsina / 斯弥尔王国 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "科林亚城(Korinya)：斯弥尔王国的都城"
               },
@@ -22230,7 +22384,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image223.png",
+            "src": "docx-media/image245.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22241,7 +22395,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image224.png",
+            "src": "docx-media/image246.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22260,7 +22414,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image225.png",
+            "src": "docx-media/image247.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22279,7 +22433,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image226.png",
+            "src": "docx-media/image248.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22298,7 +22452,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image227.png",
+            "src": "docx-media/image249.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22317,7 +22471,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image228.png",
+            "src": "docx-media/image250.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22336,7 +22490,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image229.png",
+            "src": "docx-media/image251.png",
             "width": 219,
             "height": 260,
             "alt": "文兰Vinland / 传承、财富与古老神秘 插图"
@@ -22365,6 +22519,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "文兰，已知世界最南端的广袤土地，被航海家们称为“世界的尽头”。“红发”淑妮的船队第一次望见那片遍布着峡湾与远古的尘埃的海岸时，她在那本后来遗失的航海日志中只留下了一句话：“这里有土地的气息，也有神明的沉默。”大航海时代的风帆已在这片海域飘摇了数百年，无数冒险者、商人、流亡者与梦想家穿越惊涛骇浪而来，在开拓者半岛的丛林、峡湾与海岸线上扎下根须。这里是文明世界的边缘，是帝国、商盟、王室与海盗势力交错碰撞的棋盘，也是那些不愿被旧世界规则束缚之人的新家园。四圣教堂的钟声与奴隶市场的铁链声在同一条街上回荡，冒险者公会的酒馆里，操着七种语言的寻宝人交换着关于上古废墟的传言。开拓者半岛不是乐土，而是机会——对那些敢于在刀尖上跳舞的人而言，这里遍地黄金。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image252.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 开拓者半岛(The Pioneer Peninsula) 插图"
               },
               {
                 "type": "paragraph",
@@ -22502,6 +22663,13 @@ export const tieriaBooks = [
                 "text": "在开拓者半岛与奥苏王国之间的海域上，散落着一片被这个世界刻意模糊处理的群岛。它们没有统一的名称，商船上的水手们只管它叫“碎齿海”——因为这片海域的暗碘和迷雾比鳞鱼的牙齿还密集，吞噬过的商船不计其数。在这些岛屿之间，盘踞着一股松散而危险的势力——一群从各地汇聚而来的海盗，在此建立了一个没有国王、没有法律、只有拳头和金币的暂时性联盟。这些海盗的来源极为复杂。其中最大的一股，是从沸腾之海渗透过来的零碎海盗。他们的前身大多是在香料地与巴洛卢瑟之间的航线上劫掠的老手，因被烈焰商会和克答家族的海船逐渐驱赶，被迫向更南方的海域流窜，最终在文兰西南的这片碎岛中扎下了根。第二股则来自巴洛卢瑟的索斯尔，那座被称为静海无法的海盗巢穴。当索斯尔内部的权力斗争太过血腥时，总有一些不甘臣服于海盗王的海盗带着自己的船只和战利品远走他乡，在这片新的海域重操旧业。第三股则是本地的奥苏人，他们是那些不愿向蛇冠者家族低头的叛逆者或流放者，驾驭着奥苏人特有的快速战船，以大海为家，以劫掠为生。三股势力在这片碎岛中互相牵制、互相利用，偶尔也互相背叛，形成了一个永远处于动态平衡中的危险生态。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image253.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 蟹群岛(Crab Isles) 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "碎齿海的海盗们没有建立任何永久性的城市。他们的据点随季节和海盗船队之间的势力消长而变化，今天还是一个繁忙的小港，明天可能就只剩焚毁的栈桥和海滩的骷骸。最大的一个据点被称为黑处女湾，是一个形状如破船舷的深水湾，由著名的海盗女王“黑处女”穆珊娜，湾内能同时停泊数十艘船只。码头两旁的栈屋用破船板和鲸骨拼凑而成，空气中永远弥漫着鱼腥、酒精和燃烧油脂的混合气味。在这里，任何商品都能被买卖——劫掠来的丝绸、被缚架的人质、从沉船中捞起的古董，以及一些连卖家自己也说不清来历的巧克力。"
               },
@@ -22521,6 +22689,13 @@ export const tieriaBooks = [
                 "text": "在奥苏王国以西的海域之外，传闻存在一片被称为远西之地的陆地。这片土地的存在本身就是一个谜——它不见于任何已知文明的记载，包括那个曾经统治过文兰大陆半壁江山的古塞尔克南帝国。在纳斯人和奥苏人的口传史诗中，这片土地仅仅被提及过一次——在最古老的歌谣中，它被称为吹向世界尽头的风的源头，从此便再无下文。远西之地的海岸线是一道滚滚巨浪永不停歇地剥削着岬角和暗碘的阪崖，连一处能够停泊一艘小船的淡淡海湾都找不到。这里的风从极南之地的冰原深处呼啸而来，夹带着铈骨的寒意和混着冰渎的海雾，就连奥苏人最勇敢的战船也不敢靠近。罕有的探险者在远海望见过内陆的景象——那是一片被浓雾笼罩的黑色岩石荒野，地表毫无生机，偶尔可见几棵被海风吹得乏曲的枯树，树干上挂满了被盐风蚀得惨白的海鸟尸骸。在海盗之间流传着一个模糊的说法：从远西之地继续向南航行，理论上能够绕过文兰的南部海岸线，最终抵达已知世界以南的极南之地。然而，这条航线从未被人真正走通过。那些声称自己曾经探索过远西之地的海盗，不是在酒馆中喝得醉醺醺时吹嘘，就是已经永远消失在了那片刺骨的寒风之中。唯一被认为可信的目击记录来自一位奥苏人海盗，他在一次遭遇风暴后偏离航线，在远西之地的岬角上暂时停靠，在那里发现了一些用他无法识别的符文刻成的石板。这些石板的风格与古塞尔克南文明既有相似之处，又存在本质差异，仿佛出自一个更古老的、已经消亡的文明。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image254.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 远西之地(Far West) 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "《文兰商路考》：“远西之地的海岸上，没有港口，没有灯火，没有人类曾经来过的痕迹。只有风，从年头吹到年尾，像是在对大海诉说一个早已被世人遗忘的秘密。”"
               }
@@ -22534,6 +22709,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "由贤者家族柯丘亚家族世代统治的古老帝国，盘踞于开拓者半岛以南的伊拉谷地与魁祖尔丘陵的广袤土地上。这片土地是已知世界其他角落从未见过的巨兽与奇异生物的家园——如古龙般巨大的蜥蜴、獠牙如矛的剑齿兽、以及羽翼斑斓却不能飞行的巨鸟，在草原与山谷间游荡。西风终年不息，鞭策着峡湾与草甸，夏季短暂凉爽，冬季漫长而严酷，霜雪从纳吉契山脉的山脊一路铺展至海边。纳斯人是古塞尔克南王国的后裔，古铜色皮肤，高颧骨，体格粗壮，目光沉静而深邃。他们的文化对蛇有着近乎痴迷的尊崇——蛇是智慧、是血脉、是神与人之间的信使。帝国的心脏是建在死火山口上的首都维拉科查，巨大的黑石阶梯式金字塔矗立在火山口的中央，如同一座从地底生长出来的山峰，俯瞰着整座城市与远处的山谷，依靠着贤者家族的荣誉与智慧统治着上千个部落。纳斯人崇拜荒野众神：太阳与风暴之神“蛇父”魁查玛，林神“蛇首的”帕，大地女神“蛇发的”茵缇。他们实行奴隶制，保留着活物祭司的传统，献祭的鲜血被认为能滋养大地、维系星辰的秩序。尽管纳斯人在天文学、数学、文学与建筑学上取得了令人惊叹的成就，刻在石柱上的星图精确到令人费解，巨大的水利工程能将山泉引至百里之外的梯田，但他们畏惧海洋，从不远航。传说海是蛇父魁查玛流放叛逆之子的地方，任何踏入咸水之域的人都会被诅咒。纳斯帝国与南方的米托-胡恩利兹共同守卫着胡古恩长城，越过那道由黑石与咒文筑成的巨墙，便是极南之地——已知世界以外的边境，连最富盛名的传奇冒险家都未能记录的蛮荒之域。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image255.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 纳斯帝国(Nasr Empire) 插图"
               },
               {
                 "type": "paragraph",
@@ -22551,6 +22733,13 @@ export const tieriaBooks = [
                 "text": "由蛇冠者家族奥苏特家族世代统治的王国，盘踞于文兰西南部的狭长海岸——一片被称作奥苏隆勒的土地，以及对岸海雾中若隐若现的柏斯群岛。西风终年鞭策着峡湾，将大洋深处的湿冷气息推上陆地，使这里的气候寒冷而湿润，峭壁上挂满了苔藓与地衣，峡湾深处的海水则呈现出墨玉般的幽暗色泽。奥苏人与纳斯人同源，同为古塞尔克南王国的后裔，古铜色皮肤，高颧骨，体格粗壮，但他们对海洋的态度截然不同——纳斯人畏惧它，奥苏人则驾驭它。王国倚靠着山岸而建，高大的集体民居依山势层层堆叠，粗糙的石墙与厚重的茅草屋顶抵御着终年的海风。奥苏人的首都被称作奥舒腊，此处是倚靠着海洋与山脉的狭长之地，狭长的海岸平地被开垦为农田，种植耐寒的土豆、藜麦与一种黑芯玉米；高处的台地上则修建着神庙，蛇纹石柱上刻满了历代蛇冠者的功绩与星图。奥苏人同样崇拜蛇，但他们的神谱与纳斯人略有不同：太阳与风暴之神“蛇父”魁查玛仍是至高存在，海神“蛇尾的”杜掌控着潮汐与航向，山神“蛇肤的”喇尔咖则庇佑着矿工与石匠。他们实行奴隶制，保留活物祭司传统，但在航海学、锻造学与医学研究上远超北方的表亲。奥苏人的船只是文兰西南海域最快的，龙骨用本地硬木打造，船帆用海兽皮鞣制，能在风暴中穿行而不倾覆。蛇冠者家族的荣誉与智慧统治着海岸沿线的近百个部落，每一任国王登基时都要在杜的神庙中用海水洗脚，以象征对海洋的臣服与驾驭。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image256.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 奥苏王国(Osu Kingdom) 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "《文兰商路考·奥苏王国》：“奥苏人的船不惧风浪，因为他们血管里流着海蛇的血。蛇冠者的王冠不是金的，是蛇蜕编的——每一条都来自他们征服过的海域。”"
               }
@@ -22564,6 +22753,13 @@ export const tieriaBooks = [
               {
                 "type": "paragraph",
                 "text": "矮人氏族胡恩氏族建立的王国，深藏于纳斯帝国南方的高山纳吉契山山麓之中。这个王国的起源要追溯至太古时代——当埃瑞博-隆德在都林之山覆灭后，塔林二世率领一批工匠与战士渡海前往巴洛卢瑟，试图寻找拯救族群的神器。他们中的一部分人永远留在了那片南方大陆，融入了巴洛卢瑟的文明；另一部分则在翠月陨落之后，乘着简陋的船只逃离被地震与海啸撕裂的土地，穿过沸腾之海，最终在文兰的纳吉契山脉脚下登陆。数代人的繁衍与隔绝，使这些矮人演变为今日的胡恩氏族。他们的语言中保留了许多古矮人语的词汇，却混杂了古塞尔克南语法结构；他们的建筑风格既有埃瑞博-隆德的石拱与穹顶，又融入了塞尔克南人的阶梯式元素。米托-胡恩利兹的首府是胡恩之炉，一座建在山腹深处的堡垒城市，锻炉的火焰永不熄灭，锤击声日夜回荡。胡恩氏族掌握着许多在第一纪元就已失传的矮人技艺——他们能从坚硬的石英脉中提取出纯度极高的黄金，能将蓝宝石切割出令人目眩的璀璨刻面，还能锻造出一种轻如木、坚如钢的合金，配方连都林之山的矮人同行都难以破解。他们与北方的纳斯人世代为邻，友好通商，用黄金与宝石换取粮食、布匹与牲畜。更重要的是，胡恩氏族的士兵与纳斯人、奥苏人共同驻守着胡古恩长城，把守着防御极南之地诡异威胁的漫长防线。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image257.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 米托-胡恩利兹 (Mitô-Hûnleth) 插图"
               },
               {
                 "type": "paragraph",
@@ -22581,6 +22777,13 @@ export const tieriaBooks = [
                 "text": "横亘在文兰南部纳吉契山脉与蛇脊山脉之间的巨型防御工事，由奥苏王国的民间力量、纳斯皇室的征调民夫以及米托-胡恩利兹的矮人工匠共同修筑而成。长城并非一道单一的城墙，而是一个由主墙、烽火台、驻军堡垒、补给驿站和秘密通道组成的庞大防御体系。主墙以纳吉契山脉开采的黑色玄武岩为基，外层包砌本地烧制的巨型砖石，高约六十克斯，底部厚达十克斯，顶部可并行十名全副武装的士兵。每隔五百克斯便有一座烽火台，台上常年堆放着浸过松脂的薪柴，一旦发现南方的异常动静，烽火便会在片刻间传遍整条防线。长城的修筑持续了整整三代人的时间，无数奴隶与民夫在工地上丧生，矮人工匠的凿子声昼夜不停，将咒文与符刻进每一块基石。驻守长城的是长城铁卫——一支由纳斯帝国与奥苏王国的精锐射手与步兵以及胡恩氏族重装战士组成的联合部队，总兵力常年保持在五千人以上，轮换驻防，每半年一换。长城以南是极南之地，那里没有地图，没有国名，没有任何已知文明留下的痕迹。偶尔有铁卫巡逻队声称在雾中看到过巨大的、不该存在于自然界的影子，或是在夜风中听到过不属于任何已知生物的低吼，但从未有人能带回确凿的证据。极南之地是已知世界以外的边境，是传奇冒险家们止步的地方，也是胡古恩长城之所以存在的唯一理由。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image258.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 胡古恩长城 (Hugûn Wall) 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "《文兰商路考·米托-胡恩利兹》：“望南莫越墙，墙外是遗忘。若闻雾中吼，闭目勿张望。”"
               }
@@ -22596,12 +22799,26 @@ export const tieriaBooks = [
                 "text": "塞外之地是介于胡古恩长城与真正的极南冰原之间的一片过渡荒原，亦是已知世界版图上标注最少、最为凶险的边疆。它横亘于纳吉契山脉与蛇脊山脉的南麓延伸地带，北以长城的黑色巨墙为界，南则渐渐消融于那片从未被任何已知文明踏足的白色荒漠之中。这里不是极南之地本身，而是极南之地的门槛——一片连长城铁卫也极少踏足、只存在于塞外之民口述与零星斥候报告中的灰色地带。"
               },
               {
+                "type": "image",
+                "src": "docx-media/image259.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 塞外之地 插图"
+              },
+              {
                 "type": "paragraph",
                 "text": "塞外之地的气候极为严酷，介于长城以北的亚寒带与极南冰原的永冻荒芜之间。冬季漫长如永恒的噩梦，暴风雪从极南之地毫无阻碍地席卷而来，将荒原上的每一寸土地掩埋在数尺深的积雪之下；短暂的夏季仅有寥寥数周，地表解冻时露出的是碎石、苔藓与地衣组成的贫瘠植被，以及那些在冬天冻毙的野兽骸骨。此地昼夜温差极大——正午的烈日能将裸露的岩石晒得烫手，入夜后气温便骤降至冰点以下，淬不及防的旅人可能在同一个昼夜内经历酷暑与严寒的双重折磨。长城上的铁卫们说，塞外之地的风是有名字的——白骨风，因为它从极南深处吹来时，带着一种不属于这个世界的阴冷，仿佛能直接穿透皮肉、吹进骨髓。"
               },
               {
                 "type": "paragraph",
                 "text": "在这片荒原上，零星散居着被纳斯人与奥苏人统称为“塞外之民”的游牧部族。他们是古塞尔克南王国覆灭后流落至此的遗民分支，亦或是更早时代便在此生息的土著后裔——连他们自己也说不清祖先的来历。肤色赤褐至深褐，体格高大精瘦，因世代与风沙和严寒搏斗而磨砺出极强的耐寒耐旱能力。他们不建城，不筑墙，以毛皮帐篷为居所，驱赶着耐寒的长毛畜群在荒原上逐水草而迁徙。部落之间时战时和——有时为了一口未冻的泉眼便刀兵相见，有时因一场暴风雪而被迫结盟、共享最后的口粮。他们没有文字，历史与律法以口传歌谣的形式代代相传，歌谣中充满了关于风雪中的低语、雾中若隐若现的巨大影子、以及那些深入极南之地后一去不返的猎人的故事。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image260.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "文兰Vinland / 塞外之地 插图"
               },
               {
                 "type": "paragraph",
@@ -22644,7 +22861,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image230.png",
+            "src": "docx-media/image261.png",
             "width": 1268,
             "height": 714,
             "alt": "巴洛卢瑟Baloluth / 晦朔、流离与守望 插图"
@@ -22962,7 +23179,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image231.png",
+            "src": "docx-media/image262.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -22981,7 +23198,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image232.png",
+            "src": "docx-media/image263.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23000,7 +23217,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image233.png",
+            "src": "docx-media/image264.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23019,7 +23236,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image234.png",
+            "src": "docx-media/image265.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23038,7 +23255,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image235.png",
+            "src": "docx-media/image266.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23057,7 +23274,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image236.png",
+            "src": "docx-media/image267.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23076,7 +23293,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image237.png",
+            "src": "docx-media/image268.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23095,7 +23312,7 @@ export const tieriaBooks = [
           },
           {
             "type": "image",
-            "src": "/docx-media/image238.png",
+            "src": "docx-media/image269.png",
             "width": 219,
             "height": 260,
             "alt": "巴洛卢瑟Baloluth / 传承、王座与旧日回忆 插图"
@@ -23115,118 +23332,285 @@ export const tieriaBooks = [
       {
         "id": "baloluth-s047-entry",
         "title": "地理、黑豹与国度",
-        "blocks": [
+        "blocks": [],
+        "articles": [
           {
-            "type": "paragraph",
-            "text": "密斯特隆港(Mistralon Port)"
+            "id": "baloluth-a228-entry",
+            "title": "祖达扎尔",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "祖达扎尔是巴洛卢瑟东北部的古老国度，以星象观测与航海术闻名于世。满月时代，祖达扎尔人建造了宏伟的观星之城与深水良港，其祭司编纂的黑豹历曾是整个巴洛卢瑟计时体系的基础。帝国的崩塌与游牧人的大火使这个国度元气大伤，大部分祖达扎尔人在晦月时代扬帆东去，留下的只有残破的港口、半埋的千阶，以及刻在石柱上无人能解的天文符号。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image270.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "巴洛卢瑟Baloluth / 祖达扎尔 插图"
+              },
+              {
+                "type": "paragraph",
+                "text": "密斯特隆港(Mistralon Port)"
+              },
+              {
+                "type": "paragraph",
+                "text": "巴洛卢瑟东北的大港，坐落在面向沸腾之海的海岸线上，是已知世界最大的城市之一，也是如今巴洛卢瑟最繁华、最完整的都市。这座城市的兴起，始于满月时代沃肯帝国鼎盛时期——图查喇皇帝曾命巴洛卢瑟最杰出的工匠与来自都林之山的矮人建筑师，在此修建了一座辉煌的行宫，以彰显帝国对东北海域的掌控。行宫以白色大理石为基，穹顶镶嵌金箔，廊柱雕刻着黑豹与太阳的图腾，曾是整个巴洛卢瑟最令人叹为观止的建筑之一。然而帝国的崩塌、弦月时代的战乱以及晦月时代的大地震，使行宫一度沦为废墟。直至密斯特隆商会的创始人赫尔·密斯特隆崛起，他将行宫的残骸整体搬运至密斯特隆港中心，在原址上改建扩建，筑成了今日威震四方的赫尔堡。这座堡垒既是密斯特隆家族世代统治的居城，也是商会的权力心脏，重兵把守，奢华至极，据说仅堡内收藏的古代卷轴便足以填满一座图书馆。密斯特隆港的码头延绵数里，桅杆如林，商船来自香料地、河洛、拉尔斯尼亚乃至忒诺亚，货栈里堆满了毛皮、玉石、香料与奴隶。密斯特隆家族以精明著称，他们掌控着巴洛卢瑟与外界之间几乎所有的贸易通道，其商会的影响力从沸腾之海延伸至望海崖，是狄奥多拉商盟中最举足轻重的成员之一。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“密斯特隆港的灯塔，是巴洛卢瑟东北海岸唯一不灭的星光。赫尔堡的石墙上刻着两个时代的印记——沃肯帝国的荣耀与密斯特隆家族的野心。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "千阶港 (Thousand Steps Port)"
+              },
+              {
+                "type": "paragraph",
+                "text": "位于祖达扎尔河的出海口，是巴洛卢瑟东南沿海的一座港口城市。这座城市的名字源于港口与山城之间那条著名的石阶——一千级宽大的台阶，从海边的码头逐级攀升至山顶的祖达扎尔王宫遗址，每级台阶都刻着不同的星图与豹神祷词，是满月时代祖达扎尔王国的工匠用了整整三十年凿成的。祖达扎尔人离开巴洛卢瑟、向远东迁徙的港口就在此处。据说那是一个月圆之夜，数千名祖达扎尔人登上木筏与帆船，在祭司的祈祷声中扬帆东去，再也没有回头。他们留下的城市在晦月时代的大地震中损毁严重，但千阶本身奇迹般地保存了下来——只是被泥沙与碎石掩埋了大部分，如今只露出最上面的三百余级。千阶港如今被法格尔家族统治，他们是弦月时代祖达扎尔贵族的远亲后裔，在祖达扎尔人大迁徙时选择留下，靠着港口贸易与对千阶的修复，将这座城市经营成巴洛卢瑟东南海岸少数尚未荒废的城市。法格尔家族以谨慎著称，他们不参与内陆的纷争，也不与海盗往来，只是安静地守着这座港口，用海盐与干鱼换取必需的物资。每年的月圆之夜，法格尔家族会在千阶的最底层点燃一盏灯，据说是为了照亮那些远行先祖的归途。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“千阶还在，台阶上的星图被磨得看不清了。法格尔家的灯每夜都点，但他们自己也说不清——是在等归来的人，还是在送走新的船。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "亚克斯奥姆 (Yax Oxom)"
+              },
+              {
+                "type": "paragraph",
+                "text": "弦月时代祖达扎尔王国的观星之城，坐落在祖达扎尔王国与荒漠的交界处，是一座由黑豹祭司与观星者共同建立的圣城。城市的选址极为讲究——此处位于巴洛卢瑟中部的天文赤道附近，每年春分与秋分，太阳会从城东的“豹门”正中升起，从城西的“蛇门”正中落下，这种精准的轴线设计据说需要数百年的观测积累才能完成。祭司们在这座城市里观测月相，记录潮汐，计算行星的运行周期，并编纂了巴洛卢瑟最早的一批历法——其中一部刻在三十六根石柱上的“黑豹历”，至今仍被祖达扎尔人的后裔用于确定宗教节日的日期。游牧人的大火席卷巴洛卢瑟时，亚克斯奥姆被攻破，守城的祭司们在沦陷前做出了一个悲壮的决定：他们摧毁了城市核心的星图穹顶，将最精密的天文仪器推入深井，把记载星辰秘密的卷轴投进火中，以防这些知识落入外敌之手。大火之后，亚克斯奥姆沦为废墟，直到烈焰商会将其作为内陆的商贸据点重新经营。商会修复了部分建筑，在旧城基上建起了货栈、驿馆与工坊，使这座古老的城市在烈焰商会的统治下再次焕发出生机。如今亚克斯奥姆是巴洛卢瑟内陆最重要的商品集散地之一，来自沙漠的盐、来自矿山的金属、来自草原的畜产都在此交汇，但城中最古老的建筑——那三十六根刻着“黑豹历”的石柱——依然矗立在城市中央的广场上，被烈焰商会小心翼翼地保护着，因为那是巴洛卢瑟文明存续的证明。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》：“星辰的位置变了，但柱子没变。亚克斯奥姆的石柱记得一切——记得祭司的眼睛，记得火焰的温度，也记得那些宁愿烧掉也不愿交出去的秘密。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "太阳针 (Sun Needle)"
+              },
+              {
+                "type": "paragraph",
+                "text": "沃肯帝国在巴洛卢瑟腹地沙漠中留下的一处奇观残骸，坐落在廷巴克图平原以南、红色沙海边缘的戈壁地带。太阳针原是一座高逾百丈的方尖碑，通体以某种如今已不再发光的白色合金铸成，碑身表面光滑如镜，没有任何接缝或凿痕，仿佛是从一块完整的金属中生长出来的。据说碑顶曾经悬浮着一颗永不熄灭的光球，日夜放射着如正午烈日般的强光，能为穿越沙漠的商队指引方向，其光芒在数十里外都能望见。翠月坠落的灾难中，一股不知来自何处的力量击中了这座方尖碑——光球瞬间熄灭，碑身拦腰折断，上半截轰然倒塌，横躺在旁边的沙地上，下半截仍矗立如初，断裂处呈现出诡异的玻璃化断面，仿佛是被某种比太阳更炽热的力量瞬间熔融又冷却。如今太阳针已成为沙漠商队的重要地标，也吸引着无数寻宝者与学者前来探究其秘密，但无人能解释那种合金的成分，也无人能修复那早已熄灭的光球。夜晚，断裂的碑身在月光下泛着幽冷的银白色，如同一根刺入沙漠的骨针。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“太阳针断了，但还立着。断裂的地方像伤口，结了透明的痂。”"
+              }
+            ],
+            "subheadings": []
           },
           {
-            "type": "paragraph",
-            "text": "巴洛卢瑟东北的大港，坐落在面向沸腾之海的海岸线上，是已知世界最大的城市之一，也是如今巴洛卢瑟最繁华、最完整的都市。这座城市的兴起，始于满月时代沃肯帝国鼎盛时期——图查喇皇帝曾命巴洛卢瑟最杰出的工匠与来自都林之山的矮人建筑师，在此修建了一座辉煌的行宫，以彰显帝国对东北海域的掌控。行宫以白色大理石为基，穹顶镶嵌金箔，廊柱雕刻着黑豹与太阳的图腾，曾是整个巴洛卢瑟最令人叹为观止的建筑之一。然而帝国的崩塌、弦月时代的战乱以及晦月时代的大地震，使行宫一度沦为废墟。直至密斯特隆商会的创始人赫尔·密斯特隆崛起，他将行宫的残骸整体搬运至密斯特隆港中心，在原址上改建扩建，筑成了今日威震四方的赫尔堡。这座堡垒既是密斯特隆家族世代统治的居城，也是商会的权力心脏，重兵把守，奢华至极，据说仅堡内收藏的古代卷轴便足以填满一座图书馆。密斯特隆港的码头延绵数里，桅杆如林，商船来自香料地、河洛、拉尔斯尼亚乃至忒诺亚，货栈里堆满了毛皮、玉石、香料与奴隶。密斯特隆家族以精明著称，他们掌控着巴洛卢瑟与外界之间几乎所有的贸易通道，其商会的影响力从沸腾之海延伸至望海崖，是狄奥多拉商盟中最举足轻重的成员之一。"
+            "id": "baloluth-a229-entry",
+            "title": "廷巴克图",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "廷巴克图是巴洛卢瑟中部的山地之国，廷巴克图人以在山壁上凿城而闻名，其鹰首雕像与悬空回廊曾是巴洛卢瑟建筑技艺的巅峰。沃肯帝国曾在此建都，灰垣城的七重城墙一度是已知世界最坚固的防线。内战的烽火烧尽了帝国的荣光，如今这片高原上只剩下坍塌的城墙、断裂的鹰首，以及在废墟中扎营的流浪部族。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image271.png",
+                "width": 1672,
+                "height": 941,
+                "alt": "巴洛卢瑟Baloluth / 廷巴克图 插图"
+              },
+              {
+                "type": "paragraph",
+                "text": "灰垣城 (Greywall City)"
+              },
+              {
+                "type": "paragraph",
+                "text": "满月时代沃肯帝国的首都，坐落在廷巴克图平原的中央，曾是一座被七重城墙环绕、以灰白色花岗岩筑成的巨城，故得其名。在帝国的鼎盛时期，灰垣城的规模据说能容纳百万人口，城中的金字塔神庙、太阳观象台、皇家图书馆与角斗场皆是那个时代的建筑奇迹。然而历经数个纪元的更迭——游牧人的大火、五国内战、以及那场摧毁一切的大地震——灰垣城早已不复当年的繁盛。城墙倒塌了四重，仅存的三重也布满裂缝；街道上的石板被撬走他用，留下一道道泥泞的沟壑；昔日宏伟的建筑多半只剩基座或断柱，野草与藤蔓从石缝中疯狂生长。尽管如此，灰垣城仍是荒废的巴洛卢瑟甚至是已知世界中数一数二的大城市。如今这座城市被洛伊达家族所统治，他们并非沃肯皇室的后裔，而是弦月时代末期的军事贵族，趁着晦月时代的混乱占据了这座废墟之都。洛伊达家族以务实著称，将城中最完整的几座建筑改建为仓库、兵营与集市，靠向过往商队提供补给与保护维生。灰垣城的居民多为原住民后裔，生活简朴，说着一种混杂了古巴洛卢瑟语与外来词汇的方言。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“七重城墙倒了四重，但灰垣的名字还在。洛伊达家的人说，只要还有一块石头垒在另一块石头上，这座城市就还活着。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "鹰巢墟 (Eyrie Ruin)"
+              },
+              {
+                "type": "paragraph",
+                "text": "廷巴克图王都的残骸，位于巴洛卢瑟中部山脉的最高处，是一座建在悬崖之上的古城。廷巴克图人以擅长在山壁上凿城而闻名，他们的王都被称为“鹰巢”——整座城市依悬崖的天然层次而建，悬空回廊如蛛网般交错，石砌的宫殿与民居层层叠叠，最高处的伯苏丹王厅俯瞰着整个山谷。城市最引人注目的标志是那些鹰首雕像——数以百计的巨鹰头颅雕塑，沿着悬崖边缘排列，鹰眼嵌着黑曜石，在阳光下闪烁如星辰，据说这些雕像是廷巴克图守护神的化身，庇佑着城市免受外敌入侵。然而游牧人的大火虽未烧到这座高山之城，最后的内战却在此处爆发。伯苏丹的后裔与反叛的贵族在王厅前展开血战，战火焚毁了悬空回廊，攻城器械砸塌了半边崖壁，无数建筑连同其上的鹰首雕像一同坠入深渊。如今鹰巢墟被一批称作铎林的游牧部族占领，他们并非廷巴克图人的后裔，而是从戈壁地带迁徙而来的流浪者，在废墟中搭建帐篷，靠放牧山羊与挖掘古物为生。仅有最高处的伯苏丹王厅残柱仍立在崖边，柱身爬满地衣，鹰首雕像的头颅尽数断裂，滚落谷底，只有几尊还算完整的，半埋在碎石与荒草中，空洞的眼眶望向天空。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“鹰巢的鹰没了头，廷巴克图的王没了王座。铎林人的帐篷扎在废墟里，他们不唱歌，不祭拜，只是活着——活在这片连神明都遗忘了的悬崖上。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "万鼓之城 (City of Ten Thousand Drums)"
+              },
+              {
+                "type": "paragraph",
+                "text": "由廷巴克图某位亲王在弦月时代晚期建立的城邦，建在一座巨大的平顶山之上，层层叠叠的宫殿与民居依山势而建，由无数吊桥和栈道相连，远望如同一座悬在空中的城市。这座城市的名字源于其独特的军事传统——城中每个家族都有一面战鼓，战时敲鼓召集族人，鼓声震天，据说万鼓齐鸣时，方圆数十里的鸟兽都会惊逃。在最后的内战中，这座城市成为了主战场之一。反叛的贵族联军与忠于伯苏丹的守军在山顶与山脚之间拉锯了整整三个月，吊桥被砍断，栈道被烧毁，宫殿变成堡垒，民居变成街垒。战鼓声昼夜不息，每一面鼓倒下，就有新的鼓被敲响。最终，当最后一支守军被围困在王厅时，他们选择将所有的战鼓堆在厅前点燃，鼓面在火焰中爆裂，发出如雷般的巨响，持续了整整一夜。鼓声停息后，城市陷落。如今万鼓之城被谭登家族统治，他们在废墟上重建了城市，将其改造为巴洛卢瑟中部的矿业中心。平顶山腹地蕴藏着丰富的铁矿与铜矿，矿道深入山体，冶炼炉的火焰昼夜不息。昔日的宫殿变成了矿工宿舍，吊桥被铁索栈道取代，栈道上终日有驮着矿石的骡队往来。城中再也听不到战鼓声，只有矿镐敲击岩壁的叮当声、冶炼炉的轰鸣声、以及骡队的蹄声。万鼓之名，已成历史。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》：“万鼓之城最后的声音，不是战鼓，是火焰。谭登家的人说，他们不需要鼓了——矿道里的回声比任何鼓都响亮。但老人们记得，在风从南边吹来的夜里，那座山的石头里，还能听见鼓点。”"
+              }
+            ],
+            "subheadings": []
           },
           {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“密斯特隆港的灯塔，是巴洛卢瑟东北海岸唯一不灭的星光。赫尔堡的石墙上刻着两个时代的印记——沃肯帝国的荣耀与密斯特隆家族的野心。”"
+            "id": "baloluth-a230-entry",
+            "title": "洛弥尔",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "洛弥尔位于巴洛卢瑟西部的高原地带，洛弥尔人以游牧为生，驱赶着成群的披毛巨兽在高山草甸间迁徙。他们没有固定的城市，只有随季节流转的营帐与围栏。洛弥尔人的骑术与弓箭技艺冠绝巴洛卢瑟，在五国抵抗游牧人入侵的战争中，洛弥尔的骑兵曾是联军最锋利的刀刃。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image272.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "巴洛卢瑟Baloluth / 洛弥尔 插图"
+              },
+              {
+                "type": "paragraph",
+                "text": "杜伦林 (Dulenlin)"
+              },
+              {
+                "type": "paragraph",
+                "text": "杜伦林是洛弥尔高原上唯一的固定定居点，也是洛弥尔各部族每年冬季集会与交易的场所。这座城市坐落在高原上一片平坦的台地之上，四周以粗石垒成低矮的围墙，墙内是数百座用巨兽毛皮与木材搭建的圆形毡帐，围着一座由黑石砌成的议事大厅。杜伦林以豢养高原独有的披毛巨兽——洛弥尔人称之为“云背”——而闻名，这种动物肩高两丈，背覆厚密的长毛，性情温驯，既是洛弥尔人的坐骑，也是奶、肉与毛皮的主要来源。每年开春，各部族会在此举行云背竞速，骑手们驾驭巨兽在高原上奔驰，胜者赢得一整年的荣耀。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“杜伦林的围墙不高，但风雪翻不过去。云背的蹄声从春天响到秋天，冬天一到，城就空了——只有黑石大厅的炉火不灭，等着明年回来的人。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "圣山要塞 (Holy Mountain Fortress)"
+              },
+              {
+                "type": "paragraph",
+                "text": "圣山要塞坐落于洛弥尔、祖达扎尔与廷巴克图三地交汇的咽喉要道上，是一座建在陡峭山脊之上的古老要塞。满月时代，这座要塞曾是沃肯帝国控制内陆商路的核心枢纽，其城墙以整块山岩凿成，设有巨型守望塔，可俯瞰三条通往三个国度的要道。翠月坠落后，要塞在混乱中几度易手，最终在一场不知名的战役中化为废墟。如今圣山要塞被一位自称“猿猴王”的盗贼首领及其麾下的山贼团所占据。猿猴王的真名无人知晓，手下有数百亡命之徒。他们盘踞在残存的塔楼与地堡中，向过往商队征收“过路税”，控制了巴洛卢瑟内陆最重要的贸易通道之一。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“圣山的石头会说话，但说的都是钱。猿猴王在最高的塔上挂了一面破旗，风一吹，三个国度都能看见。谁也不知道他是谁，只知道想从这条路过，得先问他答不答应。”"
+              }
+            ],
+            "subheadings": []
           },
           {
-            "type": "paragraph",
-            "text": "灰垣城 (Greywall City)"
+            "id": "baloluth-a231-entry",
+            "title": "巴普蒂斯",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "巴普蒂斯是巴洛卢瑟南部的冶炼之国，巴普蒂斯人以铸造技艺闻名，其铁匠行会掌握着从古巴洛卢瑟时代流传至今的冶铁秘法。这个国度没有统一的君主，由各大锻炉城市的匠师议会共同治理，铁锤就是他们的权杖。巴普蒂斯的锻炉日夜不熄，出产的刀剑与盔甲远销四方，据说每一把从巴普蒂斯锻炉中诞生的兵器，都淬过祭司祝祷的圣水。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image273.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "巴洛卢瑟Baloluth / 巴普蒂斯 插图"
+              },
+              {
+                "type": "paragraph",
+                "text": "坎巴里 (Kambari)"
+              },
+              {
+                "type": "paragraph",
+                "text": "坎巴里是巴普蒂斯最大的锻炉城市，坐落在巴洛卢瑟北部的一片铁矿脉之上，整座城市如同一座巨大的冶炼工坊。城市的中心是一座由玄武岩砌成的巨炉——巴普蒂斯人称之为“姆巴祖之口”，传说这口炉子已燃烧了七百年不曾熄灭，是古巴普蒂斯第一位匠师王以自身鲜血点燃的。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“他们的神在锤声里。外人听是噪音，匠人听是祈祷。”"
+              }
+            ],
+            "subheadings": []
           },
           {
-            "type": "paragraph",
-            "text": "满月时代沃肯帝国的首都，坐落在廷巴克图平原的中央，曾是一座被七重城墙环绕、以灰白色花岗岩筑成的巨城，故得其名。在帝国的鼎盛时期，灰垣城的规模据说能容纳百万人口，城中的金字塔神庙、太阳观象台、皇家图书馆与角斗场皆是那个时代的建筑奇迹。然而历经数个纪元的更迭——游牧人的大火、五国内战、以及那场摧毁一切的大地震——灰垣城早已不复当年的繁盛。城墙倒塌了四重，仅存的三重也布满裂缝；街道上的石板被撬走他用，留下一道道泥泞的沟壑；昔日宏伟的建筑多半只剩基座或断柱，野草与藤蔓从石缝中疯狂生长。尽管如此，灰垣城仍是荒废的巴洛卢瑟甚至是已知世界中数一数二的大城市。如今这座城市被洛伊达家族所统治，他们并非沃肯皇室的后裔，而是弦月时代末期的军事贵族，趁着晦月时代的混乱占据了这座废墟之都。洛伊达家族以务实著称，将城中最完整的几座建筑改建为仓库、兵营与集市，靠向过往商队提供补给与保护维生。灰垣城的居民多为原住民后裔，生活简朴，说着一种混杂了古巴洛卢瑟语与外来词汇的方言。"
+            "id": "baloluth-a232-entry",
+            "title": "贝宁",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "贝宁位于巴洛卢瑟大陆最南端，是一片被热带雨林与红树林沼泽覆盖的神秘国度。贝宁人以采集香料、雕刻象牙与航海贸易为生，其独木舟可沿海岸航行至芭蕉列岛与祖达扎尔。贝宁的巫毒祭司掌握着与祖先之灵沟通的秘仪，据说每一片雨林深处都藏着一座供奉古老神灵与黑豹的泥土神庙。如今这个国度的统治者是世袭的奥巴王，居住在密林深处的王城中，很少与外界往来。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image274.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "巴洛卢瑟Baloluth / 贝宁 插图"
+              },
+              {
+                "type": "paragraph",
+                "text": "奥约 (Oyo)"
+              },
+              {
+                "type": "paragraph",
+                "text": "奥约是贝宁南部海岸最大的港口城市，坐落在一条宽阔的河口三角洲上，以出产象牙雕刻与香料闻名。城市的标志是港口那座由整根巨木雕成的船首图腾柱，柱身刻着蛇、鳄鱼与河马的纹样，贝宁人相信这些雕刻能庇佑出海的船队免受海怪侵袭。奥约的集市以象牙雕刻最为出名——贝宁的象牙匠人能将一整根象牙镂空雕成立体的丛林场景，人物、走兽、草木层层叠叠，巧夺天工，在香料地与巴洛卢瑟的市场上千金难求。此外，奥约也是贝宁对外的主要贸易窗口，来自芭蕉列岛的香蕉与椰子、来自香料地的丝绸与香料、来自贝宁内陆的象牙与硬木，都在此交汇转运。奥约的统治者是奥巴王的表亲，称“河口之主”，拥有自己的小型舰队，负责保护商船免受海盗侵扰。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“奥约的象牙会讲故事。匠人把整片丛林刻进一颗牙齿里，鹿在跑，蛇在缠，祖先在树下等。贝宁人说，只有死人才能看懂全部的故事。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "达荷美 (Dahomey)"
+              },
+              {
+                "type": "paragraph",
+                "text": "达荷美是贝宁内陆密林深处的王城，也是贝宁王国的政治与宗教中心。这座城市没有城墙，因为密林本身就是天然的屏障——外人若无人指引，在林中不出百步便会迷失方向。达荷美的建筑以红土夯筑，宫殿的墙壁上绘满了黑、白、红三色的图腾壁画，描绘着历代奥巴王的功绩与巫毒祭司与神灵沟通的场景。城中最神圣的建筑是“万灵之屋”——一座由七十二根乌木柱支撑的圆形神庙，每根柱子上都悬挂着一面祖先的面具。据说在月圆之夜，大祭司会戴上最古老的木雕面具，进入通灵状态，代祖先之灵向奥巴王传达谕令。达荷美的奥巴王深居宫中，极少为外人所见，王宫前常年有十二名戴豹皮头饰的武士守卫，号称“豹卫”，是贝宁最精锐的战士。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“达荷美的路是树给的，树不让走，人就进不去。豹卫的眼睛在夜里发光，他们说那不是火把的反光，是祖先在看着。”"
+              }
+            ],
+            "subheadings": []
           },
           {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“七重城墙倒了四重，但灰垣的名字还在。洛伊达家的人说，只要还有一块石头垒在另一块石头上，这座城市就还活着。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "火堡 (Fire Keep)"
-          },
-          {
-            "type": "paragraph",
-            "text": "地处芭蕉列岛，巴洛卢瑟西南地区的群岛之上，与香料地的望海崖隔海相望，是连接两片大陆的海上交通枢纽。火堡得名于岛上那座休眠火山，火山口常年冒着硫磺蒸汽，入夜后暗红色的光芒映照海面，远望如一座燃烧的堡垒。这座城市由烈焰商会统治，商会的前身是巴洛卢瑟弦月时代的炼金工匠行会，成员多为祖达扎尔人与廷巴克图人的后裔，掌握着许多失传的古代技艺。火堡是这片海盗纵横的海域上最为安全的商贸港口——烈焰商会与祖达扎尔王室后裔克答家族的海船常年驻守在海峡与海岸之间，巡逻航线，清剿海盗，维护贸易的安全。港口不大，但设施极其完善，修船坞、补给站、货栈、旅馆一应俱全，且配备了弩炮与投石机，足以击退中等规模的海盗船队。火堡的集市以出售巴洛卢瑟内陆的宝石、稀有金属以及烈焰商会自产的炼金制品而闻名，许多货物在别处千金难求。城中最高的建筑是烈焰商会的总部“金克答塔”，塔顶有一座用整块黑曜石雕刻的豹首雕像，俯瞰着整片芭蕉列岛的海域。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“火堡的灯是红的，照亮了半片海峡。克答家的船在浪里穿行，像蛇一样滑，像豹一样狠。在这片水域，商人和海盗的区别，有时只是一面旗帜——而烈焰商会决定挂哪面。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "索斯尔 (Sothsehr)"
-          },
-          {
-            "type": "paragraph",
-            "text": "地处猿岛，巴洛卢瑟西部海岸线上一座被遗弃的古城邦，最初由弦月时代的廷巴克图贵族所建，作为控制西部海域的前哨。翠月陨落后的混乱中，这座城市被一支自称“夏旋风”的海盗攻占，从此沦为海盗的巢穴。历经数代海盗王的统治与更迭，索斯尔逐渐发展为已知世界最大的黑市之一，也是影响已知世界海域最不稳定的因素之一。这座城市没有城墙，因为不需要——海盗们不需要保护城市，索斯尔的建筑风格混乱而实用，木屋、石屋、船壳改造的棚屋挤在一起，街道狭窄如血管，陌生人进入极易迷路。港口泊满了各式各样的船只，从残破的渔船到改装过的武装商船，桅杆上飘扬着五花八门的旗号。黑市交易在索斯尔是公开的秘密：奴隶、赃物、禁药、情报、甚至买凶杀人，只要你出得起价，就有人敢接单。几任海盗王都试图给这座城市建立某种秩序，但都以失败告终——索斯尔的居民只认拳头和金币，不认王法。目前控制索斯尔的是绰号“老锚”的海盗王，据说是拉尔斯尼亚人，但无人知晓其真实身份。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“索斯尔没有法律，只有规矩——别在码头上杀人，别欠老锚的钱，别打听船的来路。犯了哪条，海里的鲨鱼都认得你的味道。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "太阳针 (Sun Needle)"
-          },
-          {
-            "type": "paragraph",
-            "text": "沃肯帝国在巴洛卢瑟腹地沙漠中留下的一处奇观残骸，坐落在廷巴克图平原以南、红色沙海边缘的戈壁地带。太阳针原是一座高逾百丈的方尖碑，通体以某种如今已不再发光的白色合金铸成，碑身表面光滑如镜，没有任何接缝或凿痕，仿佛是从一块完整的金属中生长出来的。据说碑顶曾经悬浮着一颗永不熄灭的光球，日夜放射着如正午烈日般的强光，能为穿越沙漠的商队指引方向，其光芒在数十里外都能望见。翠月坠落的灾难中，一股不知来自何处的力量击中了这座方尖碑——光球瞬间熄灭，碑身拦腰折断，上半截轰然倒塌，横躺在旁边的沙地上，下半截仍矗立如初，断裂处呈现出诡异的玻璃化断面，仿佛是被某种比太阳更炽热的力量瞬间熔融又冷却。如今太阳针已成为沙漠商队的重要地标，也吸引着无数寻宝者与学者前来探究其秘密，但无人能解释那种合金的成分，也无人能修复那早已熄灭的光球。夜晚，断裂的碑身在月光下泛着幽冷的银白色，如同一根刺入沙漠的骨针。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“太阳针断了，但还立着。断裂的地方像伤口，结了透明的痂。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "鹰巢墟 (Eyrie Ruin)"
-          },
-          {
-            "type": "paragraph",
-            "text": "廷巴克图王都的残骸，位于巴洛卢瑟中部山脉的最高处，是一座建在悬崖之上的古城。廷巴克图人以擅长在山壁上凿城而闻名，他们的王都被称为“鹰巢”——整座城市依悬崖的天然层次而建，悬空回廊如蛛网般交错，石砌的宫殿与民居层层叠叠，最高处的伯苏丹王厅俯瞰着整个山谷。城市最引人注目的标志是那些鹰首雕像——数以百计的巨鹰头颅雕塑，沿着悬崖边缘排列，鹰眼嵌着黑曜石，在阳光下闪烁如星辰，据说这些雕像是廷巴克图守护神的化身，庇佑着城市免受外敌入侵。然而游牧人的大火虽未烧到这座高山之城，最后的内战却在此处爆发。伯苏丹的后裔与反叛的贵族在王厅前展开血战，战火焚毁了悬空回廊，攻城器械砸塌了半边崖壁，无数建筑连同其上的鹰首雕像一同坠入深渊。如今鹰巢墟被一批称作铎林的游牧部族占领，他们并非廷巴克图人的后裔，而是从戈壁地带迁徙而来的流浪者，在废墟中搭建帐篷，靠放牧山羊与挖掘古物为生。仅有最高处的伯苏丹王厅残柱仍立在崖边，柱身爬满地衣，鹰首雕像的头颅尽数断裂，滚落谷底，只有几尊还算完整的，半埋在碎石与荒草中，空洞的眼眶望向天空。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“鹰巢的鹰没了头，廷巴克图的王没了王座。铎林人的帐篷扎在废墟里，他们不唱歌，不祭拜，只是活着——活在这片连神明都遗忘了的悬崖上。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "千阶港 (Thousand Steps Port)"
-          },
-          {
-            "type": "paragraph",
-            "text": "位于祖达扎尔河的出海口，是巴洛卢瑟东南沿海的一座港口城市。这座城市的名字源于港口与山城之间那条著名的石阶——一千级宽大的台阶，从海边的码头逐级攀升至山顶的祖达扎尔王宫遗址，每级台阶都刻着不同的星图与豹神祷词，是满月时代祖达扎尔王国的工匠用了整整三十年凿成的。祖达扎尔人离开巴洛卢瑟、向远东迁徙的港口就在此处。据说那是一个月圆之夜，数千名祖达扎尔人登上木筏与帆船，在祭司的祈祷声中扬帆东去，再也没有回头。他们留下的城市在晦月时代的大地震中损毁严重，但千阶本身奇迹般地保存了下来——只是被泥沙与碎石掩埋了大部分，如今只露出最上面的三百余级。千阶港如今被法格尔家族统治，他们是弦月时代祖达扎尔贵族的远亲后裔，在祖达扎尔人大迁徙时选择留下，靠着港口贸易与对千阶的修复，将这座城市经营成巴洛卢瑟东南海岸少数尚未荒废的城市。法格尔家族以谨慎著称，他们不参与内陆的纷争，也不与海盗往来，只是安静地守着这座港口，用海盐与干鱼换取必需的物资。每年的月圆之夜，法格尔家族会在千阶的最底层点燃一盏灯，据说是为了照亮那些远行先祖的归途。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》载：“千阶还在，台阶上的星图被磨得看不清了。法格尔家的灯每夜都点，但他们自己也说不清——是在等归来的人，还是在送走新的船。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "亚克斯奥姆 (Yax Oxom)"
-          },
-          {
-            "type": "paragraph",
-            "text": "弦月时代祖达扎尔王国的观星之城，坐落在祖达扎尔王国与荒漠的交界处，是一座由黑豹祭司与观星者共同建立的圣城。城市的选址极为讲究——此处位于巴洛卢瑟中部的天文赤道附近，每年春分与秋分，太阳会从城东的“豹门”正中升起，从城西的“蛇门”正中落下，这种精准的轴线设计据说需要数百年的观测积累才能完成。祭司们在这座城市里观测月相，记录潮汐，计算行星的运行周期，并编纂了巴洛卢瑟最早的一批历法——其中一部刻在三十六根石柱上的“黑豹历”，至今仍被祖达扎尔人的后裔用于确定宗教节日的日期。游牧人的大火席卷巴洛卢瑟时，亚克斯奥姆被攻破，守城的祭司们在沦陷前做出了一个悲壮的决定：他们摧毁了城市核心的星图穹顶，将最精密的天文仪器推入深井，把记载星辰秘密的卷轴投进火中，以防这些知识落入外敌之手。大火之后，亚克斯奥姆沦为废墟，直到烈焰商会将其作为内陆的商贸据点重新经营。商会修复了部分建筑，在旧城基上建起了货栈、驿馆与工坊，使这座古老的城市在烈焰商会的统治下再次焕发出生机。如今亚克斯奥姆是巴洛卢瑟内陆最重要的商品集散地之一，来自沙漠的盐、来自矿山的金属、来自草原的畜产都在此交汇，但城中最古老的建筑——那三十六根刻着“黑豹历”的石柱——依然矗立在城市中央的广场上，被烈焰商会小心翼翼地保护着，因为那是巴洛卢瑟文明存续的证明。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》：“星辰的位置变了，但柱子没变。亚克斯奥姆的石柱记得一切——记得祭司的眼睛，记得火焰的温度，也记得那些宁愿烧掉也不愿交出去的秘密。”"
-          },
-          {
-            "type": "paragraph",
-            "text": "万鼓之城 (City of Ten Thousand Drums)"
-          },
-          {
-            "type": "paragraph",
-            "text": "由廷巴克图某位亲王在弦月时代晚期建立的城邦，建在一座巨大的平顶山之上，层层叠叠的宫殿与民居依山势而建，由无数吊桥和栈道相连，远望如同一座悬在空中的城市。这座城市的名字源于其独特的军事传统——城中每个家族都有一面战鼓，战时敲鼓召集族人，鼓声震天，据说万鼓齐鸣时，方圆数十里的鸟兽都会惊逃。在最后的内战中，这座城市成为了主战场之一。反叛的贵族联军与忠于伯苏丹的守军在山顶与山脚之间拉锯了整整三个月，吊桥被砍断，栈道被烧毁，宫殿变成堡垒，民居变成街垒。战鼓声昼夜不息，每一面鼓倒下，就有新的鼓被敲响。最终，当最后一支守军被围困在王厅时，他们选择将所有的战鼓堆在厅前点燃，鼓面在火焰中爆裂，发出如雷般的巨响，持续了整整一夜。鼓声停息后，城市陷落。如今万鼓之城被谭登家族统治，他们在废墟上重建了城市，将其改造为巴洛卢瑟中部的矿业中心。平顶山腹地蕴藏着丰富的铁矿与铜矿，矿道深入山体，冶炼炉的火焰昼夜不息。昔日的宫殿变成了矿工宿舍，吊桥被铁索栈道取代，栈道上终日有驮着矿石的骡队往来。城中再也听不到战鼓声，只有矿镐敲击岩壁的叮当声、冶炼炉的轰鸣声、以及骡队的蹄声。万鼓之名，已成历史。"
-          },
-          {
-            "type": "paragraph",
-            "text": "《巴洛卢瑟的古与今》：“万鼓之城最后的声音，不是战鼓，是火焰。谭登家的人说，他们不需要鼓了——矿道里的回声比任何鼓都响亮。但老人们记得，在风从南边吹来的夜里，那座山的石头里，还能听见鼓点。”"
+            "id": "baloluth-a233-entry",
+            "title": "芭蕉列岛",
+            "blocks": [
+              {
+                "type": "paragraph",
+                "text": "芭蕉列岛是巴洛卢瑟西南海域的群岛之国，由数十座大小岛屿组成，横亘在巴洛卢瑟与香料地之间的航道上。岛上盛产香蕉、椰子与各种热带香料，其居民以航海与贸易为生。然而这片海域也是已知世界海盗最为猖獗的水域之一，烈焰商会与各路海盗王在此争夺制海权已逾百年。芭蕉列岛从不属于任何一个王国，在这里，金币和船帆比任何王冠都更有分量。"
+              },
+              {
+                "type": "image",
+                "src": "docx-media/image275.png",
+                "width": 1268,
+                "height": 714,
+                "alt": "巴洛卢瑟Baloluth / 芭蕉列岛 插图"
+              },
+              {
+                "type": "paragraph",
+                "text": "火堡 (Fire Keep)"
+              },
+              {
+                "type": "paragraph",
+                "text": "地处芭蕉列岛，巴洛卢瑟西南地区的群岛之上，与香料地的望海崖隔海相望，是连接两片大陆的海上交通枢纽。火堡得名于岛上那座休眠火山，火山口常年冒着硫磺蒸汽，入夜后暗红色的光芒映照海面，远望如一座燃烧的堡垒。这座城市由烈焰商会统治，商会的前身是巴洛卢瑟弦月时代的炼金工匠行会，成员多为祖达扎尔人与廷巴克图人的后裔，掌握着许多失传的古代技艺。火堡是这片海盗纵横的海域上最为安全的商贸港口——烈焰商会与祖达扎尔王室后裔克答家族的海船常年驻守在海峡与海岸之间，巡逻航线，清剿海盗，维护贸易的安全。港口不大，但设施极其完善，修船坞、补给站、货栈、旅馆一应俱全，且配备了弩炮与投石机，足以击退中等规模的海盗船队。火堡的集市以出售巴洛卢瑟内陆的宝石、稀有金属以及烈焰商会自产的炼金制品而闻名，许多货物在别处千金难求。城中最高的建筑是烈焰商会的总部“金克答塔”，塔顶有一座用整块黑曜石雕刻的豹首雕像，俯瞰着整片芭蕉列岛的海域。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“火堡的灯是红的，照亮了半片海峡。克答家的船在浪里穿行，像蛇一样滑，像豹一样狠。在这片水域，商人和海盗的区别，有时只是一面旗帜——而烈焰商会决定挂哪面。”"
+              },
+              {
+                "type": "paragraph",
+                "text": "索斯尔 (Sothsehr)"
+              },
+              {
+                "type": "paragraph",
+                "text": "地处猿岛，巴洛卢瑟西部的芭蕉列岛上一座被遗弃的古城邦，最初由弦月时代的廷巴克图贵族所建，作为控制西部海域的前哨。翠月陨落后的混乱中，这座城市被一支自称“夏旋风”的海盗攻占，从此沦为海盗的巢穴。历经数代海盗王的统治与更迭，索斯尔逐渐发展为已知世界最大的黑市之一，也是影响已知世界海域最不稳定的因素之一。这座城市没有城墙，因为不需要——海盗们不需要保护城市，索斯尔的建筑风格混乱而实用，木屋、石屋、船壳改造的棚屋挤在一起，街道狭窄如血管，陌生人进入极易迷路。港口泊满了各式各样的船只，从残破的渔船到改装过的武装商船，桅杆上飘扬着五花八门的旗号。黑市交易在索斯尔是公开的秘密：奴隶、赃物、禁药、情报、甚至买凶杀人，只要你出得起价，就有人敢接单。几任海盗王都试图给这座城市建立某种秩序，但都以失败告终——索斯尔的居民只认拳头和金币，不认王法。目前控制索斯尔的是绰号“老锚”的海盗王，据说是拉尔斯尼亚人，但无人知晓其真实身份。"
+              },
+              {
+                "type": "paragraph",
+                "text": "《巴洛卢瑟的古与今》载：“索斯尔没有法律，只有规矩——别在码头上杀人，别欠老锚的钱，别打听船的来路。犯了哪条，海里的鲨鱼都认得你的味道。”"
+              }
+            ],
+            "subheadings": []
           }
-        ],
-        "articles": [],
-        "subheadings": []
+        ]
       }
     ]
   },
@@ -23247,9 +23631,16 @@ export const tieriaBooks = [
     ],
     "rootArticles": [
       {
-        "id": "emerald-isles-a228-entry",
+        "id": "emerald-isles-a234-entry",
         "title": "地理、家园与国度",
         "blocks": [
+          {
+            "type": "image",
+            "src": "docx-media/image276.png",
+            "width": 1268,
+            "height": 714,
+            "alt": "翡翠群岛Emerald Isles / 地理、家园与国度 插图"
+          },
           {
             "type": "paragraph",
             "text": "维涅拉(Vienela)"
@@ -23324,7 +23715,7 @@ export const tieriaBooks = [
     "prefaceBlocks": [],
     "rootArticles": [
       {
-        "id": "the-jade-a229-entry",
+        "id": "the-jade-a235-entry",
         "title": "荒原、宁静与永恒",
         "blocks": [
           {
@@ -23338,6 +23729,13 @@ export const tieriaBooks = [
           {
             "type": "paragraph",
             "text": "《翡翠群岛与翡翠往事》载：“白城的城墙以月光凝成，它倒塌时没有发出声响——只是像一场做了万年的梦，终于在黎明前醒来。”"
+          },
+          {
+            "type": "image",
+            "src": "docx-media/image277.png",
+            "width": 1268,
+            "height": 714,
+            "alt": "翠月The Jade / 荒原、宁静与永恒 插图"
           },
           {
             "type": "paragraph",
@@ -23410,14 +23808,14 @@ export const tieriaBooks = [
 export const tieriaContentStats = {
   "books": 12,
   "sections": 47,
-  "articles": 229,
+  "articles": 235,
   "deepHeadings": 196,
-  "imageBlocks": 239,
-  "imageFiles": 238,
+  "imageBlocks": 278,
+  "imageFiles": 277,
   "styleCounts": {
     "2": 14,
     "3": 47,
-    "4": 229,
+    "4": 235,
     "5": 126,
     "6": 70
   }
